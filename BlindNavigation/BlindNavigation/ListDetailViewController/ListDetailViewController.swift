@@ -11,11 +11,12 @@ import UIKit
 class ListDetailViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
-
+   let cellIdentifier = "identifier"
     @IBOutlet weak var listDeatilTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+       listDeatilTableView!.register(UINib(nibName: "NavigationTableViewCell", bundle:nil), forCellReuseIdentifier: cellIdentifier)
         // Do any additional setup after loading the view.
     }
 
@@ -24,15 +25,11 @@ class ListDetailViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //1创建cell
-        let identifier : String = "identifier"
-        var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
-        if cell == nil {
-            //在swift中使用枚举类型方式 1>枚举类型.具体类型  2> .具体类型
-            cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: identifier)
-        }
+
+        let cell : NavigationTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as!  NavigationTableViewCell
+       
         
-        return cell!//在这个地方返回的cell一定不为nil，可以强制解包
+        return cell //在这个地方返回的cell一定不为nil，可以强制解包
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
