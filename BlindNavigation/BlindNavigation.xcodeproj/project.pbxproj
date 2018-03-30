@@ -15,6 +15,9 @@
 		8A5B7E90206DDEDD0078AC9E /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E8F206DDEDD0078AC9E /* InstructionsViewController.swift */; };
 		8A5B7E92206DDEE80078AC9E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E91206DDEE80078AC9E /* SettingViewController.swift */; };
 		8A5B7E94206DDEF30078AC9E /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E93206DDEF30078AC9E /* ListDetailViewController.swift */; };
+		8A5B7E97206DE2E30078AC9E /* NavitionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E96206DE2E30078AC9E /* NavitionDetailViewController.swift */; };
+		8A5B7E9B206DE3710078AC9E /* NavigationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E99206DE3710078AC9E /* NavigationTableViewCell.swift */; };
+		8A5B7E9C206DE3710078AC9E /* NavigationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5B7E9A206DE3710078AC9E /* NavigationTableViewCell.xib */; };
 		8A995A54206B34C400ADB63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A995A53206B34C400ADB63A /* AppDelegate.swift */; };
 		8A995A56206B34C400ADB63A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A995A55206B34C400ADB63A /* ViewController.swift */; };
 		8A995A59206B34C400ADB63A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A995A57206B34C400ADB63A /* Main.storyboard */; };
@@ -74,6 +77,9 @@
 		8A5B7E8F206DDEDD0078AC9E /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		8A5B7E91206DDEE80078AC9E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		8A5B7E93206DDEF30078AC9E /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		8A5B7E96206DE2E30078AC9E /* NavitionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavitionDetailViewController.swift; sourceTree = "<group>"; };
+		8A5B7E99206DE3710078AC9E /* NavigationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTableViewCell.swift; sourceTree = "<group>"; };
+		8A5B7E9A206DE3710078AC9E /* NavigationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationTableViewCell.xib; sourceTree = "<group>"; };
 		8A995A50206B34C400ADB63A /* BlindNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlindNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A995A53206B34C400ADB63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A995A55206B34C400ADB63A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +241,24 @@
 			path = ListDetailViewController;
 			sourceTree = "<group>";
 		};
+		8A5B7E95206DE2D10078AC9E /* NavitionDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A5B7E98206DE34F0078AC9E /* NavitionDetailCell */,
+				8A5B7E96206DE2E30078AC9E /* NavitionDetailViewController.swift */,
+			);
+			path = NavitionDetailViewController;
+			sourceTree = "<group>";
+		};
+		8A5B7E98206DE34F0078AC9E /* NavitionDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				8A5B7E99206DE3710078AC9E /* NavigationTableViewCell.swift */,
+				8A5B7E9A206DE3710078AC9E /* NavigationTableViewCell.xib */,
+			);
+			path = NavitionDetailCell;
+			sourceTree = "<group>";
+		};
 		8A995A47206B34C300ADB63A = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +284,7 @@
 		8A995A52206B34C400ADB63A /* BlindNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				8A5B7E95206DE2D10078AC9E /* NavitionDetailViewController */,
 				8A5B7E8C206DDEBA0078AC9E /* ListDetailViewController */,
 				8A5B7E8B206DDEA80078AC9E /* SettingViewController */,
 				8A5B7E8A206DDE9B0078AC9E /* InstructionsViewController */,
@@ -435,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A5B7E86206DCE240078AC9E /* timg.jpg in Resources */,
+				8A5B7E9C206DE3710078AC9E /* NavigationTableViewCell.xib in Resources */,
 				8A995A5E206B34C400ADB63A /* LaunchScreen.storyboard in Resources */,
 				8A995A5B206B34C400ADB63A /* Assets.xcassets in Resources */,
 				8A995A59206B34C400ADB63A /* Main.storyboard in Resources */,
@@ -520,12 +546,14 @@
 				8A5B7E84206DCCDF0078AC9E /* HomeViewController.swift in Sources */,
 				8A5B7E82206DCCD30078AC9E /* LoginViewController.swift in Sources */,
 				8A995A56206B34C400ADB63A /* ViewController.swift in Sources */,
+				8A5B7E97206DE2E30078AC9E /* NavitionDetailViewController.swift in Sources */,
 				8A5B7E92206DDEE80078AC9E /* SettingViewController.swift in Sources */,
 				8A995A54206B34C400ADB63A /* AppDelegate.swift in Sources */,
 				8AE79965206B9204006FE85F /* DHViewController.swift in Sources */,
 				8A5B7E94206DDEF30078AC9E /* ListDetailViewController.swift in Sources */,
 				8A5B7E90206DDEDD0078AC9E /* InstructionsViewController.swift in Sources */,
 				8A5B7E8E206DDECC0078AC9E /* InformationViewController.swift in Sources */,
+				8A5B7E9B206DE3710078AC9E /* NavigationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,7 +741,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a687e3fe-f875-400b-abbe-3b42756eb371";
 				PROVISIONING_PROFILE_SPECIFIER = ProductTest;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/newland/Desktop/盲人导航/BlindNavigation/BlindNavigation/Tool/BMKSwiftDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/newland/Test/BlindNavigation/BlindNavigation/Tool/BMKSwiftDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -743,7 +771,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a687e3fe-f875-400b-abbe-3b42756eb371";
 				PROVISIONING_PROFILE_SPECIFIER = ProductTest;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/newland/Desktop/盲人导航/BlindNavigation/BlindNavigation/Tool/BMKSwiftDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/newland/Test/BlindNavigation/BlindNavigation/Tool/BMKSwiftDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -27,22 +27,6 @@
             </objects>
             <point key="canvasLocation" x="-642" y="-102"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="aeA-dg-mJR">
-            <objects>
-                <viewController restorationIdentifier="DHViewController" storyboardIdentifier="DHViewController" id="Vy5-Fa-iQ0" customClass="DHViewController" customModule="BlindNavigation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cPt-Ws-KdG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="TP3-MN-TTL"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="lTN-Zw-Kvb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xvp-Pe-AMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="86" y="617"/>
-        </scene>
         <!--登录-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -200,6 +184,7 @@
                                 </state>
                                 <connections>
                                     <action selector="informationAction:" destination="KTp-kO-Yqc" eventType="touchDown" id="Cmo-y5-3Yy"/>
+                                    <segue destination="HkJ-2k-C97" kind="push" id="nRZ-vP-d3h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEE-T9-huu">
@@ -210,6 +195,7 @@
                                 </state>
                                 <connections>
                                     <action selector="listDetailAction:" destination="KTp-kO-Yqc" eventType="touchDown" id="iQi-bl-uiM"/>
+                                    <segue destination="qPt-3U-qLC" kind="push" id="Fwt-fq-ZxD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eW-nx-Vkh">
@@ -220,6 +206,7 @@
                                 </state>
                                 <connections>
                                     <action selector="settingAction:" destination="KTp-kO-Yqc" eventType="touchDown" id="4vW-ma-okW"/>
+                                    <segue destination="1kS-tM-RIg" kind="push" id="7p7-dx-aUz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGU-xZ-l22">
@@ -230,6 +217,7 @@
                                 </state>
                                 <connections>
                                     <action selector="InstructionsAction:" destination="KTp-kO-Yqc" eventType="touchDown" id="SH5-Z2-cgb"/>
+                                    <segue destination="QRK-QF-gJ4" kind="push" id="8Wg-Ye-lbx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -252,7 +240,149 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5R2-Mi-tY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="-102"/>
+            <point key="canvasLocation" x="1047" y="-102"/>
+        </scene>
+        <!--信息录入-->
+        <scene sceneID="amw-62-KOk">
+            <objects>
+                <viewController id="HkJ-2k-C97" customClass="InformationViewController" customModule="BlindNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eti-Ek-w0M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8R-TJ-UBF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.94574671983718872" green="0.90660578012466431" blue="0.77582013607025146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VAb-cj-yPB"/>
+                                </constraints>
+                                <state key="normal" title="信息录入"/>
+                                <connections>
+                                    <action selector="informationAction:" destination="HkJ-2k-C97" eventType="touchUpInside" id="Pld-f7-wZh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-lT-usd">
+                                <rect key="frame" x="0.0" y="114" width="375" height="503"/>
+                                <color key="backgroundColor" red="0.92149782179999995" green="0.92160838840000003" blue="0.92146027090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W77-vX-4l8">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.94574671983718872" green="0.90660578012466431" blue="0.77582013607025146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="紧急联系人"/>
+                                <connections>
+                                    <action selector="EmergencyContactAction:" destination="HkJ-2k-C97" eventType="touchDown" id="ox3-og-dNQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GnE-5s-wPu" firstAttribute="trailing" secondItem="h8R-TJ-UBF" secondAttribute="trailing" id="168-od-ViO"/>
+                            <constraint firstItem="GnE-5s-wPu" firstAttribute="trailing" secondItem="dzP-lT-usd" secondAttribute="trailing" id="72D-C8-Xip"/>
+                            <constraint firstItem="dzP-lT-usd" firstAttribute="leading" secondItem="GnE-5s-wPu" secondAttribute="leading" id="8Ae-gW-JME"/>
+                            <constraint firstItem="W77-vX-4l8" firstAttribute="leading" secondItem="GnE-5s-wPu" secondAttribute="leading" id="Juo-bj-zQy"/>
+                            <constraint firstItem="W77-vX-4l8" firstAttribute="bottom" secondItem="GnE-5s-wPu" secondAttribute="bottom" id="PCh-w0-CsD"/>
+                            <constraint firstItem="h8R-TJ-UBF" firstAttribute="leading" secondItem="GnE-5s-wPu" secondAttribute="leading" id="Rws-Ye-IXN"/>
+                            <constraint firstItem="GnE-5s-wPu" firstAttribute="bottom" secondItem="dzP-lT-usd" secondAttribute="bottom" constant="50" id="eNg-Zp-sZ4"/>
+                            <constraint firstItem="W77-vX-4l8" firstAttribute="top" secondItem="dzP-lT-usd" secondAttribute="bottom" id="fU5-L4-NFd"/>
+                            <constraint firstItem="GnE-5s-wPu" firstAttribute="trailing" secondItem="W77-vX-4l8" secondAttribute="trailing" id="mN4-MP-JR0"/>
+                            <constraint firstItem="h8R-TJ-UBF" firstAttribute="top" secondItem="GnE-5s-wPu" secondAttribute="top" id="uHI-f7-of8"/>
+                            <constraint firstItem="dzP-lT-usd" firstAttribute="top" secondItem="h8R-TJ-UBF" secondAttribute="bottom" id="yao-uF-yyd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GnE-5s-wPu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="信息录入" id="u8Y-Af-937"/>
+                    <connections>
+                        <outlet property="EmergencyContactButton" destination="W77-vX-4l8" id="B4j-Xv-vaA"/>
+                        <outlet property="informationButton" destination="h8R-TJ-UBF" id="ETX-0p-gYY"/>
+                        <outlet property="informationMapView" destination="dzP-lT-usd" id="pSC-KC-ZOU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLg-4v-Q7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2040.8" y="-102.09895052473765"/>
+        </scene>
+        <!--操作说明-->
+        <scene sceneID="UOI-mk-VSC">
+            <objects>
+                <viewController id="QRK-QF-gJ4" customClass="InstructionsViewController" customModule="BlindNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kGm-nh-b5F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Mjf-I8-FDP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="操作说明" id="Npb-d2-k4j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BoA-mW-f5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="746"/>
+        </scene>
+        <!--设置-->
+        <scene sceneID="b07-uN-apA">
+            <objects>
+                <viewController id="1kS-tM-RIg" customClass="SettingViewController" customModule="BlindNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a21-4R-AOB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="fFj-N1-NiL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="设置" id="B6g-ID-3IH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaJ-5c-CJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2113" y="745"/>
+        </scene>
+        <!--详细列表-->
+        <scene sceneID="cua-sN-SA8">
+            <objects>
+                <viewController id="qPt-3U-qLC" customClass="ListDetailViewController" customModule="BlindNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hOM-HI-dwf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jnx-fJ-El8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qPt-3U-qLC" id="S5n-3C-b85"/>
+                                    <outlet property="delegate" destination="qPt-3U-qLC" id="mk2-5u-ACK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wsg-NS-vLo" firstAttribute="bottom" secondItem="jnx-fJ-El8" secondAttribute="bottom" id="O65-qZ-Vh7"/>
+                            <constraint firstItem="jnx-fJ-El8" firstAttribute="top" secondItem="wsg-NS-vLo" secondAttribute="top" id="O72-ov-eHI"/>
+                            <constraint firstItem="jnx-fJ-El8" firstAttribute="leading" secondItem="wsg-NS-vLo" secondAttribute="leading" id="oR6-Oh-n16"/>
+                            <constraint firstItem="wsg-NS-vLo" firstAttribute="trailing" secondItem="jnx-fJ-El8" secondAttribute="trailing" id="sFf-L7-Ji2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wsg-NS-vLo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="详细列表" id="M9P-V3-5CF"/>
+                    <connections>
+                        <outlet property="listDeatilTableView" destination="jnx-fJ-El8" id="eiQ-cl-bK8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5k-eh-Woo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="744"/>
+        </scene>
+        <!--导航-->
+        <scene sceneID="lH1-0e-6zM">
+            <objects>
+                <viewController id="qVT-6Z-XWO" customClass="NavitionDetailViewController" customModule="BlindNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SJD-yu-kQe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="7Eh-I9-oAk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="导航" id="ofd-nS-s8I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwZ-CC-WXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="1523"/>
         </scene>
     </scenes>
     <resources>
