@@ -124,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A995A8B206B5F2000ADB63A /* CoreLocation.framework in Frameworks */,
 				8AE79962206B9056006FE85F /* UserNotifications.framework in Frameworks */,
 				8AE79960206B9028006FE85F /* AudioToolbox.framework in Frameworks */,
 				8AE7995E206B9020006FE85F /* ImageIO.framework in Frameworks */,
@@ -141,7 +142,6 @@
 				8AE79950206B8F3D006FE85F /* libstdc++.tbd in Frameworks */,
 				8A995A95206B5F5900ADB63A /* libstdc++.6.0.9.tbd in Frameworks */,
 				8A995A91206B5F4200ADB63A /* libsqlite3.0.tbd in Frameworks */,
-				8A995A8B206B5F2000ADB63A /* CoreLocation.framework in Frameworks */,
 				8A995A86206B439900ADB63A /* libssl.a in Frameworks */,
 				8A995A87206B439A00ADB63A /* libcrypto.a in Frameworks */,
 				8AC722D2206B66D000821DF6 /* BMKLocationKit.framework in Frameworks */,
@@ -421,6 +421,11 @@
 					8A995A4F206B34C400ADB63A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					8A995A63206B34C400ADB63A = {
 						CreatedOnToolsVersion = 9.2;

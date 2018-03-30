@@ -7,60 +7,117 @@
 //
 
 import UIKit
-
-class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate {
+import CoreLocation
+class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate,CLLocationManagerDelegate {
 
     @IBOutlet weak var EmergencyContactButton: UIButton!
-    @IBOutlet weak var informationMapView: UIView!
+    @IBOutlet weak var informationMapView: BMKMapView!
     @IBOutlet weak var informationButton: UIButton!
-    var _mapView: BMKMapView?
-    var _locService: BMKLocationService?
     
+    var locationService: BMKLocationService!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        _mapView = BMKMapView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        _mapView?.showsUserLocation = true//显示定位图层
-        _mapView?.userTrackingMode = BMKUserTrackingModeNone
-        informationMapView.addSubview(_mapView!)
-        //设置定位的状态为普通定位模式
+        locationService = BMKLocationService()
+        locationService.allowsBackgroundLocationUpdates = true
         
-        //
-        //        _locService = [[BMKLocationService alloc]init];
-        //        _locService.delegate = self;
-        //        //启动LocationService
-        //        [_locService startUserLocationService];
-        // Do any additional setup after loading the view, typically from a nib.
+        print("进入普通定位态");
+        locationService.startUserLocationService()
+        informationMapView.showsUserLocation = false//先关闭显示的定位图层
+        informationMapView.userTrackingMode = BMKUserTrackingModeFollow //设置定位的状态
+        informationMapView.zoomLevel = 20.0
+        informationMapView.showsUserLocation = true//显示定位图层
     }
-    
-    
-    
-    //    //处理方向变更信息
-    //    - (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
-    //    {
-    //    //NSLog(@"heading is %@",userLocation.heading);
-    //    }
-    //    //处理位置坐标更新
-    //    - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
-    //    {
-    //    //NSLog(@"didUpdateUserLocation lat %f,long %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
-    //    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        _mapView?.viewWillAppear()
-        _mapView?.delegate = nil // 此处记得不用的时候需要置nil，否则影响内存的释放
+        locationService.delegate = self
+        informationMapView.delegate = self
+        informationMapView.viewWillAppear()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        _mapView?.viewWillDisappear()
-        _mapView?.delegate = nil // 不用时，置nil
+        locationService.delegate = self
+        informationMapView.delegate = nil
+        informationMapView.viewWillDisappear()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    // MARK: - IBAction
+    @IBAction func startLocation(_ sender: AnyObject) {
+        print("进入普通定位态");
+        locationService.startUserLocationService()
+        informationMapView.showsUserLocation = false//先关闭显示的定位图层
+        informationMapView.userTrackingMode = BMKUserTrackingModeNone;//设置定位的状态
+        informationMapView.showsUserLocation = true//显示定位图层
+        
+       
     }
+    
+    @IBAction func stopLocation(_ sender: AnyObject) {
+        locationService.stopUserLocationService()
+        informationMapView.showsUserLocation = false
+        
+       
+    }
+    
+    @IBAction func followMode(_ sender: AnyObject) {
+        print("进入跟随态");
+        informationMapView.showsUserLocation = false
+        informationMapView.userTrackingMode = BMKUserTrackingModeFollow
+        informationMapView.showsUserLocation = true
+    }
+    
+    @IBAction func followHeadingMode(_ sender: AnyObject) {
+        print("进入罗盘态");
+        informationMapView.showsUserLocation = false
+        informationMapView.userTrackingMode = BMKUserTrackingModeFollowWithHeading
+        informationMapView.showsUserLocation = true
+    }
+    
+    
+    // MARK: - BMKMapViewDelegate
+    
+    
+    // MARK: - BMKLocationServiceDelegate
+    
+    /**
+     *在地图View将要启动定位时，会调用此函数
+     *@param mapView 地图View
+     */
+    func willStartLocatingUser() {
+        print("willStartLocatingUser");
+    }
+    
+    /**
+     *用户方向更新后，会调用此函数
+     *@param userLocation 新的用户位置
+     */
+    func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
+        print("heading is \(userLocation.heading)")
+        print("didUpdateUserHeading lat:\(userLocation.location.coordinate.latitude) lon:\(userLocation.location.coordinate.longitude)")
+        informationMapView.updateLocationData(userLocation)
+    }
+    
+    /**
+     *用户位置更新后，会调用此函数
+     *@param userLocation 新的用户位置
+     */
+    func didUpdate(_ userLocation: BMKUserLocation!) {
+        print("didUpdateUserLocation lat:\(userLocation.location.coordinate.latitude) lon:\(userLocation.location.coordinate.longitude)")
+        informationMapView.updateLocationData(userLocation)
+    }
+    
+    /**
+     *在地图View停止定位后，会调用此函数
+     *@param mapView 地图View
+     */
+    func didStopLocatingUser() {
+        print("didStopLocatingUser")
+    }
+
 
     @IBAction func informationAction(_ sender: UIButton)
     {
@@ -71,15 +128,11 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     @IBAction func EmergencyContactAction(_ sender: UIButton)
     {
         
+  
+       
+        
+    
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
 
 }

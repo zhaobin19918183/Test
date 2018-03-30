@@ -261,7 +261,7 @@
                                     <action selector="informationAction:" destination="HkJ-2k-C97" eventType="touchUpInside" id="Pld-f7-wZh"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-lT-usd">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-lT-usd" customClass="BMKMapView">
                                 <rect key="frame" x="0.0" y="114" width="375" height="503"/>
                                 <color key="backgroundColor" red="0.92149782179999995" green="0.92160838840000003" blue="0.92146027090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -294,7 +294,7 @@
                     <connections>
                         <outlet property="EmergencyContactButton" destination="W77-vX-4l8" id="B4j-Xv-vaA"/>
                         <outlet property="informationButton" destination="h8R-TJ-UBF" id="ETX-0p-gYY"/>
-                        <outlet property="informationMapView" destination="dzP-lT-usd" id="pSC-KC-ZOU"/>
+                        <outlet property="informationMapView" destination="dzP-lT-usd" id="arH-Ee-Vjm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLg-4v-Q7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
