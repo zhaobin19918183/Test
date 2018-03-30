@@ -56,11 +56,11 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
        
     }
     
-    @IBAction func stopLocation(_ sender: AnyObject) {
+    @IBAction func stopLocation(_ sender: AnyObject)
+    {
         locationService.stopUserLocationService()
         informationMapView.showsUserLocation = false
-        
-       
+
     }
     
     @IBAction func followMode(_ sender: AnyObject) {
