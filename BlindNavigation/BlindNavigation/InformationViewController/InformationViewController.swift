@@ -97,7 +97,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
      */
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
         print("heading is \(userLocation.heading)")
-        print("didUpdateUserHeading lat:\(userLocation.location.coordinate.latitude) lon:\(userLocation.location.coordinate.longitude)")
+   
         informationMapView.updateLocationData(userLocation)
     }
     

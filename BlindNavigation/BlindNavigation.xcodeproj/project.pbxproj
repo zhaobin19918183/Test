@@ -18,6 +18,7 @@
 		8A5B7E97206DE2E30078AC9E /* NavitionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E96206DE2E30078AC9E /* NavitionDetailViewController.swift */; };
 		8A5B7E9B206DE3710078AC9E /* NavigationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E99206DE3710078AC9E /* NavigationTableViewCell.swift */; };
 		8A5B7E9C206DE3710078AC9E /* NavigationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5B7E9A206DE3710078AC9E /* NavigationTableViewCell.xib */; };
+		8A5B7EA1206E33AB0078AC9E /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8A5B7EA0206E33AA0078AC9E /* mapapi.bundle */; };
 		8A995A54206B34C400ADB63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A995A53206B34C400ADB63A /* AppDelegate.swift */; };
 		8A995A56206B34C400ADB63A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A995A55206B34C400ADB63A /* ViewController.swift */; };
 		8A995A59206B34C400ADB63A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A995A57206B34C400ADB63A /* Main.storyboard */; };
@@ -80,6 +81,8 @@
 		8A5B7E96206DE2E30078AC9E /* NavitionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavitionDetailViewController.swift; sourceTree = "<group>"; };
 		8A5B7E99206DE3710078AC9E /* NavigationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTableViewCell.swift; sourceTree = "<group>"; };
 		8A5B7E9A206DE3710078AC9E /* NavigationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationTableViewCell.xib; sourceTree = "<group>"; };
+		8A5B7E9D206E30340078AC9E /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = Pods/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		8A5B7EA0206E33AA0078AC9E /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 		8A995A50206B34C400ADB63A /* BlindNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlindNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A995A53206B34C400ADB63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A995A55206B34C400ADB63A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +171,7 @@
 		2A37BF889FB353A364A2D561 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A5B7E9D206E30340078AC9E /* mapapi.bundle */,
 				8AE79961206B9055006FE85F /* UserNotifications.framework */,
 				8AE7995F206B9028006FE85F /* AudioToolbox.framework */,
 				8AE7995D206B9020006FE85F /* ImageIO.framework */,
@@ -259,6 +263,14 @@
 			path = NavitionDetailCell;
 			sourceTree = "<group>";
 		};
+		8A5B7E9F206E33AA0078AC9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A5B7EA0206E33AA0078AC9E /* mapapi.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8A995A47206B34C300ADB63A = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +336,7 @@
 		8A995A81206B3AD100ADB63A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8A5B7E9F206E33AA0078AC9E /* Resources */,
 				8A5B7E87206DD9660078AC9E /* timg1.jpg */,
 				8A5B7E85206DCE240078AC9E /* timg.jpg */,
 				8AC722D1206B66D000821DF6 /* BMKLocationKit.framework */,
@@ -470,6 +483,7 @@
 				8A995A5B206B34C400ADB63A /* Assets.xcassets in Resources */,
 				8A995A59206B34C400ADB63A /* Main.storyboard in Resources */,
 				8A5B7E88206DD9680078AC9E /* timg1.jpg in Resources */,
+				8A5B7EA1206E33AB0078AC9E /* mapapi.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
