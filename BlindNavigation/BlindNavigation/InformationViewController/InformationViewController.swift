@@ -17,8 +17,16 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     var locationService: BMKLocationService!
     let dic = NSMutableDictionary()
     let array = NSMutableArray()
- 
-
+    var circle: BMKCircle?
+    var polygon: BMKPolygon?
+    var polyline: BMKPolyline?
+    var colorfulPolyline: BMKPolyline?
+    var arcline: BMKArcline?
+    var ground: BMKGroundOverlay?
+    var pointAnnotation: BMKPointAnnotation?
+    var animatedAnnotation: BMKPointAnnotation?
+    var lockedScreenAnnotation: BMKPointAnnotation?
+    let coord = NSMutableArray()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationService = BMKLocationService()
@@ -171,12 +179,112 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     
     @IBAction func EmergencyContactAction(_ sender: UIButton)
     {
-        
-  
-       print(WeatherDAO.SearchAllDataEntity().count)
-        
-    
+
+        for i in 0...WeatherDAO.SearchAllDataEntity().count - 1 {
+            let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[i] as! LocationEntity)
+            let dictionary:NSDictionary = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSDictionary
+            let  locationlat =  dictionary.value(forKey: "locationlat") as! String
+            let  locationlon =  dictionary.value(forKey: "locationlon")  as! String
+            let coords2DMake = CLLocationCoordinate2DMake(Double(locationlat)! ,Double(locationlon)! )
+            coord.add(coords2DMake)
+           
+            pointAnnotation = BMKPointAnnotation()
+            pointAnnotation?.coordinate = CLLocationCoordinate2DMake(Double(locationlat)!, Double(locationlon)!)
+            pointAnnotation?.title = locationlat
+            pointAnnotation?.subtitle = locationlon
+         
+            informationMapView.addAnnotation(pointAnnotation)
+            
+        }
+          self.addOverlayViews()
     }
- 
+    
+    //添加内置覆盖物
+    func addOverlayViews() {
+      
+        // 添加折线覆盖物
+        if polyline == nil {
+           
+            var coords = [
+                self.coord[0] as!  CLLocationCoordinate2D]
+            for i in 1...coord.count - 1
+            {
+             coords.append(self.coord[i] as!  CLLocationCoordinate2D)
+            }
+            polyline = BMKPolyline(coordinates: &coords, count: UInt(coord.count))
+        }
+        informationMapView.add(polyline)
+        
+    }
+    
+    // MARK: - BMKMapViewDelegate
+    
+    /**
+     *根据overlay生成对应的View
+     *@param mapView 地图View
+     *@param overlay 指定的overlay
+     *@return 生成的覆盖物View
+     */
+    func mapView(_ mapView: BMKMapView!, viewFor overlay: BMKOverlay!) -> BMKOverlayView! {
+        
+        if (overlay as? BMKCircle) != nil {
+            let circleView = BMKCircleView(overlay: overlay)
+            circleView?.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.5)
+            circleView?.strokeColor = UIColor(red: 0, green: 0, blue: 1, alpha: 0.5)
+            circleView?.lineWidth = 5
+            
+            return circleView
+        }
+        
+        if (overlay as? BMKPolygon) != nil {
+            let polygonView = BMKPolygonView(overlay: overlay)
+            polygonView?.strokeColor = UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)
+            polygonView?.fillColor = UIColor(red: 0, green: 1, blue: 1, alpha: 0.2)
+            polygonView?.lineWidth = 1
+            polygonView?.lineDash = true
+            return polygonView
+        }
+        
+        if let overlayTemp = overlay as? BMKPolyline {
+            let polylineView = BMKPolylineView(overlay: overlay)
+            if overlayTemp == polyline {
+                polylineView?.strokeColor =  UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)
+                polylineView?.lineWidth = 3
+                polylineView?.loadStrokeTextureImage(UIImage(named: "texture_arrow.png"))
+            } else if overlayTemp == colorfulPolyline {
+                polylineView?.lineWidth = 5
+                /// 使用分段颜色绘制时，必须设置（内容必须为UIColor）
+                polylineView?.colors = [UIColor(red: 0, green: 1, blue: 0, alpha: 1),
+                                        UIColor(red: 1, green: 0, blue: 0, alpha: 1),
+                                        UIColor(red: 1, green: 1, blue: 0, alpha: 1)]
+            }
+            return polylineView
+        }
+        
+        if (overlay as? BMKGroundOverlay) != nil {
+            let groundView = BMKGroundOverlayView(overlay: overlay)
+            return groundView
+        }
+        
+        if (overlay as? BMKArcline) != nil {
+            let arclineView = BMKArclineView(overlay: overlay)
+            arclineView?.strokeColor = UIColor(red: 0, green: 0, blue: 1, alpha: 1)
+            arclineView?.lineDash = true
+            arclineView?.lineWidth = 6
+            
+            return arclineView
+        }
+        return nil
+    }
+    
+    /**
+     *当mapView新添加overlay views时，调用此接口
+     *@param mapView 地图View
+     *@param overlayViews 新添加的overlay views
+     */
+    func mapView(_ mapView: BMKMapView!, didAddOverlayViews overlayViews: [Any]!) {
+        print("didAddOverlayViews")
+    }
+    
 
 }
