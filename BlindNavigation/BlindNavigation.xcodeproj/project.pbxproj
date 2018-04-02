@@ -350,6 +350,7 @@
 		8A995A81206B3AD100ADB63A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8A19BC8A2071C2C30071992E /* NavigationModel.swift */,
 				8A19BC8C2071C4170071992E /* WeatherDAO.swift */,
 				8A19BC812071BFCC0071992E /* Common.swift */,
 				8A19BC822071BFCF0071992E /* FolderManager.swift */,
@@ -361,7 +362,6 @@
 				8A5B7E85206DCE240078AC9E /* timg.jpg */,
 				8AC722D1206B66D000821DF6 /* BMKLocationKit.framework */,
 				8A995A82206B3AE000ADB63A /* BMKSwiftDemo-Bridging-Header.h */,
-				8A19BC8A2071C2C30071992E /* NavigationModel.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";

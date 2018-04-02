@@ -13,8 +13,11 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     @IBOutlet weak var EmergencyContactButton: UIButton!
     @IBOutlet weak var informationMapView: BMKMapView!
     @IBOutlet weak var informationButton: UIButton!
-    
+    var locaitonUser : BMKUserLocation!
     var locationService: BMKLocationService!
+    let dic = NSMutableDictionary()
+    let array = NSMutableArray()
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,7 +119,8 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
      *@param userLocation 新的用户位置
      */
     func didUpdate(_ userLocation: BMKUserLocation!) {
-        print("didUpdateUserLocation lat:\(userLocation.location.coordinate.latitude) lon:\(userLocation.location.coordinate.longitude)")
+
+        locaitonUser = userLocation
         informationMapView.updateLocationData(userLocation)
     }
     
@@ -127,19 +131,49 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     func didStopLocatingUser() {
         print("didStopLocatingUser")
     }
+    
+  
 
 
     @IBAction func informationAction(_ sender: UIButton)
     {
+        coredataDic()
         
     }
-   
-
+    //MARK:存储到数据库
+    func  coredataDic()
+    {
+        let str1 = "l like read"
+        let data : NSData = str1.data(using: String.Encoding.utf8, allowLossyConversion: false)! as NSData
+          print("didUpdateUserLocation lat:\(locaitonUser.location.coordinate.latitude) lon:\(locaitonUser.location.coordinate.longitude)")
+        
+        dic.setValue(userLocationData(userLocation: locaitonUser) , forKey: "coordinates")
+        dic.setValue(data, forKey: "lcoaitonMessage")
+        dic.setValue("locaitonName", forKey: "locaitonName")
+        dic.setValue(HelperManager.converLocalTime(), forKey: "lcoaitonDate")
+        WeatherDAO.createWeatherEntity(dic)
+        
+    }
+    //MARK: 保存特定的坐标数据
+    func userLocationData(userLocation: BMKUserLocation)->NSData
+    {
+        let locationlat  =    NSString(format: "%f" , userLocation.location.coordinate.latitude)
+        let locationlon  =    NSString(format: "%f" , userLocation.location.coordinate.longitude)
+        
+        let dictionaryExample : [String:AnyObject] = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject]
+        
+        let dataExample : NSData = NSKeyedArchiver.archivedData(withRootObject: dictionaryExample) as NSData
+        
+        return dataExample
+        
+    }
+    
+    
     @IBAction func EmergencyContactAction(_ sender: UIButton)
     {
         
   
-       
+       print(WeatherDAO.SearchAllDataEntity().count)
         
     
     }

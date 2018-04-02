@@ -22,8 +22,11 @@ class WeatherDAO: BaseDAO {
     //MARK: - Update
     static func updateEntityWith(Entity entity : LocationEntity) -> Bool
     {
-        var  model =  NavigationModel.convertFrom(entity)
-       
+        let  model =  NavigationModel.convertFrom(entity)
+        model.coordinates = entity.coordinates
+        model.lcoaitonMessage = entity.locationMessage
+        model.locaitonDate = entity.locationDate
+        model.locaitonName = entity.locaitonName
         return self.save()
     }
     
@@ -55,17 +58,19 @@ class WeatherDAO: BaseDAO {
     {
 
         let success = WeatherDAO.createEntityWith { (newEntity:LocationEntity) -> () in
-//
-//            let realtimedata : Data  = NSKeyedArchiver.archivedData(withRootObject: dicData.value(forKey: "realtime")!)
-//            let lifedata : Data      = NSKeyedArchiver.archivedData(withRootObject: dicData.value(forKey: "life")!)
-//            let weatherdata : Data   = NSKeyedArchiver.archivedData(withRootObject: dicData.value(forKey: "weather")!)
-//            let pmdata : Data        = NSKeyedArchiver.archivedData(withRootObject: dicData.value(forKey: "pm25")!)
-//
-//            newEntity.realtime         = realtimedata
-//            newEntity.life             = lifedata
-//            newEntity.weather          = weatherdata
-//            newEntity.pm25             = pmdata
-          //  WeatherModel.convertFrom(newEntity)
+
+            let coordinates : Data    =  dicData.value(forKey: "coordinates") as! Data
+            let lcoaitonMessage : Data =  dicData.value(forKey: "lcoaitonMessage") as! Data
+            let lcoaitonName : String  =  dicData.value(forKey: "locaitonName") as! String
+            let lcoaitonDate : String
+                =  dicData.value(forKey: "lcoaitonDate")! as! String
+
+
+            newEntity.locationMessage         = lcoaitonMessage
+            newEntity.coordinates             = coordinates
+            newEntity.locaitonName            = lcoaitonName
+            newEntity.locationDate            = lcoaitonDate
+//            NavigationModel.convertFrom(newEntity)
             
         }
         if success == true
@@ -99,7 +104,7 @@ class WeatherDAO: BaseDAO {
     static func SearchAllDataEntity()->NSArray
     {
         let managedContext  = BaseDAO.mainMOC
-        let fetchRqeust     = NSFetchRequest<NSFetchRequestResult>(entityName: "WeatherEntity")
+        let fetchRqeust     = NSFetchRequest<NSFetchRequestResult>(entityName: "LocationEntity")
         let weatherArray    = try!managedContext.fetch(fetchRqeust) as AnyObject as! NSArray
         return weatherArray
     }

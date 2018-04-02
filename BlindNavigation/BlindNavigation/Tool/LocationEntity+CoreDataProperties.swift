@@ -18,5 +18,7 @@ extension LocationEntity {
 
     @NSManaged public var coordinates: NSData?
     @NSManaged public var locationMessage: NSData?
+    @NSManaged public var locationDate: String?
+    @NSManaged public var locaitonName: String?
 
 }

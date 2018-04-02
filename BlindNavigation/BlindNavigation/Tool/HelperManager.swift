@@ -68,6 +68,20 @@ struct HelperManager {
         
         return resultAnyObject
     }
+    
+    static func converLocalTime()->String
+    {
+        
+        //获取当前时间
+        let now = Date()
+        // 创建一个日期格式器
+        let dformatter = DateFormatter()
+        dformatter.dateFormat = "yyyy年MM月dd日 HH:mm:ss"
+        return  dformatter.string(from: now)
+    }
+    
+    
+    
     static func convertServerTimeToLocalTime(_ dateString : String) -> String
     {
         let dateFormatter = DateFormatter()
