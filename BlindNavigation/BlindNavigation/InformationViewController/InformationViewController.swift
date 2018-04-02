@@ -27,6 +27,16 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         informationMapView.userTrackingMode = BMKUserTrackingModeFollow //设置定位的状态
         informationMapView.zoomLevel = 20.0
         informationMapView.showsUserLocation = true//显示定位图层
+        
+        let customRightBarButtonItem = UIBarButtonItem(title: "结束", style: .plain, target: self, action: #selector(InformationViewController.customLocationAccuracyCircle))
+        self.navigationItem.rightBarButtonItem = customRightBarButtonItem
+        
+        
+    }
+    
+    @objc func customLocationAccuracyCircle() {
+ 
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

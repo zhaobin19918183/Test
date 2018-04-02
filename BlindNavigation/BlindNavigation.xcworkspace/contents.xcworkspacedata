@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:BlindNavigation/Tool/LocationEntity+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:BlindNavigation/Tool/LocationEntity+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:BlindNavigation.xcodeproj">
    </FileRef>
    <FileRef

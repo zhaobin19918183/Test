@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A19BC802071BF8C0071992E /* BaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC7F2071BF8B0071992E /* BaseDAO.swift */; };
+		8A19BC842071BFD20071992E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC812071BFCC0071992E /* Common.swift */; };
+		8A19BC852071BFD20071992E /* FolderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC822071BFCF0071992E /* FolderManager.swift */; };
+		8A19BC862071BFD20071992E /* HelperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC832071BFD20071992E /* HelperManager.swift */; };
+		8A19BC892071C1450071992E /* NavigationModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC872071C1450071992E /* NavigationModel.xcdatamodeld */; };
+		8A19BC8B2071C2C30071992E /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC8A2071C2C30071992E /* NavigationModel.swift */; };
+		8A19BC8D2071C4170071992E /* WeatherDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC8C2071C4170071992E /* WeatherDAO.swift */; };
 		8A5B7E82206DCCD30078AC9E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E81206DCCD30078AC9E /* LoginViewController.swift */; };
 		8A5B7E84206DCCDF0078AC9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E83206DCCDF0078AC9E /* HomeViewController.swift */; };
 		8A5B7E86206DCE240078AC9E /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5B7E85206DCE240078AC9E /* timg.jpg */; };
@@ -70,6 +77,13 @@
 /* Begin PBXFileReference section */
 		615660D3BE925C625AF5EBA6 /* libPods-BlindNavigation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlindNavigation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C09145EAB9BB7C0B775430 /* Pods-BlindNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindNavigation.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlindNavigation/Pods-BlindNavigation.release.xcconfig"; sourceTree = "<group>"; };
+		8A19BC7F2071BF8B0071992E /* BaseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDAO.swift; sourceTree = "<group>"; };
+		8A19BC812071BFCC0071992E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		8A19BC822071BFCF0071992E /* FolderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderManager.swift; sourceTree = "<group>"; };
+		8A19BC832071BFD20071992E /* HelperManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperManager.swift; sourceTree = "<group>"; };
+		8A19BC882071C1450071992E /* NavigationModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NavigationModel.xcdatamodel; sourceTree = "<group>"; };
+		8A19BC8A2071C2C30071992E /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
+		8A19BC8C2071C4170071992E /* WeatherDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDAO.swift; sourceTree = "<group>"; };
 		8A5B7E81206DCCD30078AC9E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8A5B7E83206DCCDF0078AC9E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8A5B7E85206DCE240078AC9E /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
@@ -336,11 +350,18 @@
 		8A995A81206B3AD100ADB63A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8A19BC8C2071C4170071992E /* WeatherDAO.swift */,
+				8A19BC812071BFCC0071992E /* Common.swift */,
+				8A19BC822071BFCF0071992E /* FolderManager.swift */,
+				8A19BC832071BFD20071992E /* HelperManager.swift */,
+				8A19BC7F2071BF8B0071992E /* BaseDAO.swift */,
+				8A19BC872071C1450071992E /* NavigationModel.xcdatamodeld */,
 				8A5B7E9F206E33AA0078AC9E /* Resources */,
 				8A5B7E87206DD9660078AC9E /* timg1.jpg */,
 				8A5B7E85206DCE240078AC9E /* timg.jpg */,
 				8AC722D1206B66D000821DF6 /* BMKLocationKit.framework */,
 				8A995A82206B3AE000ADB63A /* BMKSwiftDemo-Bridging-Header.h */,
+				8A19BC8A2071C2C30071992E /* NavigationModel.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -562,17 +583,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A19BC862071BFD20071992E /* HelperManager.swift in Sources */,
+				8A19BC8D2071C4170071992E /* WeatherDAO.swift in Sources */,
 				8A5B7E84206DCCDF0078AC9E /* HomeViewController.swift in Sources */,
 				8A5B7E82206DCCD30078AC9E /* LoginViewController.swift in Sources */,
+				8A19BC842071BFD20071992E /* Common.swift in Sources */,
 				8A995A56206B34C400ADB63A /* ViewController.swift in Sources */,
+				8A19BC892071C1450071992E /* NavigationModel.xcdatamodeld in Sources */,
 				8A5B7E97206DE2E30078AC9E /* NavitionDetailViewController.swift in Sources */,
 				8A5B7E92206DDEE80078AC9E /* SettingViewController.swift in Sources */,
 				8A995A54206B34C400ADB63A /* AppDelegate.swift in Sources */,
 				8AE79965206B9204006FE85F /* DHViewController.swift in Sources */,
 				8A5B7E94206DDEF30078AC9E /* ListDetailViewController.swift in Sources */,
+				8A19BC852071BFD20071992E /* FolderManager.swift in Sources */,
 				8A5B7E90206DDEDD0078AC9E /* InstructionsViewController.swift in Sources */,
 				8A5B7E8E206DDECC0078AC9E /* InformationViewController.swift in Sources */,
+				8A19BC8B2071C2C30071992E /* NavigationModel.swift in Sources */,
 				8A5B7EA5206E379A0078AC9E /* NavigationTableViewCell.swift in Sources */,
+				8A19BC802071BF8C0071992E /* BaseDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +926,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8A19BC872071C1450071992E /* NavigationModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8A19BC882071C1450071992E /* NavigationModel.xcdatamodel */,
+			);
+			currentVersion = 8A19BC882071C1450071992E /* NavigationModel.xcdatamodel */;
+			path = NavigationModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8A995A48206B34C400ADB63A /* Project object */;
 }

@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate {
     var _mapManager: BMKMapManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        initialDirectories()
         
         _mapManager = BMKMapManager()
      
