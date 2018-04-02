@@ -371,14 +371,29 @@
         <!--导航-->
         <scene sceneID="lH1-0e-6zM">
             <objects>
-                <viewController id="qVT-6Z-XWO" customClass="NavitionDetailViewController" customModule="BlindNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="NavitionDetailView" storyboardIdentifier="NavitionDetailView" id="qVT-6Z-XWO" customClass="NavitionDetailViewController" customModule="BlindNavigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SJD-yu-kQe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oD-Nm-cRH" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9oD-Nm-cRH" firstAttribute="top" secondItem="7Eh-I9-oAk" secondAttribute="top" id="9Am-XH-TlD"/>
+                            <constraint firstItem="9oD-Nm-cRH" firstAttribute="leading" secondItem="7Eh-I9-oAk" secondAttribute="leading" id="JwO-mt-OYg"/>
+                            <constraint firstItem="7Eh-I9-oAk" firstAttribute="bottom" secondItem="9oD-Nm-cRH" secondAttribute="bottom" id="c4u-kw-9uu"/>
+                            <constraint firstItem="7Eh-I9-oAk" firstAttribute="trailing" secondItem="9oD-Nm-cRH" secondAttribute="trailing" id="y2S-eZ-X2D"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7Eh-I9-oAk"/>
                     </view>
                     <navigationItem key="navigationItem" title="导航" id="ofd-nS-s8I"/>
+                    <connections>
+                        <outlet property="informationMapView" destination="9oD-Nm-cRH" id="a0M-RE-ppJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwZ-CC-WXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

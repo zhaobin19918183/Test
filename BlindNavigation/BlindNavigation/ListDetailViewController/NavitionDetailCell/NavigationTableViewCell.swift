@@ -10,9 +10,16 @@ import UIKit
 
 class NavigationTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func localMssage(entityModel:NavigationModel)
+    {
+        print(entityModel.locaitonName as Any)
+        nameLabel.text = entityModel.locaitonName
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -27,6 +27,10 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     var animatedAnnotation: BMKPointAnnotation?
     var lockedScreenAnnotation: BMKPointAnnotation?
     let coord = NSMutableArray()
+    var dictionaryExample : [String:AnyObject] = [:]
+    
+    var arrayExample : [AnyObject] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationService = BMKLocationService()
@@ -43,9 +47,15 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         self.navigationItem.rightBarButtonItem = customRightBarButtonItem
         
         
+        
+        
     }
     
-    @objc func customLocationAccuracyCircle() {
+    @objc func customLocationAccuracyCircle()
+    {
+        
+        coredataDic()
+        self.navigationController?.popViewController(animated: true)
  
         
     }
@@ -140,65 +150,82 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         print("didStopLocatingUser")
     }
     
-  
-
-
     @IBAction func informationAction(_ sender: UIButton)
     {
-        coredataDic()
+        locationUserMessage()
+    }
+    
+    //MARK:获取需要记录点的坐标
+    func  locationUserMessage()
+    {
+        let locationlat  =    NSString(format: "%f" , locaitonUser.location.coordinate.latitude)
+        let locationlon  =    NSString(format: "%f" , locaitonUser.location.coordinate.longitude)
+        
+        
+        dictionaryExample = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject]
+        arrayExample.append(dictionaryExample as AnyObject)
+        
         
     }
+  
     //MARK:存储到数据库
     func  coredataDic()
     {
-        let str1 = "l like read"
+        let str1 = "第一次数据库测试"
         let data : NSData = str1.data(using: String.Encoding.utf8, allowLossyConversion: false)! as NSData
           print("didUpdateUserLocation lat:\(locaitonUser.location.coordinate.latitude) lon:\(locaitonUser.location.coordinate.longitude)")
         
-        dic.setValue(userLocationData(userLocation: locaitonUser) , forKey: "coordinates")
+        dic.setValue(userLocationData() , forKey: "coordinates")
         dic.setValue(data, forKey: "lcoaitonMessage")
-        dic.setValue("locaitonName", forKey: "locaitonName")
+        dic.setValue("路线名称-新城软件", forKey: "locaitonName")
         dic.setValue(HelperManager.converLocalTime(), forKey: "lcoaitonDate")
         WeatherDAO.createWeatherEntity(dic)
         
     }
     //MARK: 保存特定的坐标数据
-    func userLocationData(userLocation: BMKUserLocation)->NSData
+    func userLocationData()->NSData
     {
-        let locationlat  =    NSString(format: "%f" , userLocation.location.coordinate.latitude)
-        let locationlon  =    NSString(format: "%f" , userLocation.location.coordinate.longitude)
         
-        let dictionaryExample : [String:AnyObject] = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject]
-        
-        let dataExample : NSData = NSKeyedArchiver.archivedData(withRootObject: dictionaryExample) as NSData
+        let dataExample : NSData = NSKeyedArchiver.archivedData(withRootObject: arrayExample) as NSData
         
         return dataExample
         
     }
+   
     
     
     @IBAction func EmergencyContactAction(_ sender: UIButton)
     {
+       
 
-        for i in 0...WeatherDAO.SearchAllDataEntity().count - 1 {
-            let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[i] as! LocationEntity)
-            let dictionary:NSDictionary = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSDictionary
+    }
+    //MARK:画出地图上的运动轨迹和记录点
+    func locationLine()
+    {
+         let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[0] as! LocationEntity)
+        let array:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSArray
+        for i in 0...array.count - 1 {
+            
+            let  dictionary:NSDictionary = array[i] as! NSDictionary
             let  locationlat =  dictionary.value(forKey: "locationlat") as! String
             let  locationlon =  dictionary.value(forKey: "locationlon")  as! String
             let coords2DMake = CLLocationCoordinate2DMake(Double(locationlat)! ,Double(locationlon)! )
             coord.add(coords2DMake)
-           
+            
             pointAnnotation = BMKPointAnnotation()
             pointAnnotation?.coordinate = CLLocationCoordinate2DMake(Double(locationlat)!, Double(locationlon)!)
             pointAnnotation?.title = locationlat
             pointAnnotation?.subtitle = locationlon
-         
-            informationMapView.addAnnotation(pointAnnotation)
             
+            informationMapView.addAnnotation(pointAnnotation)
         }
-          self.addOverlayViews()
+        
+        
+        
+            
+       
+        self.addOverlayViews()
     }
-    
     //添加内置覆盖物
     func addOverlayViews() {
       

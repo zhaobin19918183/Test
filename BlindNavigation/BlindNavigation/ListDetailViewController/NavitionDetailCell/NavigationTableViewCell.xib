@@ -30,7 +30,7 @@
                         <state key="normal" title="编辑"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="路线名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-tz-1xq">
-                        <rect key="frame" x="32" y="31" width="70" height="21"/>
+                        <rect key="frame" x="0.0" y="31" width="165" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -40,6 +40,9 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.92909818887710571" green="0.49640446901321411" blue="0.044188275933265686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="mfs-tz-1xq" id="Vac-GZ-tTv"/>
+            </connections>
             <point key="canvasLocation" x="2.5" y="21.5"/>
         </tableViewCell>
     </objects>
