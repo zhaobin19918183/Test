@@ -14,15 +14,9 @@ class VoiceBroadcasManager: NSObject
 
 {
     fileprivate let avSpeech = AVSpeechSynthesizer()
-    //语音文件播放
-    static func VoiceFilePlayback()
-    {
-        
-    }
-    //获取文件地址
     //播放固定语音文字
     //开始转换,不同国家的语言支持
-    fileprivate func startTranslattion(message:String,countrylanguage:String){
+     func startTranslattion(message:String,countrylanguage:String){
         //1. 创建需要合成的声音类型
 //        let voice = AVSpeechSynthesisVoice(language: countrylanguage)
         let voice = AVSpeechSynthesisVoice(language: "zh-CN")
@@ -38,17 +32,17 @@ class VoiceBroadcasManager: NSObject
     }
     
     //暂停播放
-    fileprivate func pauseTranslation(){
+   func pauseTranslation(){
         avSpeech.pauseSpeaking(at: .immediate)
     }
     
     //继续播放
-    fileprivate func continueSpeek(){
+     func continueSpeek(){
         avSpeech.continueSpeaking()
     }
     
     //取消播放
-    fileprivate func cancleSpeek(){
+    func cancleSpeek(){
         avSpeech.stopSpeaking(at: .immediate)
     }
     

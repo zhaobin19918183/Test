@@ -9,9 +9,6 @@
 import UIKit
 import CoreLocation
 class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate,CLLocationManagerDelegate {
-
-
-  
     @IBOutlet weak var informationMapView: BMKMapView!
     var locaitonUser : BMKUserLocation!
     var locationService: BMKLocationService!
@@ -31,28 +28,33 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     var index:Int = 0 
     var arrayExample : [AnyObject] = []
     var entity = LocationEntity()
-     var  record = RecordManager()
-    
+    var  record = RecordManager()
+    var start  =      VoiceBroadcasManager()
+    //第几个点
+    var pointNumber:Int = 0
+    var mindistance = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationService = BMKLocationService()
         locationService.allowsBackgroundLocationUpdates = true
-        
-        print("进入普通定位态");
         locationService.startUserLocationService()
         informationMapView.showsUserLocation = false//先关闭显示的定位图层
         informationMapView.userTrackingMode = BMKUserTrackingModeFollow //设置定位的状态
         informationMapView.zoomLevel = 20.0
         informationMapView.showsUserLocation = true//显示定位图层
+         locationLine()
         
 //        let customRightBarButtonItem = UIBarButtonItem(title: "结束", style: .plain, target: self, action: #selector(InformationViewController.customLocationAccuracyCircle))
 //        self.navigationItem.rightBarButtonItem = customRightBarButtonItem
-        locationLine()
-       
-        playMusicFile()
-        
+
+//        playMusicFile()
+     
+//
         
     }
+   
+   
+    
     
     @objc func customLocationAccuracyCircle()
     {
@@ -131,7 +133,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
      */
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
         print("heading is \(userLocation.heading)")
-        
+        //TODO:实时监听偏离路线
         informationMapView.updateLocationData(userLocation)
     }
     
@@ -144,6 +146,69 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         locaitonUser = userLocation
         informationMapView.updateLocationData(userLocation)
     }
+    //MARK:SDK还提供获取折线上与折线外指定位置最近点的方法。核心代码如下
+    func  ClosestPointOfDistance(userLocation: BMKUserLocation)
+    {
+        let pointNow:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude));
+        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
+        let pointArray:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSArray
+        var pointDistanceArr:[AnyObject] = []
+        for i  in 0...pointArray.count - 1 {
+            let  dictionary:NSDictionary = array[i] as! NSDictionary
+            let  locationlat =  dictionary.value(forKey: "locationlat") as! String
+            let  locationlon =  dictionary.value(forKey: "locationlon")  as! String
+    
+            let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(Double(locationlat)!,Double(locationlon)!));
+  
+           let distance  =  BMKMetersBetweenMapPoints(pointNow,pointBefore)
+            pointDistanceArr.append(distance as AnyObject)
+            
+        }
+    
+        var min = Int(truncating: pointDistanceArr[0] as! NSNumber)
+        for i in 0..<pointDistanceArr.count - 1 {
+            
+            let mindis = Int(truncating: pointDistanceArr[i] as! NSNumber)
+            if  mindis < min  {
+                min = mindis
+                mindistance = i
+            }
+        }
+        //TODO:最近点的位置
+        mindistance =   mindistance + 1
+     
+   
+    }
+    //MARK:判断是否迷路
+    func  LostToJudge(location:BMKUserLocation)
+    {
+        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
+        let array:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSArray
+        let  dictionary:NSDictionary = array[mindistance] as! NSDictionary
+        let  heading:BMKUserLocation =  dictionary.value(forKey: "headering")  as! BMKUserLocation
+        print(heading.heading.trueHeading)
+        let beforeHeading = Double(heading.heading.trueHeading)
+        let beforeAdd = beforeHeading + 15.0
+        let beforeReduce  = beforeHeading + 15.0
+        let nowHeading   =  Double(location.heading.trueHeading)
+        if  beforeAdd < nowHeading && beforeReduce > nowHeading
+        {
+         start.startTranslattion(message: "新城加油新城加油", countrylanguage: "11")
+            
+        }
+        else if beforeAdd > nowHeading
+        {
+              start.startTranslattion(message: "脱离路线,请注意,请向左侧移动", countrylanguage: "11")
+            
+        }
+        else if  beforeReduce < nowHeading
+        {
+             start.startTranslattion(message: "脱离路线,请注意,请向右侧移动", countrylanguage: "11")
+        }
+        
+        
+    }
+    
     
     /**
      *在地图View停止定位后，会调用此函数

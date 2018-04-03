@@ -14,6 +14,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     @IBOutlet weak var informationMapView: BMKMapView!
     @IBOutlet weak var informationButton: UIButton!
     var locaitonUser : BMKUserLocation!
+    var locaitonUserHeadering : BMKUserLocation!
     var locationService: BMKLocationService!
     let dic = NSMutableDictionary()
     let array = NSMutableArray()
@@ -127,7 +128,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
      */
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
         print("heading is \(userLocation.heading)")
-   
+        locaitonUserHeadering = userLocation
         informationMapView.updateLocationData(userLocation)
     }
     
@@ -170,7 +171,9 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         let distance:CLLocationDistance =  BMKMetersBetweenMapPoints(pointBefore,pointNow)
         
         if distance == 10 {
+            soundName.append("" as AnyObject)
             locationUserMessage()
+            
         }
         print(distance)
     }
@@ -184,9 +187,10 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     //MARK:获取需要记录点的坐标
     func  locationUserMessage()
     {
+        //
         let locationlat  =    NSString(format: "%f" , locaitonUser.location.coordinate.latitude)
         let locationlon  =    NSString(format: "%f" , locaitonUser.location.coordinate.longitude)
-        dictionaryExample = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject]
+        dictionaryExample = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject,"headering":locaitonUserHeadering as AnyObject]
         arrayExample.append(dictionaryExample as AnyObject)
     }
   
