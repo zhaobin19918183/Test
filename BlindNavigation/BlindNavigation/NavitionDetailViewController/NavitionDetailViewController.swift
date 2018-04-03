@@ -178,7 +178,9 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         }
         //TODO:最近点的位置
         mindistance =   mindistance + 1
+        //TODO:到达下一个坐标点
         nextPoint(location: userLocation, number: mindistance)
+        //TODO:判断是否迷路
         LostToJudge(location: userLocation)
    
     }
@@ -196,9 +198,27 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         {
            start.startTranslattion(message: "距离目标单还有3米,请注意", countrylanguage: "11")
         }
+        if distance < 1
+        {
+            
+        }
         nextPoint = number
         nextPoint = nextPoint + 1
+        playMusicFile(number:nextPoint )
         
+        
+    }
+    //MARK:播放录音文件
+    func playMusicFile(number:Int)
+    {
+        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
+        let namearray:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.locationSoundName! )! as! NSArray
+        print(namearray)
+        let file = HelperManager.file_pathString(nameString: namearray[number] as! String)
+        if file != ""
+        {
+            record.play(HelperManager.file_pathString(nameString: namearray[number] as! String))
+        }
         
     }
     //MARK:判断是否迷路
@@ -239,14 +259,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     func didStopLocatingUser() {
         print("didStopLocatingUser")
     }
-    //MARK:播放录音文件
-    func playMusicFile()
-    {
-        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
-        let namearray:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.locationSoundName! )! as! NSArray
-        print(namearray)
-        record.play(HelperManager.file_pathString(nameString: namearray[0] as! String))
-    }
+   
   
     //MARK:画出地图上的运动轨迹和记录点
     func locationLine()
