@@ -33,6 +33,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     //第几个点
     var pointNumber:Int = 0
     var mindistance = Int()
+     var nextPoint = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationService = BMKLocationService()
@@ -134,6 +135,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
         print("heading is \(userLocation.heading)")
         //TODO:实时监听偏离路线
+        ClosestPointOfDistance(userLocation: userLocation)
         informationMapView.updateLocationData(userLocation)
     }
     
@@ -176,8 +178,28 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         }
         //TODO:最近点的位置
         mindistance =   mindistance + 1
-     
+        nextPoint(location: userLocation, number: mindistance)
+        LostToJudge(location: userLocation)
    
+    }
+    //MARK:是否到达下一个坐标点
+    func nextPoint(location:BMKUserLocation, number:Int)
+    {
+       
+        let  dictionary:NSDictionary = array[number] as! NSDictionary
+        let  locationlat =  dictionary.value(forKey: "locationlat") as! String
+        let  locationlon =  dictionary.value(forKey: "locationlon")  as! String
+        let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(Double(locationlat)!,Double(locationlon)!));
+         let pointNow:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(location.location.coordinate.latitude,location.location.coordinate.longitude));
+        let distance  =  BMKMetersBetweenMapPoints(pointNow,pointBefore)
+        if distance  < 3
+        {
+           start.startTranslattion(message: "距离目标单还有3米,请注意", countrylanguage: "11")
+        }
+        nextPoint = number
+        nextPoint = nextPoint + 1
+        
+        
     }
     //MARK:判断是否迷路
     func  LostToJudge(location:BMKUserLocation)
@@ -193,7 +215,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         let nowHeading   =  Double(location.heading.trueHeading)
         if  beforeAdd < nowHeading && beforeReduce > nowHeading
         {
-         start.startTranslattion(message: "新城加油新城加油", countrylanguage: "11")
+         start.startTranslattion(message: "路线正确请直行", countrylanguage: "11")
             
         }
         else if beforeAdd > nowHeading
