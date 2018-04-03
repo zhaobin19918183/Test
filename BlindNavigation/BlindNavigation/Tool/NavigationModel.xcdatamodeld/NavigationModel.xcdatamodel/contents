@@ -3,8 +3,8 @@
     <entity name="LocationEntity" representedClassName="LocationEntity" syncable="YES" codeGenerationType="class">
         <attribute name="coordinates" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="locaitonName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="locationDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="locationMessage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="locationSoundName" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
     <elements>
         <element name="LocationEntity" positionX="-63" positionY="-18" width="128" height="105"/>

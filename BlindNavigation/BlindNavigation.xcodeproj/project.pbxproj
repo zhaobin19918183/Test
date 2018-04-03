@@ -14,6 +14,8 @@
 		8A19BC892071C1450071992E /* NavigationModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC872071C1450071992E /* NavigationModel.xcdatamodeld */; };
 		8A19BC8B2071C2C30071992E /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC8A2071C2C30071992E /* NavigationModel.swift */; };
 		8A19BC8D2071C4170071992E /* WeatherDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC8C2071C4170071992E /* WeatherDAO.swift */; };
+		8A19BC93207314C40071992E /* VoiceBroadcasManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC92207314C40071992E /* VoiceBroadcasManager.swift */; };
+		8A19BC9520731A1B0071992E /* RecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC9420731A1B0071992E /* RecordManager.swift */; };
 		8A5B7E82206DCCD30078AC9E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E81206DCCD30078AC9E /* LoginViewController.swift */; };
 		8A5B7E84206DCCDF0078AC9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7E83206DCCDF0078AC9E /* HomeViewController.swift */; };
 		8A5B7E86206DCE240078AC9E /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A5B7E85206DCE240078AC9E /* timg.jpg */; };
@@ -84,6 +86,8 @@
 		8A19BC882071C1450071992E /* NavigationModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NavigationModel.xcdatamodel; sourceTree = "<group>"; };
 		8A19BC8A2071C2C30071992E /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
 		8A19BC8C2071C4170071992E /* WeatherDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDAO.swift; sourceTree = "<group>"; };
+		8A19BC92207314C40071992E /* VoiceBroadcasManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceBroadcasManager.swift; sourceTree = "<group>"; };
+		8A19BC9420731A1B0071992E /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
 		8A5B7E81206DCCD30078AC9E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8A5B7E83206DCCDF0078AC9E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8A5B7E85206DCE240078AC9E /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
@@ -350,6 +354,8 @@
 		8A995A81206B3AD100ADB63A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8A19BC92207314C40071992E /* VoiceBroadcasManager.swift */,
+				8A19BC9420731A1B0071992E /* RecordManager.swift */,
 				8A19BC8A2071C2C30071992E /* NavigationModel.swift */,
 				8A19BC8C2071C4170071992E /* WeatherDAO.swift */,
 				8A19BC812071BFCC0071992E /* Common.swift */,
@@ -591,6 +597,7 @@
 				8A995A56206B34C400ADB63A /* ViewController.swift in Sources */,
 				8A19BC892071C1450071992E /* NavigationModel.xcdatamodeld in Sources */,
 				8A5B7E97206DE2E30078AC9E /* NavitionDetailViewController.swift in Sources */,
+				8A19BC9520731A1B0071992E /* RecordManager.swift in Sources */,
 				8A5B7E92206DDEE80078AC9E /* SettingViewController.swift in Sources */,
 				8A995A54206B34C400ADB63A /* AppDelegate.swift in Sources */,
 				8AE79965206B9204006FE85F /* DHViewController.swift in Sources */,
@@ -601,6 +608,7 @@
 				8A19BC8B2071C2C30071992E /* NavigationModel.swift in Sources */,
 				8A5B7EA5206E379A0078AC9E /* NavigationTableViewCell.swift in Sources */,
 				8A19BC802071BF8C0071992E /* BaseDAO.swift in Sources */,
+				8A19BC93207314C40071992E /* VoiceBroadcasManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

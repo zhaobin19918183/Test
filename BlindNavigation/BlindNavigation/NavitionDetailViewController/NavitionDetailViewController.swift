@@ -31,7 +31,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     var index:Int = 0 
     var arrayExample : [AnyObject] = []
     var entity = LocationEntity()
-    
+     var  record = RecordManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,8 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
 //        let customRightBarButtonItem = UIBarButtonItem(title: "结束", style: .plain, target: self, action: #selector(InformationViewController.customLocationAccuracyCircle))
 //        self.navigationItem.rightBarButtonItem = customRightBarButtonItem
         locationLine()
-        
+       
+        playMusicFile()
         
         
     }
@@ -151,13 +152,20 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     func didStopLocatingUser() {
         print("didStopLocatingUser")
     }
-    
+    //MARK:播放录音文件
+    func playMusicFile()
+    {
+        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
+        let namearray:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.locationSoundName! )! as! NSArray
+        print(namearray)
+        record.play(HelperManager.file_pathString(nameString: namearray[0] as! String))
+    }
   
-    
     //MARK:画出地图上的运动轨迹和记录点
     func locationLine()
     {
         let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
+
         let array:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSArray
         for i in 0...array.count - 1 {
             

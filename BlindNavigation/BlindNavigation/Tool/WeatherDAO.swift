@@ -25,7 +25,7 @@ class WeatherDAO: BaseDAO {
         let  model =  NavigationModel.convertFrom(entity)
         model.coordinates = entity.coordinates
         model.lcoaitonMessage = entity.locationMessage
-        model.locaitonDate = entity.locationDate
+        model.locationSoundName = entity.locationSoundName
         model.locaitonName = entity.locaitonName
         return self.save()
     }
@@ -62,14 +62,14 @@ class WeatherDAO: BaseDAO {
             let coordinates : Data    =  dicData.value(forKey: "coordinates") as! Data
             let lcoaitonMessage : Data =  dicData.value(forKey: "lcoaitonMessage") as! Data
             let lcoaitonName : String  =  dicData.value(forKey: "locaitonName") as! String
-            let lcoaitonDate : String
-                =  dicData.value(forKey: "lcoaitonDate")! as! String
+            let locationSoundName : Data
+                =  dicData.value(forKey: "locationSoundName")! as! Data
 
 
             newEntity.locationMessage         = lcoaitonMessage
             newEntity.coordinates             = coordinates
             newEntity.locaitonName            = lcoaitonName
-            newEntity.locationDate            = lcoaitonDate
+            newEntity.locationSoundName        = locationSoundName
 //            NavigationModel.convertFrom(newEntity)
             
         }

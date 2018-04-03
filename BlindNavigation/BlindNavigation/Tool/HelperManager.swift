@@ -12,6 +12,13 @@ struct HelperManager {
     static let sharedManager = HelperManager()
     fileprivate init() {}
     
+     static   func file_pathString(nameString:String)->String
+    {
+        let file_path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first?.appending("/\(nameString)")
+        
+        return file_path!
+    }
+    
     static func convertAnyObjectToData< T > (_ anyObject : T) -> Data
     {
         let resultData : Data?
