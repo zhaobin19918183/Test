@@ -349,13 +349,61 @@
                                     <outlet property="delegate" destination="qPt-3U-qLC" id="mk2-5u-ACK"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyh-Nj-udU">
+                                <rect key="frame" x="0.0" y="367" width="375" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTY-c2-A0W">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="CTg-LM-PCU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <state key="normal" title="上"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYA-Kn-jbr">
+                                        <rect key="frame" x="225" y="75" width="150" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="oE6-yH-zCC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <state key="normal" title="确认"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oui-OB-VnX">
+                                        <rect key="frame" x="0.0" y="150" width="150" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="141-RJ-JsF"/>
+                                            <constraint firstAttribute="height" constant="150" id="Ywi-mZ-aeP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <state key="normal" title="下"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92909818887710571" green="0.49640446901321411" blue="0.044188275933265686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SYA-Kn-jbr" firstAttribute="top" secondItem="Gyh-Nj-udU" secondAttribute="top" constant="75" id="1Qk-22-tq8"/>
+                                    <constraint firstItem="Oui-OB-VnX" firstAttribute="top" secondItem="uTY-c2-A0W" secondAttribute="bottom" id="A2U-AI-0mZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="SYA-Kn-jbr" secondAttribute="bottom" constant="75" id="NzA-PH-NRZ"/>
+                                    <constraint firstItem="uTY-c2-A0W" firstAttribute="leading" secondItem="Gyh-Nj-udU" secondAttribute="leading" id="VMS-0I-zST"/>
+                                    <constraint firstItem="uTY-c2-A0W" firstAttribute="top" secondItem="Gyh-Nj-udU" secondAttribute="top" id="ZV6-lO-AX4"/>
+                                    <constraint firstItem="Oui-OB-VnX" firstAttribute="leading" secondItem="Gyh-Nj-udU" secondAttribute="leading" id="eiX-pM-BA5"/>
+                                    <constraint firstAttribute="height" constant="300" id="g7B-LD-8Jc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oui-OB-VnX" secondAttribute="bottom" id="sw1-mQ-c8Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="SYA-Kn-jbr" secondAttribute="trailing" id="vVd-IK-gIS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wsg-NS-vLo" firstAttribute="bottom" secondItem="jnx-fJ-El8" secondAttribute="bottom" id="O65-qZ-Vh7"/>
                             <constraint firstItem="jnx-fJ-El8" firstAttribute="top" secondItem="wsg-NS-vLo" secondAttribute="top" id="O72-ov-eHI"/>
+                            <constraint firstItem="Gyh-Nj-udU" firstAttribute="leading" secondItem="wsg-NS-vLo" secondAttribute="leading" id="Opp-de-oJc"/>
+                            <constraint firstItem="wsg-NS-vLo" firstAttribute="bottom" secondItem="Gyh-Nj-udU" secondAttribute="bottom" id="g8Z-a6-efo"/>
                             <constraint firstItem="jnx-fJ-El8" firstAttribute="leading" secondItem="wsg-NS-vLo" secondAttribute="leading" id="oR6-Oh-n16"/>
                             <constraint firstItem="wsg-NS-vLo" firstAttribute="trailing" secondItem="jnx-fJ-El8" secondAttribute="trailing" id="sFf-L7-Ji2"/>
+                            <constraint firstItem="wsg-NS-vLo" firstAttribute="trailing" secondItem="Gyh-Nj-udU" secondAttribute="trailing" id="wD3-P0-pn3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wsg-NS-vLo"/>
                     </view>
@@ -366,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5k-eh-Woo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="744"/>
+            <point key="canvasLocation" x="1045.5999999999999" y="743.47826086956525"/>
         </scene>
         <!--导航-->
         <scene sceneID="lH1-0e-6zM">
