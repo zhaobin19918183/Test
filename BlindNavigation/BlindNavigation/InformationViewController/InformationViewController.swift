@@ -215,6 +215,26 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         dic.setValue(testSaveArrayPlist(arrayObject: arrayExample), forKey: "coordinates")
         dic.setValue(testSaveArrayPlist(arrayObject: soundName), forKey: "locationSoundName")
         WeatherDAO.createWeatherEntity(dic)
+        /*
+         newEntity.locationID          = locationID
+         newEntity.locationName        = locationName
+         newEntity.locationDate        = locationDate
+         */
+        let locaitonDic = NSMutableDictionary()
+        locaitonDic.setValue("", forKey: "locationID")
+        locaitonDic.setValue("", forKey: "locationID")
+        locaitonDic.setValue("", forKey: "locationID")
+        WeatherDAO.locaitonToCoordinates(locaitonDic)
+        /*  @NSManaged public var locationX: Double
+         @NSManaged public var locationY: Double
+         @NSManaged public var heading: Double
+         @NSManaged public var relationship: Location?*/
+        let CoordinatesDic = NSMutableDictionary()
+        CoordinatesDic.setValue("", forKey: "locationX")
+        CoordinatesDic.setValue("", forKey: "locationY")
+        CoordinatesDic.setValue("", forKey: "heading")
+        CoordinatesDic.setValue("", forKey: "relationship")
+        WeatherDAO.CoordinatesToLocation(CoordinatesDic)
         
     }
     

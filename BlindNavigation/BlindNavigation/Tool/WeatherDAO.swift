@@ -21,14 +21,14 @@ class WeatherDAO: BaseDAO {
     //TODO:Location
     static func createLocationEntityWith(InitialClosure closure : (_ newEntity : Location )->() ) -> Bool
     {
-        let entity = NSEntityDescription.insertNewObject(forEntityName: self.entityName(), into: BaseDAO.mainMOC) as! Location
+        let entity = NSEntityDescription.insertNewObject(forEntityName: self.Location(), into: BaseDAO.mainMOC) as! Location
         closure(entity)
         return self.save()
     }
-    //TODO:Location
+    //TODO:Coordinates
     static func createCoordinatesEntityWith(InitialClosure closure : (_ newEntity : Coordinates )->() ) -> Bool
     {
-        let entity = NSEntityDescription.insertNewObject(forEntityName: self.entityName(), into: BaseDAO.mainMOC) as! Coordinates
+        let entity = NSEntityDescription.insertNewObject(forEntityName: self.Coordinates(), into: BaseDAO.mainMOC) as! Coordinates
         closure(entity)
         return self.save()
     }
@@ -201,11 +201,18 @@ class WeatherDAO: BaseDAO {
             print("保存失败")
         }
     }
-    
-    
-    
     static func entityName() -> String
     {
         return "LocationEntity"
+    }
+    static func Location() -> String
+    {
+        return "Location"
+    }
+    
+    
+    static func Coordinates() -> String
+    {
+        return "Coordinates"
     }
 }
