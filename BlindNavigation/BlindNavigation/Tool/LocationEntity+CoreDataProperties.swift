@@ -2,7 +2,7 @@
 //  LocationEntity+CoreDataProperties.swift
 //  
 //
-//  Created by newland on 2018/4/2.
+//  Created by newland on 2018/4/8.
 //
 //
 
@@ -17,8 +17,8 @@ extension LocationEntity {
     }
 
     @NSManaged public var coordinates: NSData?
-    @NSManaged public var locationMessage: NSData?
-    @NSManaged public var locationDate: String?
     @NSManaged public var locaitonName: String?
+    @NSManaged public var locationMessage: NSData?
+    @NSManaged public var locationSoundName: NSData?
 
 }

@@ -13,7 +13,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     var locaitonUser : BMKUserLocation!
     var locationService: BMKLocationService!
     let dic = NSMutableDictionary()
-    let array = NSMutableArray()
     var circle: BMKCircle?
     var polygon: BMKPolygon?
     var polyline: BMKPolyline?
@@ -153,10 +152,13 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     {
         let pointNow:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude));
         let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
-        let pointArray:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSArray
+        
+         let dictionary:String = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates!)! as! String
+        let pointArray = getDictionaryFromJSONString(jsonString: dictionary)
+
         var pointDistanceArr:[AnyObject] = []
         for i  in 0...pointArray.count - 1 {
-            let  dictionary:NSDictionary = array[i] as! NSDictionary
+            let  dictionary:NSDictionary = pointArray[i] as! NSDictionary
             let  locationlat =  dictionary.value(forKey: "locationlat") as! String
             let  locationlon =  dictionary.value(forKey: "locationlon")  as! String
     
@@ -181,13 +183,16 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         //TODO:到达下一个坐标点
         nextPoint(location: userLocation, number: mindistance)
         //TODO:判断是否迷路
-        LostToJudge(location: userLocation)
+//        LostToJudge(location: userLocation)
    
     }
     //MARK:是否到达下一个坐标点
     func nextPoint(location:BMKUserLocation, number:Int)
     {
-       
+        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
+        
+        let dictionary1:String = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates!)! as! String
+        let array = getDictionaryFromJSONString(jsonString: dictionary1)
         let  dictionary:NSDictionary = array[number] as! NSDictionary
         let  locationlat =  dictionary.value(forKey: "locationlat") as! String
         let  locationlon =  dictionary.value(forKey: "locationlon")  as! String
@@ -196,15 +201,15 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         let distance  =  BMKMetersBetweenMapPoints(pointNow,pointBefore)
         if distance  < 3
         {
-           start.startTranslattion(message: "距离目标单还有3米,请注意", countrylanguage: "11")
+           start.startTranslattion(message: "距离目标位置还有3米,请注意", countrylanguage: "11")
         }
         if distance < 1
         {
             
         }
         nextPoint = number
-        nextPoint = nextPoint + 1
-        playMusicFile(number:nextPoint )
+       
+//        playMusicFile(number:nextPoint )
         
         
     }
@@ -212,7 +217,9 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     func playMusicFile(number:Int)
     {
         let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
-        let namearray:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.locationSoundName! )! as! NSArray
+        let dictionary:String = NSKeyedUnarchiver.unarchiveObject(with: naviModel.locationSoundName!)! as! String
+         let namearray = getDictionaryFromJSONString(jsonString: dictionary)
+
         print(namearray)
         let file = HelperManager.file_pathString(nameString: namearray[number] as! String)
         if file != ""
@@ -226,10 +233,10 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     {
         let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
         let array:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSArray
+        
         let  dictionary:NSDictionary = array[mindistance] as! NSDictionary
-        let  heading:BMKUserLocation =  dictionary.value(forKey: "headering")  as! BMKUserLocation
-        print(heading.heading.trueHeading)
-        let beforeHeading = Double(heading.heading.trueHeading)
+        let  heading:Double =  dictionary.value(forKey: "headering") as! Double
+        let beforeHeading = heading
         let beforeAdd = beforeHeading + 15.0
         let beforeReduce  = beforeHeading + 15.0
         let nowHeading   =  Double(location.heading.trueHeading)
@@ -260,13 +267,28 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         print("didStopLocatingUser")
     }
    
-  
+    func getDictionaryFromJSONString(jsonString:String) ->NSArray{
+        
+        let jsonData:Data = jsonString.data(using: .utf8)!
+        
+        let dict = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
+        if dict != nil {
+            return dict as! NSArray
+        }
+        return NSArray()
+        
+        
+    }
     //MARK:画出地图上的运动轨迹和记录点
     func locationLine()
     {
         let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
-
-        let array:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSArray
+        let dictionary:String = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates!)! as! String
+       
+      let array = getDictionaryFromJSONString(jsonString: dictionary)
+ 
+      
+        
         for i in 0...array.count - 1 {
             
             let  dictionary:NSDictionary = array[i] as! NSDictionary

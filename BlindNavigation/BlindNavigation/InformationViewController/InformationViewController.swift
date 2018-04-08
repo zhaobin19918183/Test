@@ -30,13 +30,13 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     var lockedScreenAnnotation: BMKPointAnnotation?
     let coord = NSMutableArray()
     //事件保存坐标
-    var dictionaryExample : [String:AnyObject] = [:]
-    var arrayExample : [AnyObject] = []
+    var dictionaryExample = NSMutableDictionary()
+    var arrayExample  = NSMutableArray()
     //录音文件
     var nameString:String = ""
     var  record = RecordManager()
     var number :Int = 9990
-    var soundName: [AnyObject] = []
+    var soundName = NSMutableArray()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationService = BMKLocationService()
@@ -50,6 +50,9 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         
         let customRightBarButtonItem = UIBarButtonItem(title: "结束", style: .plain, target: self, action: #selector(InformationViewController.customLocationAccuracyCircle))
         self.navigationItem.rightBarButtonItem = customRightBarButtonItem
+        
+        
+        
     }
     
     @objc func customLocationAccuracyCircle()
@@ -112,7 +115,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     {
         
         record.beginRecord(HelperManager.file_pathString(nameString: "\(HelperManager.converLocalTime())_\(number + 1).wav"))
-       soundName.append("\(HelperManager.converLocalTime())_\(number + 1).wav" as AnyObject)
+       soundName.add("\(HelperManager.converLocalTime())_\(number + 1).wav")
       
     }
     // MARK: - BMKMapViewDelegate
@@ -129,6 +132,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
         print("heading is \(userLocation.heading)")
         locaitonUserHeadering = userLocation
+//        locaitonUser = userLocation
         informationMapView.updateLocationData(userLocation)
     }
     
@@ -139,15 +143,16 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     func didUpdate(_ userLocation: BMKUserLocation!) {
 
         locaitonUser = userLocation
+        locaitonUserHeadering =  userLocation
         informationMapView.updateLocationData(userLocation)
-        
+         print("heading is \(userLocation)")
         //初次进入导航页面记录获取到的第一个点,并录音
-        if arrayExample.count == 0
+        if arrayExample.count == 0 && locaitonUserHeadering.heading != nil
         {
 //            startToRecord()
             locationUserMessage()
         }
-        else
+       if  arrayExample.count != 0 && locaitonUserHeadering.heading != nil
         {
 //            stopRecordAction()
             SameIntervalDistance()
@@ -171,7 +176,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         let distance:CLLocationDistance =  BMKMetersBetweenMapPoints(pointBefore,pointNow)
         
         if distance == 10 {
-            soundName.append("" as AnyObject)
+            soundName.add("")
             locationUserMessage()
             
         }
@@ -190,29 +195,47 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         //
         let locationlat  =    NSString(format: "%f" , locaitonUser.location.coordinate.latitude)
         let locationlon  =    NSString(format: "%f" , locaitonUser.location.coordinate.longitude)
-        dictionaryExample = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject,"headering":locaitonUserHeadering as AnyObject]
-        arrayExample.append(dictionaryExample as AnyObject)
+        dictionaryExample = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject,"headering":locaitonUserHeadering.heading.trueHeading as AnyObject]
+     
+        arrayExample.add(dictionaryExample)
     }
+ 
+
+    
   
     //MARK:存储到数据库
     func  coredataDic()
     {
-        let str1 = "第一次数据库测试"
+        let str1 = HelperManager.converLocalTime()
         let data : NSData = str1.data(using: String.Encoding.utf8, allowLossyConversion: false)! as NSData
-          print("didUpdateUserLocation lat:\(locaitonUser.location.coordinate.latitude) lon:\(locaitonUser.location.coordinate.longitude)")
-        
-        dic.setValue(userLocationData(array: arrayExample) , forKey: "coordinates")
+          print("didUpdateUserLocation lat:\(locaitonUser.location.coordinate.latitude) lon:\(locaitonUser.location.coordinate.longitude)") 
+      
         dic.setValue(data, forKey: "lcoaitonMessage")
         dic.setValue(HelperManager.converLocalTime(), forKey: "locaitonName")
-        dic.setValue(userLocationData(array: soundName), forKey: "locationSoundName")
+        dic.setValue(testSaveArrayPlist(arrayObject: arrayExample), forKey: "coordinates")
+        dic.setValue(testSaveArrayPlist(arrayObject: soundName), forKey: "locationSoundName")
         WeatherDAO.createWeatherEntity(dic)
         
     }
+    
+    
+    func testSaveArrayPlist(arrayObject:NSMutableArray) ->NSData{
+        //JSONSerialization
+        let data = try? JSONSerialization.data(withJSONObject: arrayObject, options: JSONSerialization.WritingOptions.prettyPrinted)
+        let strJson = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+        let dataExample : NSData = NSKeyedArchiver.archivedData(withRootObject: strJson as Any) as NSData
+      return dataExample
+        //locationSoundName
+       
+    }
+    
+    
     //MARK: 保存特定的坐标数据
     func userLocationData(array:[AnyObject])->NSData
     {
+        let dic:[String:AnyObject] = ["arrayDic":array as AnyObject]
         
-        let dataExample : NSData = NSKeyedArchiver.archivedData(withRootObject: array) as NSData
+        let dataExample : NSData = NSKeyedArchiver.archivedData(withRootObject: dic) as NSData
         return dataExample
         
     }
@@ -223,3 +246,4 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     
 
 }
+

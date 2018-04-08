@@ -349,7 +349,7 @@
                                     <outlet property="delegate" destination="qPt-3U-qLC" id="mk2-5u-ACK"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyh-Nj-udU">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyh-Nj-udU">
                                 <rect key="frame" x="0.0" y="367" width="375" height="300"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTY-c2-A0W">

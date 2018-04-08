@@ -2,7 +2,7 @@
 //  LocationEntity+CoreDataClass.swift
 //  
 //
-//  Created by newland on 2018/4/2.
+//  Created by newland on 2018/4/8.
 //
 //
 
