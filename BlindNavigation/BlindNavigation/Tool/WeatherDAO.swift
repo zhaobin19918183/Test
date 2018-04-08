@@ -18,6 +18,21 @@ class WeatherDAO: BaseDAO {
         closure(entity)
         return self.save()
     }
+    //TODO:Location
+    static func createLocationEntityWith(InitialClosure closure : (_ newEntity : Location )->() ) -> Bool
+    {
+        let entity = NSEntityDescription.insertNewObject(forEntityName: self.entityName(), into: BaseDAO.mainMOC) as! Location
+        closure(entity)
+        return self.save()
+    }
+    //TODO:Location
+    static func createCoordinatesEntityWith(InitialClosure closure : (_ newEntity : Coordinates )->() ) -> Bool
+    {
+        let entity = NSEntityDescription.insertNewObject(forEntityName: self.entityName(), into: BaseDAO.mainMOC) as! Coordinates
+        closure(entity)
+        return self.save()
+    }
+    
     
     //MARK: - Update
     static func updateEntityWith(Entity entity : LocationEntity) -> Bool
@@ -117,7 +132,7 @@ class WeatherDAO: BaseDAO {
         let model           =  NavigationModel.convertFrom(fetcheResults.object(at: 0) as! LocationEntity)
         return model
     }
-   //MARK: - save
+   //MARK: -
     static func save() -> Bool
     {
         if BaseDAO.mainMOC.hasChanges
@@ -137,6 +152,57 @@ class WeatherDAO: BaseDAO {
             return false
         }
     }
+    //TODO:locaitonToCoordinates
+    static  func locaitonToCoordinates(_ dicData:NSMutableDictionary)
+    {
+        
+        let success = WeatherDAO.createLocationEntityWith { (newEntity:Location) -> () in
+            
+            let locationID : Int16    =  dicData.value(forKey: "locationID") as! Int16
+            let locationName : String =  dicData.value(forKey: "locationName") as! String
+            let locationDate : String  =  dicData.value(forKey: "locationDate") as! String
+            newEntity.locationID          = locationID
+            newEntity.locationName        = locationName
+            newEntity.locationDate        = locationDate
+        }
+        if success == true
+        {
+            print("保存成功")
+            // self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+        else
+        {
+            print("保存失败")
+        }
+    }
+    
+    //TODO:createCoordinatesEntityWith
+    static  func CoordinatesToLocation(_ dicData:NSMutableDictionary)
+    {
+
+        let success = WeatherDAO.createCoordinatesEntityWith { (newEntity:Coordinates) -> () in
+            
+            let locationX : Double    =  dicData.value(forKey: "locationX") as! Double
+            let locationY : Double =  dicData.value(forKey: "locationY") as! Double
+            let heading : Double  =  dicData.value(forKey: "heading") as! Double
+            let relationship : Location  =  dicData.value(forKey: "relationship") as! Location
+            newEntity.locationX           = locationX
+            newEntity.locationY           = locationY
+            newEntity.heading             = heading
+            newEntity.relationship        = relationship
+        }
+        if success == true
+        {
+            print("保存成功")
+            // self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+        else
+        {
+            print("保存失败")
+        }
+    }
+    
+    
     
     static func entityName() -> String
     {
