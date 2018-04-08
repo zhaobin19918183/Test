@@ -16,13 +16,45 @@ class NavigationModel: NSObject
     var lcoaitonMessage               : Data?
     var locaitonName                  : String?
     var locationSoundName              : Data?
+    //Location
+    var locationID                    : Int16?
+    var locationName                  : String?
+    var locationDate                  : String?
+    //Coordinates
+    var locationX                     : Double?
+    var locationY                     : Double?
+    var relationship                  : Location?
+    var heading                       : Double?
+
+    static func convertLocation(_ dictionary :Location) -> NavigationModel
+    {
+        let model = NavigationModel()
+        model.locationID      = dictionary.locationID
+        model.locationDate    = dictionary.locationDate
+        model.locationName    = dictionary.locationName
+       
+        return model
+    }
+    static func convertCoordinates(_ dictionary :Coordinates) -> NavigationModel
+    {
+        let model = NavigationModel()
+        model.locationX        = dictionary.locationX
+        model.locationY        = dictionary.locationY
+        model.heading          = dictionary.heading
+        model.relationship     = dictionary.relationship
+        
+        return model
+    }
+    
+    
+    
     static func convertFrom(_ dictionary :LocationEntity) -> NavigationModel
     {
         let model = NavigationModel()
-        model.coordinates      = dictionary.coordinates
-        model.lcoaitonMessage  = dictionary.locationMessage
+        model.coordinates           = dictionary.coordinates
+        model.lcoaitonMessage       = dictionary.locationMessage
         model.locationSoundName     = dictionary.locationSoundName
-        model.locaitonName     = dictionary.locaitonName
+        model.locaitonName          = dictionary.locaitonName
         
         return model
     }
