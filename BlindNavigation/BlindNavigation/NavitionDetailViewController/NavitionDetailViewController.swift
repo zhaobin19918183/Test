@@ -32,7 +32,9 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     //第几个点
     var pointNumber:Int = 0
     var mindistance = Int()
-     var nextPoint = Int()
+    var nextPoint = Int()
+    var CoordinatesArray = [Coordinates]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationService = BMKLocationService()
@@ -42,15 +44,23 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         informationMapView.userTrackingMode = BMKUserTrackingModeFollow //设置定位的状态
         informationMapView.zoomLevel = 20.0
         informationMapView.showsUserLocation = true//显示定位图层
-         locationLine()
+//         locationLine()
+        CoordinatesLine()
+        playMusicFile(number: 0)
+        
+        
         
 //        let customRightBarButtonItem = UIBarButtonItem(title: "结束", style: .plain, target: self, action: #selector(InformationViewController.customLocationAccuracyCircle))
 //        self.navigationItem.rightBarButtonItem = customRightBarButtonItem
 
-//        playMusicFile()
+
      
 //
         
+    }
+    override func viewDidDisappear(_ animated: Bool)
+    {
+        start.cancleSpeek()
     }
    
    
@@ -79,40 +89,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         informationMapView.viewWillDisappear()
     }
     
-    
-    
-    // MARK: - IBAction
-    @IBAction func startLocation(_ sender: AnyObject) {
-        print("进入普通定位态");
-        locationService.startUserLocationService()
-        informationMapView.showsUserLocation = false//先关闭显示的定位图层
-        informationMapView.userTrackingMode = BMKUserTrackingModeNone;//设置定位的状态
-        informationMapView.showsUserLocation = true//显示定位图层
-        
-        
-    }
-    
-    @IBAction func stopLocation(_ sender: AnyObject)
-    {
-        locationService.stopUserLocationService()
-        informationMapView.showsUserLocation = false
-        
-    }
-    
-    @IBAction func followMode(_ sender: AnyObject) {
-        print("进入跟随态");
-        informationMapView.showsUserLocation = false
-        informationMapView.userTrackingMode = BMKUserTrackingModeFollow
-        informationMapView.showsUserLocation = true
-    }
-    
-    @IBAction func followHeadingMode(_ sender: AnyObject) {
-        print("进入罗盘态");
-        informationMapView.showsUserLocation = false
-        informationMapView.userTrackingMode = BMKUserTrackingModeFollowWithHeading
-        informationMapView.showsUserLocation = true
-    }
-    
+
     
     // MARK: - BMKMapViewDelegate
     
@@ -134,6 +111,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
         print("heading is \(userLocation.heading)")
         //TODO:实时监听偏离路线
+        
         ClosestPointOfDistance(userLocation: userLocation)
         informationMapView.updateLocationData(userLocation)
     }
@@ -151,18 +129,13 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     func  ClosestPointOfDistance(userLocation: BMKUserLocation)
     {
         let pointNow:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude));
-        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
-        
-         let dictionary:String = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates!)! as! String
-        let pointArray = getDictionaryFromJSONString(jsonString: dictionary)
-
         var pointDistanceArr:[AnyObject] = []
-        for i  in 0...pointArray.count - 1 {
-            let  dictionary:NSDictionary = pointArray[i] as! NSDictionary
-            let  locationlat =  dictionary.value(forKey: "locationlat") as! String
-            let  locationlon =  dictionary.value(forKey: "locationlon")  as! String
+        for i  in 0...CoordinatesArray.count - 1 {
+            let  coordinates:Coordinates = CoordinatesArray[i]
+            let  locationlat =  coordinates.locationX
+            let  locationlon =  coordinates.locationY
     
-            let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(Double(locationlat)!,Double(locationlon)!));
+            let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(Double(locationlat),Double(locationlon)));
   
            let distance  =  BMKMetersBetweenMapPoints(pointNow,pointBefore)
             pointDistanceArr.append(distance as AnyObject)
@@ -178,83 +151,100 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
                 mindistance = i
             }
         }
-        //TODO:最近点的位置
-        mindistance =   mindistance + 1
         //TODO:到达下一个坐标点
         nextPoint(location: userLocation, number: mindistance)
         //TODO:判断是否迷路
-//        LostToJudge(location: userLocation)
+        LostToJudge(location: userLocation, number: mindistance)
    
     }
     //MARK:是否到达下一个坐标点
     func nextPoint(location:BMKUserLocation, number:Int)
     {
-        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
-        
-        let dictionary1:String = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates!)! as! String
-        let array = getDictionaryFromJSONString(jsonString: dictionary1)
-        let  dictionary:NSDictionary = array[number] as! NSDictionary
-        let  locationlat =  dictionary.value(forKey: "locationlat") as! String
-        let  locationlon =  dictionary.value(forKey: "locationlon")  as! String
-        let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(Double(locationlat)!,Double(locationlon)!));
+        let  coordinates:Coordinates = CoordinatesArray[number]
+        let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(coordinates.locationX,coordinates.locationY))
          let pointNow:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(location.location.coordinate.latitude,location.location.coordinate.longitude));
         let distance  =  BMKMetersBetweenMapPoints(pointNow,pointBefore)
-        if distance  < 3
+        nextPoint = number
+        if distance  < 2
         {
            start.startTranslattion(message: "距离目标位置还有3米,请注意", countrylanguage: "11")
+           playMusicFile(number:nextPoint)
         }
-        if distance < 1
-        {
-            
-        }
-        nextPoint = number
-       
-//        playMusicFile(number:nextPoint )
-        
-        
+
     }
     //MARK:播放录音文件
     func playMusicFile(number:Int)
     {
-        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
-        let dictionary:String = NSKeyedUnarchiver.unarchiveObject(with: naviModel.locationSoundName!)! as! String
-         let namearray = getDictionaryFromJSONString(jsonString: dictionary)
-
-        print(namearray)
-        let file = HelperManager.file_pathString(nameString: namearray[number] as! String)
-        if file != ""
+        let  coordinates:Coordinates = CoordinatesArray[number]
+        if coordinates.soundName != ""
         {
-            record.play(HelperManager.file_pathString(nameString: namearray[number] as! String))
+            record.play(HelperManager.file_pathString(nameString: coordinates.soundName!))
         }
         
     }
     //MARK:判断是否迷路
-    func  LostToJudge(location:BMKUserLocation)
+    func  LostToJudge(location:BMKUserLocation,number:Int)
     {
-        let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
-        let array:NSArray = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates! )! as! NSArray
-        
-        let  dictionary:NSDictionary = array[mindistance] as! NSDictionary
-        let  heading:Double =  dictionary.value(forKey: "headering") as! Double
+
+        let  coordinates:Coordinates = CoordinatesArray[number]
+        let  heading:Double =  coordinates.heading
         let beforeHeading = heading
         let beforeAdd = beforeHeading + 15.0
-        let beforeReduce  = beforeHeading + 15.0
+        let beforeReduce  = beforeHeading - 15.0
         let nowHeading   =  Double(location.heading.trueHeading)
-        if  beforeAdd < nowHeading && beforeReduce > nowHeading
+        if nowHeading <= 180.0
         {
-         start.startTranslattion(message: "路线正确请直行", countrylanguage: "11")
+            if beforeReduce  < nowHeading && beforeReduce < 15.0
+            {
+                  start.startTranslattion(message: "脱离路线,请注意,请向右侧移动", countrylanguage: "11")
+            } else
+            if beforeReduce > 345.0
+            {
+                start.startTranslattion(message: "脱离路线,请注意,请向右侧移动", countrylanguage: "11")
+            }
+            else
+            if   nowHeading < beforeAdd
+            {
+                
+                start.startTranslattion(message: "脱离路线,请注意,请向左侧移动", countrylanguage: "11")
+            }
+            else
+            {
+                start.startTranslattion(message: "路线正确请直行", countrylanguage: "11")
+
+            }
             
         }
-        else if beforeAdd > nowHeading
+        else
         {
-              start.startTranslattion(message: "脱离路线,请注意,请向左侧移动", countrylanguage: "11")
+            if beforeAdd > 270.0 && beforeAdd < nowHeading
+            {
+                  start.startTranslattion(message: "脱离路线,请注意,请向左侧移动", countrylanguage: "11")
+                
+            }
+            else
+            if  beforeAdd < 90.0
+            {
+                  start.startTranslattion(message: "脱离路线,请注意,请向左侧移动", countrylanguage: "11")
+            }
+            else
+            if beforeReduce > nowHeading
+            {
+                 start.startTranslattion(message: "脱离路线,请注意,请向右侧移动", countrylanguage: "11")
+            }
+            else
             
-        }
-        else if  beforeReduce < nowHeading
-        {
-             start.startTranslattion(message: "脱离路线,请注意,请向右侧移动", countrylanguage: "11")
+            {
+                 start.startTranslattion(message: "路线正确请直行", countrylanguage: "11")
+ 
+            }
+           
+            
+            
         }
         
+        
+    
         
     }
     
@@ -280,8 +270,30 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         
     }
     //MARK:画出地图上的运动轨迹和记录点
+    func CoordinatesLine()
+    {
+        for i in 0...CoordinatesArray.count - 1 {
+            
+            let  coordinates:Coordinates = CoordinatesArray[i]
+            let coords2DMake = CLLocationCoordinate2DMake(coordinates.locationX,coordinates.locationY )
+            coord.add(coords2DMake)
+            pointAnnotation = BMKPointAnnotation()
+            pointAnnotation?.coordinate = CLLocationCoordinate2DMake(coordinates.locationX,coordinates.locationY)
+//            pointAnnotation?.title = coordinates.locationX
+//            pointAnnotation?.subtitle = coordinates.locationY
+            
+            informationMapView.addAnnotation(pointAnnotation)
+        }
+         self.addOverlayViews()
+        
+        
+    }
+    
+    
     func locationLine()
     {
+//        CoordinatesArray
+        
         let naviModel = NavigationModel.convertFrom(WeatherDAO.SearchAllDataEntity()[index] as! LocationEntity)
         let dictionary:String = NSKeyedUnarchiver.unarchiveObject(with: naviModel.coordinates!)! as! String
        

@@ -25,6 +25,7 @@ class NavigationModel: NSObject
     var locationY                     : Double?
     var relationship                  : Location?
     var heading                       : Double?
+    var soundName                     : String?
 
     static func convertLocation(_ dictionary :Location) -> NavigationModel
     {
@@ -42,7 +43,7 @@ class NavigationModel: NSObject
         model.locationY        = dictionary.locationY
         model.heading          = dictionary.heading
         model.relationship     = dictionary.relationship
-        
+        model.soundName        = dictionary.soundName
         return model
     }
     

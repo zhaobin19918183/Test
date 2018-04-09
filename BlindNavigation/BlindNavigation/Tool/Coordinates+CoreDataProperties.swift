@@ -2,7 +2,7 @@
 //  Coordinates+CoreDataProperties.swift
 //  
 //
-//  Created by newland on 2018/4/8.
+//  Created by newland on 2018/4/9.
 //
 //
 
@@ -16,9 +16,10 @@ extension Coordinates {
         return NSFetchRequest<Coordinates>(entityName: "Coordinates")
     }
 
+    @NSManaged public var heading: Double
     @NSManaged public var locationX: Double
     @NSManaged public var locationY: Double
-    @NSManaged public var heading: Double
+    @NSManaged public var soundName: String?
     @NSManaged public var relationship: Location?
 
 }

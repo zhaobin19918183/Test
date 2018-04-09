@@ -37,6 +37,8 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     var  record = RecordManager()
     var number :Int = 9990
     var soundName = NSMutableArray()
+    //TODO:数据库优化参数
+        let coordinatesDic = NSMutableDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationService = BMKLocationService()
@@ -57,7 +59,8 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     
     @objc func customLocationAccuracyCircle()
     {
-        coredataDic()
+//        coredataDic()
+        coredatamanager()
         stopRecordAction()
         self.navigationController?.popViewController(animated: true)
     }
@@ -80,35 +83,6 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         locationService.delegate = self
         informationMapView.delegate = nil
         informationMapView.viewWillDisappear()
-    }
-    // MARK: - IBAction
-    @IBAction func startLocation(_ sender: AnyObject) {
-        print("进入普通定位态");
-        locationService.startUserLocationService()
-        informationMapView.showsUserLocation = false//先关闭显示的定位图层
-        informationMapView.userTrackingMode = BMKUserTrackingModeNone;//设置定位的状态
-        informationMapView.showsUserLocation = true//显示定位图层
-    }
-    
-    @IBAction func stopLocation(_ sender: AnyObject)
-    {
-        locationService.stopUserLocationService()
-        informationMapView.showsUserLocation = false
-
-    }
-    
-    @IBAction func followMode(_ sender: AnyObject) {
-        print("进入跟随态");
-        informationMapView.showsUserLocation = false
-        informationMapView.userTrackingMode = BMKUserTrackingModeFollow
-        informationMapView.showsUserLocation = true
-    }
-    
-    @IBAction func followHeadingMode(_ sender: AnyObject) {
-        print("进入罗盘态");
-        informationMapView.showsUserLocation = false
-        informationMapView.userTrackingMode = BMKUserTrackingModeFollowWithHeading
-        informationMapView.showsUserLocation = true
     }
     //MARK:开始录音
     func startToRecord()
@@ -146,11 +120,12 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         locaitonUserHeadering =  userLocation
         informationMapView.updateLocationData(userLocation)
          print("heading is \(userLocation)")
-        //初次进入导航页面记录获取到的第一个点,并录音
+        //TODO:初次进入导航页面记录获取到的第一个点,并录音
         if arrayExample.count == 0 && locaitonUserHeadering.heading != nil
         {
-//            startToRecord()
-            locationUserMessage()
+//           startToRecord()
+            //TODO:起始位置没有录音
+            locationUserMessage(nameString:"")
         }
        if  arrayExample.count != 0 && locaitonUserHeadering.heading != nil
         {
@@ -170,75 +145,113 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     func SameIntervalDistance()
     {
         let pointNow:BMKMapPoint  = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(locaitonUser.location.coordinate.latitude,locaitonUser.location.coordinate.longitude));
-        let  beforelat = Double(dictionaryExample["locationlat"] as! String)
-        let  beforelon = Double(dictionaryExample["locationlon"] as! String)
-        let pointBefore:BMKMapPoint  = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(beforelat! ,beforelon!));
+        let  beforelat = dictionaryExample["locationlat"]
+        let  beforelon = dictionaryExample["locationlon"]
+        let pointBefore:BMKMapPoint  = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(beforelat! as! CLLocationDegrees ,beforelon! as! CLLocationDegrees));
         let distance:CLLocationDistance =  BMKMetersBetweenMapPoints(pointBefore,pointNow)
         
-        if distance == 10 {
-            soundName.add("")
-            locationUserMessage()
+        if distance >= 5 && distance < 10{
+
+            locationUserMessage(nameString:"")
             
         }
         print(distance)
     }
+    //MARK:画出地图上的运动轨迹和记录点
+    func locationLine()
+    {
+        
+        for i in 0...arrayExample.count - 1 {
+            
+            let  dictionary:NSDictionary = arrayExample[i] as! NSDictionary
+            let  locationlat:Double =  dictionary.value(forKey: "locationlat") as! Double
+            let  locationlon:Double =  dictionary.value(forKey: "locationlon") as! Double
+            let coords2DMake = CLLocationCoordinate2DMake(locationlat ,locationlon )
+            coord.add(coords2DMake)
+            
+            pointAnnotation = BMKPointAnnotation()
+            pointAnnotation?.coordinate = CLLocationCoordinate2DMake(locationlat, locationlon)
+//            pointAnnotation?.title = locationlat
+//            pointAnnotation?.subtitle = locationlon
+            
+            informationMapView.addAnnotation(pointAnnotation)
+        }
+        
+        self.addOverlayViews()
+    }
+    //添加内置覆盖物
+    func addOverlayViews() {
+            var coords = [
+                self.coord[0] as!  CLLocationCoordinate2D]
+           coords.append(self.coord[0] as!  CLLocationCoordinate2D)
+            if coord.count > 1
+            {
+                for i in 1...coord.count - 1
+                {
+                    coords.append(self.coord[i] as!  CLLocationCoordinate2D)
+                }
+            }
+        polyline = BMKPolyline(coordinates: &coords, count: UInt(coord.count))
+      
+        informationMapView.add(polyline)
+        
+    }
     
+    // MARK: - BMKMapViewDelegate
+    
+    /**
+     *根据overlay生成对应的View
+     *@param mapView 地图View
+     *@param overlay 指定的overlay
+     *@return 生成的覆盖物View
+     */
+    func mapView(_ mapView: BMKMapView!, viewFor overlay: BMKOverlay!) -> BMKOverlayView! {
+        
+            let polylineView = BMKPolylineView(overlay: overlay)
+           
+            polylineView?.strokeColor =  UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)
+            polylineView?.lineWidth = 3
+            polylineView?.loadStrokeTextureImage(UIImage(named: "texture_arrow.png"))
+            return polylineView
+
+    }
+    
+    /**
+     *当mapView新添加overlay views时，调用此接口
+     *@param mapView 地图View
+     *@param overlayViews 新添加的overlay views
+     */
+    func mapView(_ mapView: BMKMapView!, didAddOverlayViews overlayViews: [Any]!) {
+        print("didAddOverlayViews")
+    }
     //MARK:记录当前的坐标点以及录音
     @IBAction func informationAction(_ sender: UIButton)
     {
         startToRecord()
-        locationUserMessage()
+        locationUserMessage(nameString: HelperManager.converLocalTime())
     }
     //MARK:获取需要记录点的坐标
-    func  locationUserMessage()
+    func  locationUserMessage(nameString:String)
     {
-        //
-        let locationlat  =    NSString(format: "%f" , locaitonUser.location.coordinate.latitude)
-        let locationlon  =    NSString(format: "%f" , locaitonUser.location.coordinate.longitude)
-        dictionaryExample = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject,"headering":locaitonUserHeadering.heading.trueHeading as AnyObject]
+        let locationlat :Double =   locaitonUser.location.coordinate.latitude
+        let locationlon :Double  =    locaitonUser.location.coordinate.longitude
+        dictionaryExample = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject,"headering":locaitonUserHeadering.heading.trueHeading as AnyObject,"soundName":nameString as AnyObject]
      
         arrayExample.add(dictionaryExample)
+        locationLine()
     }
- 
-
-    
-  
-    //MARK:存储到数据库
-    func  coredataDic()
+    //MARK:数据库优化
+    func  coredatamanager()
     {
-        let str1 = HelperManager.converLocalTime()
-        let data : NSData = str1.data(using: String.Encoding.utf8, allowLossyConversion: false)! as NSData
-          print("didUpdateUserLocation lat:\(locaitonUser.location.coordinate.latitude) lon:\(locaitonUser.location.coordinate.longitude)") 
-      
-        dic.setValue(data, forKey: "lcoaitonMessage")
-        dic.setValue(HelperManager.converLocalTime(), forKey: "locaitonName")
-        dic.setValue(testSaveArrayPlist(arrayObject: arrayExample), forKey: "coordinates")
-        dic.setValue(testSaveArrayPlist(arrayObject: soundName), forKey: "locationSoundName")
-        WeatherDAO.createWeatherEntity(dic)
-        /*
-         newEntity.locationID          = locationID
-         newEntity.locationName        = locationName
-         newEntity.locationDate        = locationDate
-         */
-        let locaitonDic = NSMutableDictionary()
-        locaitonDic.setValue("", forKey: "locationID")
-        locaitonDic.setValue("", forKey: "locationID")
-        locaitonDic.setValue("", forKey: "locationID")
-        WeatherDAO.locaitonToCoordinates(locaitonDic)
-        /*  @NSManaged public var locationX: Double
-         @NSManaged public var locationY: Double
-         @NSManaged public var heading: Double
-         @NSManaged public var relationship: Location?*/
-        let CoordinatesDic = NSMutableDictionary()
-        CoordinatesDic.setValue("", forKey: "locationX")
-        CoordinatesDic.setValue("", forKey: "locationY")
-        CoordinatesDic.setValue("", forKey: "heading")
-        CoordinatesDic.setValue("", forKey: "relationship")
-        WeatherDAO.CoordinatesToLocation(CoordinatesDic)
+        //arrayExample
+        let locationDic = NSMutableDictionary()
+        locationDic.setValue(HelperManager.converLocalTime(), forKey: "locationDate")
+        locationDic.setValue(HelperManager.converLocalTime(), forKey: "locationName")
+        locationDic.setValue(1, forKey: "locationID")
+        CoredataManager.coredataManagerLocation(LocationDic: locationDic, coordinatesArray: arrayExample)
         
     }
-    
-    
+
     func testSaveArrayPlist(arrayObject:NSMutableArray) ->NSData{
         //JSONSerialization
         let data = try? JSONSerialization.data(withJSONObject: arrayObject, options: JSONSerialization.WritingOptions.prettyPrinted)
@@ -266,4 +279,3 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     
 
 }
-

@@ -18,9 +18,11 @@ class NavigationTableViewCell: UITableViewCell {
     
     func localMssage(entityModel:NavigationModel)
     {
-        print(entityModel.locaitonName as Any)
-        nameLabel.text = entityModel.locaitonName
+         print(entityModel.locationName as Any)
+        nameLabel.text = entityModel.locationName
     }
+    
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

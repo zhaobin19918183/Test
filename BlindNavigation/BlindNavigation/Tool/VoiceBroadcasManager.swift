@@ -29,6 +29,8 @@ class VoiceBroadcasManager: NSObject
         utterance.pitchMultiplier = 1
         //开始播放
         avSpeech.speak(utterance)
+     
+        
     }
     
     //暂停播放

@@ -57,6 +57,7 @@
 		8AE79960206B9028006FE85F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE7995F206B9028006FE85F /* AudioToolbox.framework */; };
 		8AE79962206B9056006FE85F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE79961206B9055006FE85F /* UserNotifications.framework */; };
 		8AE79965206B9204006FE85F /* DHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE79964206B9204006FE85F /* DHViewController.swift */; };
+		8AF95C06207B1A2700742006 /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF95C05207B1A2700742006 /* CoredataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		8AE7995F206B9028006FE85F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8AE79961206B9055006FE85F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		8AE79964206B9204006FE85F /* DHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHViewController.swift; sourceTree = "<group>"; };
+		8AF95C05207B1A2700742006 /* CoredataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
 		AFFA6947E28CDF1216275153 /* Pods-BlindNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindNavigation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlindNavigation/Pods-BlindNavigation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -354,6 +356,7 @@
 		8A995A81206B3AD100ADB63A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8AF95C05207B1A2700742006 /* CoredataManager.swift */,
 				8A19BC92207314C40071992E /* VoiceBroadcasManager.swift */,
 				8A19BC9420731A1B0071992E /* RecordManager.swift */,
 				8A19BC8A2071C2C30071992E /* NavigationModel.swift */,
@@ -596,6 +599,7 @@
 				8A19BC842071BFD20071992E /* Common.swift in Sources */,
 				8A995A56206B34C400ADB63A /* ViewController.swift in Sources */,
 				8A19BC892071C1450071992E /* NavigationModel.xcdatamodeld in Sources */,
+				8AF95C06207B1A2700742006 /* CoredataManager.swift in Sources */,
 				8A5B7E97206DE2E30078AC9E /* NavitionDetailViewController.swift in Sources */,
 				8A19BC9520731A1B0071992E /* RecordManager.swift in Sources */,
 				8A5B7E92206DDEE80078AC9E /* SettingViewController.swift in Sources */,
