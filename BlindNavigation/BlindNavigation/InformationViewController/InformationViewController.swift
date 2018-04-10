@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate,CLLocationManagerDelegate {
 
+    @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var EmergencyContactButton: UIButton!
     @IBOutlet weak var informationMapView: BMKMapView!
     @IBOutlet weak var informationButton: UIButton!
@@ -21,7 +22,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     //画折线
     var circle: BMKCircle?
     var polygon: BMKPolygon?
-    var polyline: BMKPolyline?
+
     var colorfulPolyline: BMKPolyline?
     var arcline: BMKArcline?
     var ground: BMKGroundOverlay?
@@ -33,6 +34,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     var dictionaryExample = NSMutableDictionary()
     var arrayExample  = NSMutableArray()
     //录音文件
+    var intoBool:Bool = true
     var nameString:String = ""
     var  record = RecordManager()
     var number :Int = 9990
@@ -41,9 +43,10 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         let coordinatesDic = NSMutableDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         locationService = BMKLocationService()
         locationService.allowsBackgroundLocationUpdates = true
-        print("进入普通定位态");
         locationService.startUserLocationService()
         informationMapView.showsUserLocation = false//先关闭显示的定位图层
         informationMapView.userTrackingMode = BMKUserTrackingModeFollow //设置定位的状态
@@ -52,7 +55,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         
         let customRightBarButtonItem = UIBarButtonItem(title: "结束", style: .plain, target: self, action: #selector(InformationViewController.customLocationAccuracyCircle))
         self.navigationItem.rightBarButtonItem = customRightBarButtonItem
-        
+        numberLabel.isHidden = true
         
         
     }
@@ -67,6 +70,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     //停止录音
     func stopRecordAction()
     {
+        numberLabel.isHidden = true
         record.stopRecord(HelperManager.file_pathString(nameString: "\(HelperManager.converLocalTime())_\(number + 1).wav"))
         
     }
@@ -84,14 +88,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         informationMapView.delegate = nil
         informationMapView.viewWillDisappear()
     }
-    //MARK:开始录音
-    func startToRecord()
-    {
-        
-        record.beginRecord(HelperManager.file_pathString(nameString: "\(HelperManager.converLocalTime())_\(number + 1).wav"))
-       soundName.add("\(HelperManager.converLocalTime())_\(number + 1).wav")
-      
-    }
+    
     // MARK: - BMKMapViewDelegate
     // MARK: - BMKLocationServiceDelegate
     
@@ -123,13 +120,12 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         //TODO:初次进入导航页面记录获取到的第一个点,并录音
         if arrayExample.count == 0 && locaitonUserHeadering.heading != nil
         {
-//           startToRecord()
-            //TODO:起始位置没有录音
+            startToRecord()
             locationUserMessage(nameString:"")
         }
        if  arrayExample.count != 0 && locaitonUserHeadering.heading != nil
         {
-//            stopRecordAction()
+           
             SameIntervalDistance()
         }
     }
@@ -160,7 +156,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     //MARK:画出地图上的运动轨迹和记录点
     func locationLine()
     {
-        
+        //dictionaryExample
         for i in 0...arrayExample.count - 1 {
             
             let  dictionary:NSDictionary = arrayExample[i] as! NSDictionary
@@ -176,26 +172,8 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
             
             informationMapView.addAnnotation(pointAnnotation)
         }
-        
-        self.addOverlayViews()
     }
-    //添加内置覆盖物
-    func addOverlayViews() {
-            var coords = [
-                self.coord[0] as!  CLLocationCoordinate2D]
-           coords.append(self.coord[0] as!  CLLocationCoordinate2D)
-            if coord.count > 1
-            {
-                for i in 1...coord.count - 1
-                {
-                    coords.append(self.coord[i] as!  CLLocationCoordinate2D)
-                }
-            }
-        polyline = BMKPolyline(coordinates: &coords, count: UInt(coord.count))
-      
-        informationMapView.add(polyline)
-        
-    }
+
     
     // MARK: - BMKMapViewDelegate
     
@@ -224,21 +202,96 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     func mapView(_ mapView: BMKMapView!, didAddOverlayViews overlayViews: [Any]!) {
         print("didAddOverlayViews")
     }
-    //MARK:记录当前的坐标点以及录音
+    //MARK:进入商店内部
     @IBAction func informationAction(_ sender: UIButton)
     {
-        startToRecord()
-        locationUserMessage(nameString: HelperManager.converLocalTime())
+       intoBool = false
     }
+    //MARK:退出商店
+    @IBAction func exitShopAction(_ sender: UIButton)
+    {
+        intoBool = true
+    }
+    //MARK:开始录音
+    func startToRecord()
+    {
+        let start  =      VoiceBroadcasManager()
+        start.startTranslattion(message: "录音开始", countrylanguage: "11")
+        numberLabel.isHidden = false
+        record.beginRecord(HelperManager.file_pathString(nameString: "\(HelperManager.converLocalTime())_\(number + 1).wav"))
+        soundName.add("\(HelperManager.converLocalTime())_\(number + 1).wav")
+        timeToStopRecord()
+        
+    }
+    func timeToStopRecord()
+    {
+        // 定义需要计时的时间
+        var timeCount = 10
+        // 在global线程里创建一个时间源
+        let codeTimer = DispatchSource.makeTimerSource(queue:      DispatchQueue.global())
+        // 设定这个时间源是每秒循环一次，立即开始
+        codeTimer.schedule(deadline: .now(), repeating: .seconds(1))
+        // 设定时间源的触发事件
+        codeTimer.setEventHandler(handler: {
+          
+            // 返回主线程处理一些事件，更新UI等等
+            DispatchQueue.main.async {
+                self.numberLabel.text = String(timeCount)
+                print(timeCount)
+            }
+            // 每秒计时一次
+            timeCount = timeCount - 1
+            // 时间到了取消时间源
+            if timeCount <= 0 {
+                self.stopRecordAction()
+                let start  =      VoiceBroadcasManager()
+                start.startTranslattion(message: "录音结束", countrylanguage: "11")
+                codeTimer.cancel()
+            }
+        })
+        // 启动时间源
+        codeTimer.resume()
+        
+    }
+    
+    
     //MARK:获取需要记录点的坐标
     func  locationUserMessage(nameString:String)
     {
+        
+        if intoBool == true
+        {
+       
         let locationlat :Double =   locaitonUser.location.coordinate.latitude
         let locationlon :Double  =    locaitonUser.location.coordinate.longitude
+        //TODO:划线和点
+        var polyline: BMKPolyline?
+        if arrayExample.count != 0{
+        if polyline == nil {
+            var coords = [
+    CLLocationCoordinate2DMake(Double(dictionaryExample["locationlat"] as! Double),  Double(dictionaryExample["locationlon"]  as! Double)),
+ 
+        CLLocationCoordinate2DMake(locationlat, locationlon)]
+            polyline = BMKPolyline(coordinates: &coords, count: 2)
+        }
+            informationMapView.add(polyline)
+ 
+            let  locationlat:Double =  dictionaryExample.value(forKey: "locationlat") as! Double
+            let  locationlon:Double =  dictionaryExample.value(forKey: "locationlon") as! Double
+            let coords2DMake = CLLocationCoordinate2DMake(locationlat ,locationlon )
+            coord.add(coords2DMake)
+            
+            pointAnnotation = BMKPointAnnotation()
+            pointAnnotation?.coordinate = CLLocationCoordinate2DMake(locationlat, locationlon)
+            informationMapView.addAnnotation(pointAnnotation)
+            
+        }
+        
         dictionaryExample = ["locationlat":locationlat as AnyObject,"locationlon":locationlon as AnyObject,"headering":locaitonUserHeadering.heading.trueHeading as AnyObject,"soundName":nameString as AnyObject]
      
-        arrayExample.add(dictionaryExample)
-        locationLine()
+            arrayExample.add(dictionaryExample)
+            
+        }
     }
     //MARK:数据库优化
     func  coredatamanager()
@@ -274,7 +327,9 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     }
     @IBAction func EmergencyContactAction(_ sender: UIButton)
     {
-         stopRecordAction()
+        startToRecord()
+        locationUserMessage(nameString: HelperManager.converLocalTime())
+
     }
     
 

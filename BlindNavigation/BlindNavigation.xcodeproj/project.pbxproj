@@ -58,6 +58,7 @@
 		8AE79962206B9056006FE85F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE79961206B9055006FE85F /* UserNotifications.framework */; };
 		8AE79965206B9204006FE85F /* DHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE79964206B9204006FE85F /* DHViewController.swift */; };
 		8AF95C06207B1A2700742006 /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF95C05207B1A2700742006 /* CoredataManager.swift */; };
+		8AF95C08207C8B8E00742006 /* 再别康桥.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C07207C8B8D00742006 /* 再别康桥.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		8AE79961206B9055006FE85F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		8AE79964206B9204006FE85F /* DHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHViewController.swift; sourceTree = "<group>"; };
 		8AF95C05207B1A2700742006 /* CoredataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
+		8AF95C07207C8B8D00742006 /* 再别康桥.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "再别康桥.mp3"; sourceTree = "<group>"; };
 		AFFA6947E28CDF1216275153 /* Pods-BlindNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindNavigation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlindNavigation/Pods-BlindNavigation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -356,6 +358,7 @@
 		8A995A81206B3AD100ADB63A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8AF95C07207C8B8D00742006 /* 再别康桥.mp3 */,
 				8AF95C05207B1A2700742006 /* CoredataManager.swift */,
 				8A19BC92207314C40071992E /* VoiceBroadcasManager.swift */,
 				8A19BC9420731A1B0071992E /* RecordManager.swift */,
@@ -509,6 +512,7 @@
 			files = (
 				8A5B7E86206DCE240078AC9E /* timg.jpg in Resources */,
 				8A995A5E206B34C400ADB63A /* LaunchScreen.storyboard in Resources */,
+				8AF95C08207C8B8E00742006 /* 再别康桥.mp3 in Resources */,
 				8A995A5B206B34C400ADB63A /* Assets.xcassets in Resources */,
 				8A5B7EA6206E379A0078AC9E /* NavigationTableViewCell.xib in Resources */,
 				8A995A59206B34C400ADB63A /* Main.storyboard in Resources */,

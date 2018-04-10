@@ -10,26 +10,27 @@ import UIKit
 import AVFoundation
 import Speech
 
-class VoiceBroadcasManager: NSObject
+class VoiceBroadcasManager: NSObject,SFSpeechRecognitionTaskDelegate
 
 {
+    
     fileprivate let avSpeech = AVSpeechSynthesizer()
     //播放固定语音文字
     //开始转换,不同国家的语言支持
      func startTranslattion(message:String,countrylanguage:String){
         //1. 创建需要合成的声音类型
 //        let voice = AVSpeechSynthesisVoice(language: countrylanguage)
+        let SpeakSpeed : (ind :  Int,value :  Float) = (1, 0.55)
         let voice = AVSpeechSynthesisVoice(language: "zh-CN")
         //2. 创建合成的语音类
         let utterance = AVSpeechUtterance(string: message)
-        utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+        utterance.rate = SpeakSpeed.value
         utterance.voice = voice
         utterance.volume = 1
         utterance.postUtteranceDelay = 0.1
         utterance.pitchMultiplier = 1
         //开始播放
         avSpeech.speak(utterance)
-     
         
     }
     
@@ -45,11 +46,11 @@ class VoiceBroadcasManager: NSObject
     
     //取消播放
     func cancleSpeek(){
-        avSpeech.stopSpeaking(at: .immediate)
+        if avSpeech.isSpeaking
+        {
+               avSpeech.stopSpeaking(at: .immediate)
+        }
+     
     }
-    
-
-    
-    
 
 }

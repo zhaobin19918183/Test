@@ -158,7 +158,7 @@
 				TargetAttributes = {
 					47E87A601FE7BA30006DF756 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -346,12 +346,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HG8J7L5X5;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M84ATZ6Y6H;
 				INFOPLIST_FILE = TextAndVoice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-tian.TextAndVoice";
+				PRODUCT_BUNDLE_IDENTIFIER = co.jiuxiang.jxzs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a687e3fe-f875-400b-abbe-3b42756eb371";
+				PROVISIONING_PROFILE_SPECIFIER = ProductTest;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,12 +363,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HG8J7L5X5;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M84ATZ6Y6H;
 				INFOPLIST_FILE = TextAndVoice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-tian.TextAndVoice";
+				PRODUCT_BUNDLE_IDENTIFIER = co.jiuxiang.jxzs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a687e3fe-f875-400b-abbe-3b42756eb371";
+				PROVISIONING_PROFILE_SPECIFIER = ProductTest;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

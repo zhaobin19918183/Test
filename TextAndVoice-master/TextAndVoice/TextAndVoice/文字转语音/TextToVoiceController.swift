@@ -22,6 +22,7 @@ class TextToVoiceController: UIViewController {
 
         title = "文字转语音"
         avSpeech.delegate = self
+        startTranslattion()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

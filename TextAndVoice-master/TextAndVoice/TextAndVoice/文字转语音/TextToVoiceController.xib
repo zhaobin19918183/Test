@@ -24,16 +24,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cq9-86-cxU">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="谈到语音和文本的转换," translatesAutoresizingMaskIntoConstraints="NO" id="Cq9-86-cxU">
                     <rect key="frame" x="30" y="125" width="315" height="150"/>
                     <color key="backgroundColor" red="0.76123882097199347" green="0.98224833639999998" blue="0.94709867726199159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="CuU-5N-SzX"/>
                     </constraints>
-                    <string key="text">谈到语音和文本的转换, 就要说到语音转文本和文本转语音两大技术,
-文本转语音是iOS7以后的技术, 用到的是AVFoundation框架,
-语音转文本是iOS10以后, 苹果发布的一个Speech框架,
-下面先介绍一下简单的文本转语音</string>
                     <color key="textColor" red="0.064161542577639896" green="0.3938269430965724" blue="0.93549042940139771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
