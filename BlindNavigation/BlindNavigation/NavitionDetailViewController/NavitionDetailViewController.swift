@@ -198,7 +198,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         let beforeAdd = beforeHeading + 15.0
         let beforeReduce  = beforeHeading - 15.0
         let nowHeading   =  Double(location.heading.trueHeading)
-
         if heading <= 180.0
         {
             if beforeReduce  < nowHeading && beforeReduce < 15.0 || beforeReduce > 345.0 || nowHeading < beforeAdd

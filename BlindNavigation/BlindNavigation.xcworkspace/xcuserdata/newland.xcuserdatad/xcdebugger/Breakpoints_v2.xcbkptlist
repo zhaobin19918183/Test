@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlindNavigation/NavitionDetailViewController/NavitionDetailViewController.swift"
-            timestampString = "545036152.160912"
+            timestampString = "545045887.600105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "LostToJudge(location:number:)"
             landmarkType = "7">
          </BreakpointContent>

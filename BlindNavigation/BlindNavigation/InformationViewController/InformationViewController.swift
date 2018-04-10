@@ -223,9 +223,10 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         timeToStopRecord()
         
     }
+    //MARK: 定义需要计时的时间
     func timeToStopRecord()
     {
-        // 定义需要计时的时间
+        
         var timeCount = 10
         // 在global线程里创建一个时间源
         let codeTimer = DispatchSource.makeTimerSource(queue:      DispatchQueue.global())
