@@ -63,14 +63,14 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     @objc func customLocationAccuracyCircle()
     {
 //        coredataDic()
-        coredatamanager()
         stopRecordAction()
+        coredatamanager()
         self.navigationController?.popViewController(animated: true)
     }
     //停止录音
     func stopRecordAction()
     {
-        numberLabel.isHidden = true
+        
         record.stopRecord(HelperManager.file_pathString(nameString: "\(HelperManager.converLocalTime())_\(number + 1).wav"))
         
     }
@@ -98,36 +98,36 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     
     /**
      *用户方向更新后，会调用此函数
-     *@param userLocation 新的用户位置
+     *@param userLocation 新的用户位置 didUpdateBMKUserLocation
      */
+ 
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
         print("heading is \(userLocation.heading)")
-        locaitonUserHeadering = userLocation
-//        locaitonUser = userLocation
-        informationMapView.updateLocationData(userLocation)
+       
     }
     
     /**
      *用户位置更新后，会调用此函数
      *@param userLocation 新的用户位置
      */
-    func didUpdate(_ userLocation: BMKUserLocation!) {
 
-        locaitonUser = userLocation
-        locaitonUserHeadering =  userLocation
+    func didUpdate(_ userLocation: BMKUserLocation!) {
+        locaitonUserHeadering = userLocation
         informationMapView.updateLocationData(userLocation)
-         print("heading is \(userLocation)")
+        locaitonUser = userLocation
+        informationMapView.updateLocationData(userLocation)
+        print("heading is \(userLocation)")
         //TODO:初次进入导航页面记录获取到的第一个点,并录音
-        if arrayExample.count == 0 && locaitonUserHeadering.heading != nil
+        if arrayExample.count == 0
         {
-            startToRecord()
-            locationUserMessage(nameString:"")
+              startToRecord()
         }
-       if  arrayExample.count != 0 && locaitonUserHeadering.heading != nil
+        if locaitonUser.heading != nil
         {
-           
+            locationUserMessage(nameString:"")
             SameIntervalDistance()
         }
+     
     }
     
     /**
@@ -146,7 +146,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         let pointBefore:BMKMapPoint  = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(beforelat! as! CLLocationDegrees ,beforelon! as! CLLocationDegrees));
         let distance:CLLocationDistance =  BMKMetersBetweenMapPoints(pointBefore,pointNow)
         
-        if distance >= 5 && distance < 10{
+        if distance >= 10 && distance < 11{
 
             locationUserMessage(nameString:"")
             
@@ -216,7 +216,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     func startToRecord()
     {
         let start  =      VoiceBroadcasManager()
-        start.startTranslattion(message: "录音开始", countrylanguage: "11")
+//        start.startTranslattion(message: "录音开始", countrylanguage: "11")
         numberLabel.isHidden = false
         record.beginRecord(HelperManager.file_pathString(nameString: "\(HelperManager.converLocalTime())_\(number + 1).wav"))
         soundName.add("\(HelperManager.converLocalTime())_\(number + 1).wav")
@@ -236,17 +236,24 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         codeTimer.setEventHandler(handler: {
           
             // 返回主线程处理一些事件，更新UI等等
+            timeCount = timeCount - 1
             DispatchQueue.main.async {
-                self.numberLabel.text = String(timeCount)
+               self.numberLabel.text = String(timeCount)
+                if timeCount <= 0
+                {
+                    self.numberLabel.isHidden = true
+                }
                 print(timeCount)
             }
             // 每秒计时一次
-            timeCount = timeCount - 1
+           
+           
             // 时间到了取消时间源
             if timeCount <= 0 {
-                self.stopRecordAction()
-                let start  =      VoiceBroadcasManager()
-                start.startTranslattion(message: "录音结束", countrylanguage: "11")
+//
+//                self.stopRecordAction()
+//                let start  =      VoiceBroadcasManager()
+//                start.startTranslattion(message: "录音结束", countrylanguage: "11")
                 codeTimer.cancel()
             }
         })

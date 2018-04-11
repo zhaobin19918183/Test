@@ -447,12 +447,33 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAd-kD-qEl">
+                                <rect key="frame" x="255" y="547" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="NUc-IS-Ygd"/>
+                                    <constraint firstAttribute="width" constant="100" id="iQz-32-yLF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow4.png" translatesAutoresizingMaskIntoConstraints="NO" id="el9-tF-0zK">
+                                <rect key="frame" x="20" y="547" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XQV-Up-P9d"/>
+                                    <constraint firstAttribute="height" constant="100" id="afb-nv-Mpk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="el9-tF-0zK" firstAttribute="leading" secondItem="7Eh-I9-oAk" secondAttribute="leading" constant="20" id="7Qf-A5-6fj"/>
                             <constraint firstItem="9oD-Nm-cRH" firstAttribute="top" secondItem="7Eh-I9-oAk" secondAttribute="top" id="9Am-XH-TlD"/>
+                            <constraint firstItem="7Eh-I9-oAk" firstAttribute="bottom" secondItem="lAd-kD-qEl" secondAttribute="bottom" constant="20" id="DZa-Nl-mAT"/>
                             <constraint firstItem="9oD-Nm-cRH" firstAttribute="leading" secondItem="7Eh-I9-oAk" secondAttribute="leading" id="JwO-mt-OYg"/>
+                            <constraint firstItem="7Eh-I9-oAk" firstAttribute="bottom" secondItem="el9-tF-0zK" secondAttribute="bottom" constant="20" id="XZX-h6-IzA"/>
                             <constraint firstItem="7Eh-I9-oAk" firstAttribute="bottom" secondItem="9oD-Nm-cRH" secondAttribute="bottom" id="c4u-kw-9uu"/>
+                            <constraint firstItem="7Eh-I9-oAk" firstAttribute="trailing" secondItem="lAd-kD-qEl" secondAttribute="trailing" constant="20" id="lIm-UL-ezO"/>
                             <constraint firstItem="7Eh-I9-oAk" firstAttribute="trailing" secondItem="9oD-Nm-cRH" secondAttribute="trailing" id="y2S-eZ-X2D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Eh-I9-oAk"/>
@@ -460,14 +481,17 @@
                     <navigationItem key="navigationItem" title="导航" id="ofd-nS-s8I"/>
                     <connections>
                         <outlet property="informationMapView" destination="9oD-Nm-cRH" id="a0M-RE-ppJ"/>
+                        <outlet property="numberLabel" destination="lAd-kD-qEl" id="Hef-Vk-BUp"/>
+                        <outlet property="targetImageVIew" destination="el9-tF-0zK" id="o9g-1J-hb8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwZ-CC-WXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="1523"/>
+            <point key="canvasLocation" x="1045.5999999999999" y="1522.488755622189"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow4.png" width="120" height="120"/>
         <image name="timg.jpg" width="299" height="449"/>
         <image name="timg1.jpg" width="490" height="607"/>
     </resources>

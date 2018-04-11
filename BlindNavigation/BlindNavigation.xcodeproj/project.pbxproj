@@ -59,6 +59,12 @@
 		8AE79965206B9204006FE85F /* DHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE79964206B9204006FE85F /* DHViewController.swift */; };
 		8AF95C06207B1A2700742006 /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF95C05207B1A2700742006 /* CoredataManager.swift */; };
 		8AF95C08207C8B8E00742006 /* 再别康桥.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C07207C8B8D00742006 /* 再别康桥.mp3 */; };
+		8AF95C0A207DD06500742006 /* icon_nav_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C09207DD06400742006 /* icon_nav_start.png */; };
+		8AF95C0C207DD4F800742006 /* icon_nav_end@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C0B207DD4F800742006 /* icon_nav_end@2x.png */; };
+		8AF95C0E207DD50100742006 /* pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C0D207DD50100742006 /* pin_red.png */; };
+		8AF95C10207DE54A00742006 /* poi_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C0F207DE54900742006 /* poi_1.png */; };
+		8AF95C12207DECF800742006 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C11207DECF700742006 /* Arrow.png */; };
+		8AF95C14207DED0D00742006 /* Arrow4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C13207DED0D00742006 /* Arrow4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +147,12 @@
 		8AE79964206B9204006FE85F /* DHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHViewController.swift; sourceTree = "<group>"; };
 		8AF95C05207B1A2700742006 /* CoredataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
 		8AF95C07207C8B8D00742006 /* 再别康桥.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "再别康桥.mp3"; sourceTree = "<group>"; };
+		8AF95C09207DD06400742006 /* icon_nav_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_nav_start.png; path = Pods/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle/images/icon_nav_start.png; sourceTree = SOURCE_ROOT; };
+		8AF95C0B207DD4F800742006 /* icon_nav_end@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_nav_end@2x.png"; path = "Pods/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle/images/icon_nav_end@2x.png"; sourceTree = SOURCE_ROOT; };
+		8AF95C0D207DD50100742006 /* pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin_red.png; path = Pods/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle/images/pin_red.png; sourceTree = SOURCE_ROOT; };
+		8AF95C0F207DE54900742006 /* poi_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poi_1.png; sourceTree = "<group>"; };
+		8AF95C11207DECF700742006 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
+		8AF95C13207DED0D00742006 /* Arrow4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow4.png; sourceTree = "<group>"; };
 		AFFA6947E28CDF1216275153 /* Pods-BlindNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindNavigation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlindNavigation/Pods-BlindNavigation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,6 +283,10 @@
 		8A5B7E95206DE2D10078AC9E /* NavitionDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8AF95C0F207DE54900742006 /* poi_1.png */,
+				8AF95C0D207DD50100742006 /* pin_red.png */,
+				8AF95C0B207DD4F800742006 /* icon_nav_end@2x.png */,
+				8AF95C09207DD06400742006 /* icon_nav_start.png */,
 				8A5B7E96206DE2E30078AC9E /* NavitionDetailViewController.swift */,
 			);
 			path = NavitionDetailViewController;
@@ -358,6 +374,8 @@
 		8A995A81206B3AD100ADB63A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8AF95C13207DED0D00742006 /* Arrow4.png */,
+				8AF95C11207DECF700742006 /* Arrow.png */,
 				8AF95C07207C8B8D00742006 /* 再别康桥.mp3 */,
 				8AF95C05207B1A2700742006 /* CoredataManager.swift */,
 				8A19BC92207314C40071992E /* VoiceBroadcasManager.swift */,
@@ -513,10 +531,16 @@
 				8A5B7E86206DCE240078AC9E /* timg.jpg in Resources */,
 				8A995A5E206B34C400ADB63A /* LaunchScreen.storyboard in Resources */,
 				8AF95C08207C8B8E00742006 /* 再别康桥.mp3 in Resources */,
+				8AF95C0E207DD50100742006 /* pin_red.png in Resources */,
 				8A995A5B206B34C400ADB63A /* Assets.xcassets in Resources */,
 				8A5B7EA6206E379A0078AC9E /* NavigationTableViewCell.xib in Resources */,
+				8AF95C0C207DD4F800742006 /* icon_nav_end@2x.png in Resources */,
 				8A995A59206B34C400ADB63A /* Main.storyboard in Resources */,
+				8AF95C10207DE54A00742006 /* poi_1.png in Resources */,
+				8AF95C12207DECF800742006 /* Arrow.png in Resources */,
+				8AF95C0A207DD06500742006 /* icon_nav_start.png in Resources */,
 				8A5B7E88206DD9680078AC9E /* timg1.jpg in Resources */,
+				8AF95C14207DED0D00742006 /* Arrow4.png in Resources */,
 				8A5B7EA1206E33AB0078AC9E /* mapapi.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
