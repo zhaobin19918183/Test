@@ -67,11 +67,12 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         coredatamanager()
         self.navigationController?.popViewController(animated: true)
     }
-    //停止录音
+    //MARK:停止录音
     func stopRecordAction()
     {
         
         record.stopRecord(HelperManager.file_pathString(nameString: "\(HelperManager.converLocalTime())_\(number + 1).wav"))
+         self.numberLabel.isHidden = true
         
     }
     
@@ -118,13 +119,14 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         informationMapView.updateLocationData(userLocation)
         print("heading is \(userLocation)")
         //TODO:初次进入导航页面记录获取到的第一个点,并录音
-        if arrayExample.count == 0
+        if arrayExample.count == 0 && locaitonUser.heading != nil
         {
-              startToRecord()
+//              startToRecord()
+              locationUserMessage(nameString:"")
         }
-        if locaitonUser.heading != nil
+        if arrayExample.count != 0 && locaitonUser.heading != nil
         {
-            locationUserMessage(nameString:"")
+            
             SameIntervalDistance()
         }
      
@@ -146,7 +148,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         let pointBefore:BMKMapPoint  = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(beforelat! as! CLLocationDegrees ,beforelon! as! CLLocationDegrees));
         let distance:CLLocationDistance =  BMKMetersBetweenMapPoints(pointBefore,pointNow)
         
-        if distance >= 10 && distance < 11{
+        if distance >= 10 {
 
             locationUserMessage(nameString:"")
             
@@ -215,7 +217,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     //MARK:开始录音
     func startToRecord()
     {
-        let start  =      VoiceBroadcasManager()
+//        let start  =      VoiceBroadcasManager()
 //        start.startTranslattion(message: "录音开始", countrylanguage: "11")
         numberLabel.isHidden = false
         record.beginRecord(HelperManager.file_pathString(nameString: "\(HelperManager.converLocalTime())_\(number + 1).wav"))
@@ -238,11 +240,12 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
             // 返回主线程处理一些事件，更新UI等等
             timeCount = timeCount - 1
             DispatchQueue.main.async {
-               self.numberLabel.text = String(timeCount)
+              
                 if timeCount <= 0
                 {
                     self.numberLabel.isHidden = true
                 }
+                 self.numberLabel.text = String(timeCount)
                 print(timeCount)
             }
             // 每秒计时一次
@@ -251,7 +254,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
             // 时间到了取消时间源
             if timeCount <= 0 {
 //
-//                self.stopRecordAction()
+                self.stopRecordAction()
 //                let start  =      VoiceBroadcasManager()
 //                start.startTranslattion(message: "录音结束", countrylanguage: "11")
                 codeTimer.cancel()

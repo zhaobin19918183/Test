@@ -65,6 +65,10 @@
 		8AF95C10207DE54A00742006 /* poi_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C0F207DE54900742006 /* poi_1.png */; };
 		8AF95C12207DECF800742006 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C11207DECF700742006 /* Arrow.png */; };
 		8AF95C14207DED0D00742006 /* Arrow4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF95C13207DED0D00742006 /* Arrow4.png */; };
+		8AF95C1A207F2CE300742006 /* AnimatedAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF95C16207F2CE300742006 /* AnimatedAnnotationView.swift */; };
+		8AF95C1B207F2CE300742006 /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF95C17207F2CE300742006 /* CustomOverlay.swift */; };
+		8AF95C1C207F2CE300742006 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF95C18207F2CE300742006 /* CustomOverlayView.swift */; };
+		8AF95C1D207F2CE300742006 /* RouteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF95C19207F2CE300742006 /* RouteAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +157,10 @@
 		8AF95C0F207DE54900742006 /* poi_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poi_1.png; sourceTree = "<group>"; };
 		8AF95C11207DECF700742006 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
 		8AF95C13207DED0D00742006 /* Arrow4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow4.png; sourceTree = "<group>"; };
+		8AF95C16207F2CE300742006 /* AnimatedAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedAnnotationView.swift; sourceTree = "<group>"; };
+		8AF95C17207F2CE300742006 /* CustomOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
+		8AF95C18207F2CE300742006 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		8AF95C19207F2CE300742006 /* RouteAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteAnnotation.swift; sourceTree = "<group>"; };
 		AFFA6947E28CDF1216275153 /* Pods-BlindNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindNavigation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlindNavigation/Pods-BlindNavigation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -374,6 +382,7 @@
 		8A995A81206B3AD100ADB63A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8AF95C15207F2CE300742006 /* Custom */,
 				8AF95C13207DED0D00742006 /* Arrow4.png */,
 				8AF95C11207DECF700742006 /* Arrow.png */,
 				8AF95C07207C8B8D00742006 /* 再别康桥.mp3 */,
@@ -402,6 +411,17 @@
 				8AE79964206B9204006FE85F /* DHViewController.swift */,
 			);
 			path = DHViewController;
+			sourceTree = "<group>";
+		};
+		8AF95C15207F2CE300742006 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				8AF95C16207F2CE300742006 /* AnimatedAnnotationView.swift */,
+				8AF95C17207F2CE300742006 /* CustomOverlay.swift */,
+				8AF95C18207F2CE300742006 /* CustomOverlayView.swift */,
+				8AF95C19207F2CE300742006 /* RouteAnnotation.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		8CEBBE810A68D28BC1E99FC8 /* Pods */ = {
@@ -622,14 +642,18 @@
 			files = (
 				8A19BC862071BFD20071992E /* HelperManager.swift in Sources */,
 				8A19BC8D2071C4170071992E /* WeatherDAO.swift in Sources */,
+				8AF95C1C207F2CE300742006 /* CustomOverlayView.swift in Sources */,
 				8A5B7E84206DCCDF0078AC9E /* HomeViewController.swift in Sources */,
 				8A5B7E82206DCCD30078AC9E /* LoginViewController.swift in Sources */,
 				8A19BC842071BFD20071992E /* Common.swift in Sources */,
+				8AF95C1B207F2CE300742006 /* CustomOverlay.swift in Sources */,
 				8A995A56206B34C400ADB63A /* ViewController.swift in Sources */,
 				8A19BC892071C1450071992E /* NavigationModel.xcdatamodeld in Sources */,
 				8AF95C06207B1A2700742006 /* CoredataManager.swift in Sources */,
+				8AF95C1A207F2CE300742006 /* AnimatedAnnotationView.swift in Sources */,
 				8A5B7E97206DE2E30078AC9E /* NavitionDetailViewController.swift in Sources */,
 				8A19BC9520731A1B0071992E /* RecordManager.swift in Sources */,
+				8AF95C1D207F2CE300742006 /* RouteAnnotation.swift in Sources */,
 				8A5B7E92206DDEE80078AC9E /* SettingViewController.swift in Sources */,
 				8A995A54206B34C400ADB63A /* AppDelegate.swift in Sources */,
 				8AE79965206B9204006FE85F /* DHViewController.swift in Sources */,
