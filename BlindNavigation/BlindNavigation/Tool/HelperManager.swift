@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AudioToolbox
 struct HelperManager {
     static let sharedManager = HelperManager()
     fileprivate init() {}
@@ -18,6 +18,45 @@ struct HelperManager {
         
         return file_path!
     }
+    
+  //两点距离
+    static  func  distanceBetweenTheCoordinates(startPointlat:Double,startPointlon:Double,endPointLat:Double,endPointLon:Double)->Int
+    {
+        
+        let startPoint:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(startPointlat,startPointlon));
+     
+        let endPoint:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(endPointLat,endPointLon));
+        let distance  =  BMKMetersBetweenMapPoints(endPoint,startPoint)
+        return Int(distance)
+    }
+    //在角度范围内震动
+    static func Angularvibration(beforeHeading:Double,nowHeading:Double)
+    {
+       
+        let beforeAdd     =    nowHeading + 15.0
+        let beforeReduce  = nowHeading  - 15.0
+       
+        if nowHeading < 345.0 && nowHeading > 15.0 && beforeHeading > beforeReduce && beforeHeading < beforeAdd
+        {
+            
+            let soundID = SystemSoundID(kSystemSoundID_Vibrate)
+            //振动
+            AudioServicesPlaySystemSound(soundID)
+            
+        }
+        if  nowHeading > 345.0 && nowHeading < 15.0 && beforeReduce > 345.0 && beforeAdd < 15.0
+        {
+            
+            let soundID = SystemSoundID(kSystemSoundID_Vibrate)
+            //振动
+            AudioServicesPlaySystemSound(soundID)
+        }
+        
+    }
+    
+  
+    
+    
     
     static func convertAnyObjectToData< T > (_ anyObject : T) -> Data
     {

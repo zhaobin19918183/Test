@@ -46,13 +46,18 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     var lostDistance = Int()
     var CoordinatesArray = [Coordinates]()
     var numberint:Int = 0
-     var routeSearch: BMKRouteSearch!
+    var routeSearch: BMKRouteSearch!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var targetImageVIew: UIImageView!
     var lostBool:Bool = true
     var locaitonBool:Bool = true
     var routeSearchBool:Bool = true
     var  AnnotationViewID : String = ""
+    var RouteAnnotationArr = [BMKWalkingStep]()
+    var stepInt:Int = 0
+    var nextStepInt:Int = 0
+    
+    @IBOutlet weak var naviView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -64,48 +69,30 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         informationMapView.userTrackingMode = BMKUserTrackingModeFollow //设置定位的状态
         informationMapView.zoomLevel = 20.0
         informationMapView.showsUserLocation = true//显示定位图层
-//         locationLine()
         CoordinatesLine()
         playMusicFile(number: 0)
-        
-        
-        
-//        let customRightBarButtonItem = UIBarButtonItem(title: "结束", style: .plain, target: self, action: #selector(InformationViewController.customLocationAccuracyCircle))
-//        self.navigationItem.rightBarButtonItem = customRightBarButtonItem
-
-
-     
-//
-        
+    
     }
     override func viewDidDisappear(_ animated: Bool)
     {
         start.cancleSpeek()
     }
-   
-   
-    
-    
+
     @objc func customLocationAccuracyCircle()
     {
-        
-    
         self.navigationController?.popViewController(animated: true)
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         locationService.delegate = self
-        
         informationMapView.delegate = self
         informationMapView.viewWillAppear()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        locationService.delegate = self
+        locationService.delegate = nil
         informationMapView.delegate = nil
         informationMapView.viewWillDisappear()
     }
@@ -122,22 +109,22 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
      *@param userLocation 新的用户位置
      */
     func didUpdateUserHeading(_ userLocation: BMKUserLocation!) {
-        print("heading is \(userLocation.heading)")
-        
-       
-        informationMapView.updateLocationData(userLocation)
+        print("didUpdateUserHeading")
+        LostToJudge(location: userLocation, number: nextdistance)
     }
-    
+
     /**
      *用户位置更新后，会调用此函数
      *@param userLocation 新的用户位置
      */
     func didUpdate(_ userLocation: BMKUserLocation!) {
-        
+        print("didUpdate")
         locaitonUser = userLocation
         informationMapView.updateLocationData(userLocation)
-        if userLocation.heading != nil {
-        ClosestPointOfDistance(userLocation: userLocation)}
+        if userLocation.heading != nil
+        {
+         ClosestPointOfDistance(userLocation: userLocation)
+        }
        
     }
     //MARK:最近点
@@ -158,55 +145,52 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         }
     
         var min = Int(truncating: pointDistanceArr[0] as! NSNumber)
+        var mindistance:Int = 0
         for i in 1..<pointDistanceArr.count - 1 {
             
             let mindis = Int(truncating: pointDistanceArr[i] as! NSNumber)
             if  mindis < min  {
                 min = mindis
+                // mindistance 最近导航点在已知数组中的位置
                 mindistance = i
             }
             
         }
-
-        lostDistance = mindistance
-        let numberInt:Int = mindistance + 2
+        let numberInt:Int = mindistance + 1
         numberLabel.text = String(numberInt)
-       
-        if lostBool == false
+        if  lostBool == true
+        {
+            lostBool = false
+            if  mindistance > 10
+            {
+               
+                goToFitstLoactionHeader(startLoaciton: userLocation, number: mindistance)
+                
+            }
+            else
+            {
+                  nextPoint(location: userLocation, number: mindistance)
+            }
+        }
+        else
         {
             nextPoint(location: userLocation, number: mindistance)
-            LostToJudge(location: userLocation, number: nextdistance)
-
-        }else
-        {
-             goToFitstLoactionHeader(startLoaciton: userLocation, number: mindistance + 1)
         }
-
-    
     }
     //MARK:是否到达下一个坐标点
     func nextPoint(location:BMKUserLocation, number:Int)
     {
-       
+
         let  coordinates:Coordinates = CoordinatesArray[number]
-        let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(coordinates.locationX,coordinates.locationY))
-         let pointNow:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(location.location.coordinate.latitude,location.location.coordinate.longitude));
-        let distance  =  BMKMetersBetweenMapPoints(pointNow,pointBefore)
-       
-        if distance  < 2  && locaitonBool == true
+        let distance = HelperManager.distanceBetweenTheCoordinates(startPointlat: coordinates.locationX, startPointlon: coordinates.locationY, endPointLat:location.location.coordinate.latitude, endPointLon: location.location.coordinate.longitude)
+ 
+        if distance  < 2
         {
             locaitonBool = false
             start.startTranslattion(message: "距离第\(number)目标位置还有2米,请注意", countrylanguage: "11")
             nextdistance = number + 1
-           
             playMusicFile(number:nextPoint)
         }
-        else
-        {
-         locaitonBool = true
-        }
-       
-        
 
     }
     //MARK:播放录音文件
@@ -247,108 +231,50 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
                 print("步行检索发送失败")
             }
         }
-
-//        let  heading:Double =  coordinates.heading
-
-        let pointNow:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(startLoaciton.location.coordinate.latitude,startLoaciton.location.coordinate.longitude));
-  
-        let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(Double(locationlat),Double(locationlon)));
-        //当前点和目标点距离
-        let distance  =  BMKMetersBetweenMapPoints(pointNow,pointBefore)
-        if distance >=  10
-        {
-            
-        }
-        else if distance <=  2
+        let distance = HelperManager.distanceBetweenTheCoordinates(startPointlat: coordinates.locationX, startPointlon: coordinates.locationY, endPointLat:startLoaciton.location.coordinate.latitude, endPointLon: startLoaciton.location.coordinate.latitude)
+        
+        if distance <=  2
          {
                 lostBool = false
                 let numberInt:Int = mindistance + 2
                 let start  =      VoiceBroadcasManager()
-                start.startTranslattion(message: "距离第\(numberInt)目标位置还有2米,请注意", countrylanguage: "11")
+                start.startTranslattion(message: "初次导航距离第\(numberInt)目标位置还有2米,请注意", countrylanguage: "china")
         }
-        
-        
-//        { // 目标点方向
-//            let beforeHeading = heading
-//            //当前方向
-//            let nowHeading   =  Double(startLoaciton.heading.trueHeading)
-//            let nowAdd = nowHeading + 15.0
-//            let nowReduce  = nowHeading - 15.0
-//
-//            if nowHeading < 345.0 && nowHeading > 15.0 && beforeHeading > nowReduce && beforeHeading < nowReduce
-//            {
-//
-//                let soundID = SystemSoundID(kSystemSoundID_Vibrate)
-//                //振动
-//                AudioServicesPlaySystemSound(soundID)
-//
-//            }
-//            if  nowHeading > 345.0 && nowHeading < 15.0 && nowReduce > 345.0 && nowAdd < 15.0
-//            {
-//
-//                let soundID = SystemSoundID(kSystemSoundID_Vibrate)
-//                //振动
-//                AudioServicesPlaySystemSound(soundID)
-//            }
-//
-//
-//        }
-//        else if distance <=  2
-//        {
-//            lostBool = false
-//            let numberInt:Int = mindistance + 2
-//            let start  =      VoiceBroadcasManager()
-//            start.startTranslattion(message: "距离第\(numberInt)目标位置还有2米,请注意", countrylanguage: "11")
-//        }
-        
+
     }
-    
-     //MARK:判断是否迷路 == 线上
-    
+    //MARK:判断是否迷路 == 当前位置距离最近的坐标点如果距离大于2米,择按照步行导航的线上点角度进行判断,当距离小于2米后按照原有线路上的方向进行导航
     func  LostToJudge(location:BMKUserLocation,number:Int)
     {
 
         let  coordinates:Coordinates = CoordinatesArray[number]
         let  heading:Double =  coordinates.heading
+        let distance = HelperManager.distanceBetweenTheCoordinates(startPointlat: coordinates.locationX, startPointlon: coordinates.locationY, endPointLat:location.location.coordinate.latitude, endPointLon: location.location.coordinate.longitude)
         
-        let pointNow:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(location.location.coordinate.latitude,location.location.coordinate.longitude));
-        let  locationlat =  coordinates.locationX
-        let  locationlon =  coordinates.locationY
-        let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(Double(locationlat),Double(locationlon)));
-        
-        let distance  =  BMKMetersBetweenMapPoints(pointNow,pointBefore)
-      
-        if distance < 10
+        if distance > 2 && RouteAnnotationArr.count != 0 && stepInt < RouteAnnotationArr.count
         {
-            let beforeHeading = heading
-            let beforeAdd = beforeHeading + 15.0
-            let beforeReduce  = beforeHeading - 15.0
-            let nowHeading   =  Double(location.heading.trueHeading)
-            if heading < 345.0 && heading > 15.0 && nowHeading > beforeReduce && nowHeading < beforeAdd
+           // RouteAnnotationArr
+            let transitStep:BMKWalkingStep = RouteAnnotationArr[stepInt]
+            let  headingStep:Double =  Double(transitStep.direction)*30
+            HelperManager.Angularvibration(beforeHeading: location.heading.trueHeading, nowHeading: headingStep)
+//            self.targetImageVIew.transform = CGAffineTransform(rotationAngle: CGFloat(headingStep))
+            let distanceStep = HelperManager.distanceBetweenTheCoordinates(startPointlat: transitStep.points[stepInt].x, startPointlon: transitStep.points[stepInt].y, endPointLat:location.location.coordinate.latitude, endPointLon: location.location.coordinate.longitude)
+            if distanceStep < 1
             {
-                
-                let soundID = SystemSoundID(kSystemSoundID_Vibrate)
-                //振动
-                AudioServicesPlaySystemSound(soundID)
-                
+                stepInt = stepInt + 1
             }
-            if  heading > 345.0 && heading < 15.0 && beforeReduce > 345.0 && beforeAdd < 15.0
-            {
-                
-                let soundID = SystemSoundID(kSystemSoundID_Vibrate)
-                //振动
-                AudioServicesPlaySystemSound(soundID)
-            }
-    
+        }
+        
+        if distance <= 2
+        {
+            self.targetImageVIew.transform = CGAffineTransform(rotationAngle: CGFloat(heading))
+            HelperManager.Angularvibration(beforeHeading: location.heading.trueHeading, nowHeading: heading)
         }
 
     }
-    
     func onGetWalkingRouteResult(_ searcher: BMKRouteSearch!, result: BMKWalkingRouteResult!, errorCode error: BMKSearchErrorCode) {
         print("onGetWalkingRouteResult: \(error)")
-//        informationMapView.removeAnnotations(informationMapView.annotations)
-//        informationMapView.removeOverlays(informationMapView.overlays)
-        
+        naviView.isHidden = true
+        //BMKUserLocation
         if error == BMK_SEARCH_NO_ERROR {
             let plan = result.routes[0] as! BMKWalkingRouteLine
             
@@ -356,6 +282,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
             var planPointCounts = 0
             for i in 0..<size {
                 let transitStep = plan.steps[i] as! BMKWalkingStep
+                RouteAnnotationArr.append(transitStep)
                 if i == 0 {
                     let item = RouteAnnotation()
                     item.coordinate = plan.starting.location
@@ -370,19 +297,21 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
                     item.type = 1
                     informationMapView.addAnnotation(item)  // 添加终点标注
                 }
-                // 添加 annotation 节点
+                //TODO: 添加 annotation 节点 节点上描述文字
                 let item = RouteAnnotation()
                 item.coordinate = transitStep.entrace.location
                 item.title = transitStep.entraceInstruction
                 item.degree = Int(transitStep.direction) * 30
                 item.type = 4
                 informationMapView.addAnnotation(item)
-                
+              
+                print(transitStep.direction)
                 // 轨迹点总数累计
                 planPointCounts = Int(transitStep.pointsCount) + planPointCounts
             }
             
             // 轨迹点
+    
             var tempPoints = Array(repeating: BMKMapPoint(x: 0, y: 0), count: planPointCounts)
             var i = 0
             for j in 0..<size {
@@ -397,13 +326,13 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
             // 通过 points 构建 BMKPolyline
             let polyLine = BMKPolyline(points: &tempPoints, count: UInt(planPointCounts))
             informationMapView.add(polyLine)  // 添加路线 overlay
-            mapViewFitPolyLine(polyLine)
+//            mapViewFitPolyLine(polyLine)
         } else if error == BMK_SEARCH_AMBIGUOUS_ROURE_ADDR {
          
         }
     }
     //根据polyline设置地图范围
-    func mapViewFitPolyLine(_ polyline: BMKPolyline!) {
+   func mapViewFitPolyLine(_ polyline: BMKPolyline!) {
         if polyline.pointCount < 1 {
             return
         }
@@ -460,9 +389,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
             coord.add(coords2DMake)
             pointAnnotation = BMKPointAnnotation()
             pointAnnotation?.coordinate = CLLocationCoordinate2DMake(coordinates.locationX,coordinates.locationY)
-//            pointAnnotation?.title = coordinates.locationX
-//            pointAnnotation?.subtitle = coordinates.locationY
-            
             informationMapView.addAnnotation(pointAnnotation)
         }
          self.addOverlayViews()
@@ -478,10 +404,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         routeSearch.delegate = self
     }
     func mapView(_ mapView: BMKMapView!, viewFor annotation: BMKAnnotation!) -> BMKAnnotationView! {
-        
-        // 普通标注
-      
-    
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: AnnotationViewID) as! BMKPinAnnotationView?
         if annotationView == nil {
             annotationView = BMKPinAnnotationView(annotation: pointAnnotation, reuseIdentifier: AnnotationViewID)
@@ -497,12 +419,12 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
             if AnnotationViewID != "routeSearch"
                 {
                     let label = UILabel()
-                    label.frame = CGRect(x:0, y: 10, width: 20, height: 20)
+                    label.frame = CGRect(x:0, y: 10, width: 25, height: 25)
                     label.backgroundColor = UIColor.blue
                     label.textColor = UIColor.white
                     numberint = numberint + 1
                     label.clipsToBounds = true
-                    label.layer.cornerRadius = 10
+                    label.layer.cornerRadius = 8
                     label.textAlignment = NSTextAlignment.center
                     label.text = String(numberint )
                     annotationView?.addSubview(label)
@@ -513,7 +435,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
 
         annotationView?.annotation = annotation
         return annotationView
-        
     }
     //添加内置覆盖物
     func addOverlayViews() {
@@ -534,9 +455,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         informationMapView.add(polyline)
   
     }
-    
     // MARK: - BMKMapViewDelegate
-    
     /**
      *根据overlay生成对应的View
      *@param mapView 地图View
@@ -544,9 +463,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
      *@return 生成的覆盖物View
      */
     func mapView(_ mapView: BMKMapView!, viewFor overlay: BMKOverlay!) -> BMKOverlayView! {
-        
         let polylineView = BMKPolylineView(overlay: overlay)
-        
         polylineView?.strokeColor =  UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)
         polylineView?.lineWidth = 3
         polylineView?.loadStrokeTextureImage(UIImage(named: "texture_arrow.png"))
@@ -560,5 +477,4 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     func mapView(_ mapView: BMKMapView!, didAddOverlayViews overlayViews: [Any]!) {
         print("didAddOverlayViews")
     }
-    
 }

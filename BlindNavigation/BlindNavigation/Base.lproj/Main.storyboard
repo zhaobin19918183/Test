@@ -464,16 +464,37 @@
                                     <constraint firstAttribute="height" constant="100" id="afb-nv-Mpk"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b44-UT-BiF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地图正在初始化请稍等" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbm-3u-bWM">
+                                        <rect key="frame" x="99" y="230" width="177" height="187"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rbm-3u-bWM" firstAttribute="leading" secondItem="b44-UT-BiF" secondAttribute="leading" constant="99" id="B8A-4N-ppx"/>
+                                    <constraint firstItem="rbm-3u-bWM" firstAttribute="top" secondItem="b44-UT-BiF" secondAttribute="top" constant="230" id="EJT-da-9o2"/>
+                                    <constraint firstAttribute="trailing" secondItem="rbm-3u-bWM" secondAttribute="trailing" constant="99" id="PVj-TU-9aU"/>
+                                    <constraint firstAttribute="bottom" secondItem="rbm-3u-bWM" secondAttribute="bottom" constant="230" id="iMj-bs-QZ9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="el9-tF-0zK" firstAttribute="leading" secondItem="7Eh-I9-oAk" secondAttribute="leading" constant="20" id="7Qf-A5-6fj"/>
                             <constraint firstItem="9oD-Nm-cRH" firstAttribute="top" secondItem="7Eh-I9-oAk" secondAttribute="top" id="9Am-XH-TlD"/>
                             <constraint firstItem="7Eh-I9-oAk" firstAttribute="bottom" secondItem="lAd-kD-qEl" secondAttribute="bottom" constant="20" id="DZa-Nl-mAT"/>
+                            <constraint firstAttribute="bottom" secondItem="b44-UT-BiF" secondAttribute="bottom" id="EE7-5O-Rst"/>
                             <constraint firstItem="9oD-Nm-cRH" firstAttribute="leading" secondItem="7Eh-I9-oAk" secondAttribute="leading" id="JwO-mt-OYg"/>
                             <constraint firstItem="7Eh-I9-oAk" firstAttribute="bottom" secondItem="el9-tF-0zK" secondAttribute="bottom" constant="20" id="XZX-h6-IzA"/>
+                            <constraint firstItem="b44-UT-BiF" firstAttribute="top" secondItem="7Eh-I9-oAk" secondAttribute="top" id="alr-vD-dUc"/>
                             <constraint firstItem="7Eh-I9-oAk" firstAttribute="bottom" secondItem="9oD-Nm-cRH" secondAttribute="bottom" id="c4u-kw-9uu"/>
+                            <constraint firstItem="7Eh-I9-oAk" firstAttribute="trailing" secondItem="b44-UT-BiF" secondAttribute="trailing" id="koF-4j-5jK"/>
                             <constraint firstItem="7Eh-I9-oAk" firstAttribute="trailing" secondItem="lAd-kD-qEl" secondAttribute="trailing" constant="20" id="lIm-UL-ezO"/>
+                            <constraint firstItem="b44-UT-BiF" firstAttribute="leading" secondItem="7Eh-I9-oAk" secondAttribute="leading" id="wYz-wb-z8L"/>
                             <constraint firstItem="7Eh-I9-oAk" firstAttribute="trailing" secondItem="9oD-Nm-cRH" secondAttribute="trailing" id="y2S-eZ-X2D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Eh-I9-oAk"/>
@@ -481,6 +502,7 @@
                     <navigationItem key="navigationItem" title="导航" id="ofd-nS-s8I"/>
                     <connections>
                         <outlet property="informationMapView" destination="9oD-Nm-cRH" id="a0M-RE-ppJ"/>
+                        <outlet property="naviView" destination="b44-UT-BiF" id="Gye-qr-gG1"/>
                         <outlet property="numberLabel" destination="lAd-kD-qEl" id="Hef-Vk-BUp"/>
                         <outlet property="targetImageVIew" destination="el9-tF-0zK" id="o9g-1J-hb8"/>
                     </connections>
