@@ -237,6 +237,14 @@ struct HelperManager {
         return (day,monthString)
         
     }
+    static func dataTypeTurnJson(element:AnyObject) -> String {
+        
+        let jsonData = try! JSONSerialization.data(withJSONObject: element, options: JSONSerialization.WritingOptions.prettyPrinted)
+        let str = String(data: jsonData, encoding: String.Encoding.utf8)!
+        return str
+    
+    } 
+
 
    
     

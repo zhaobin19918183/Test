@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreLocation
+import MessageUI
+import Alamofire
+
 class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate,CLLocationManagerDelegate {
 
     @IBOutlet weak var numberLabel: UILabel!
@@ -35,6 +38,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     var arrayExample  = NSMutableArray()
     //录音文件
     var intoBool:Bool = true
+    var firstBool:Bool = true
     var nameString:String = ""
     var  record = RecordManager()
     var number :Int = 9990
@@ -85,7 +89,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        locationService.delegate = self
+        locationService.delegate = nil
         informationMapView.delegate = nil
         informationMapView.viewWillDisappear()
     }
@@ -116,20 +120,52 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         locaitonUserHeadering = userLocation
         informationMapView.updateLocationData(userLocation)
         locaitonUser = userLocation
-        informationMapView.updateLocationData(userLocation)
         print("heading is \(userLocation)")
-        //TODO:初次进入导航页面记录获取到的第一个点,并录音
-        if arrayExample.count == 0 && locaitonUser.heading != nil
+        if firstBool == true
         {
-//              startToRecord()
-              locationUserMessage(nameString:"")
-        }
-        if arrayExample.count != 0 && locaitonUser.heading != nil
-        {
+            firstBool  = false
+            //TODO:初次进入导航页面记录获取到的第一个点,并录音
+            var timeCount = 10
+            // 在global线程里创建一个时间源
+            let codeTimer = DispatchSource.makeTimerSource(queue:      DispatchQueue.global())
+            // 设定这个时间源是每秒循环一次，立即开始
+            codeTimer.schedule(deadline: .now(), repeating: .seconds(1))
+            // 设定时间源的触发事件
+            codeTimer.setEventHandler(handler: {
+                // 返回主线程处理一些事件，更新UI等等
+                timeCount = timeCount - 1
+                // 每秒计时一次
+                // 时间到了取消时间源
+                print(timeCount)
+                if timeCount <= 0 {
+                    //
+                    if self.arrayExample.count == 0 && self.locaitonUser.heading != nil
+                    {
+                        //              startToRecord()
+                        self.locationUserMessage(nameString:"")
+                    }
+                   
+                    
+                    self.stopRecordAction()
+                    
+                    codeTimer.cancel()
+                }
+            })
+            // 启动时间源
+            codeTimer.resume()
             
-            SameIntervalDistance()
         }
-     
+        else
+        {
+            if self.arrayExample.count != 0 && self.locaitonUser.heading != nil
+            {
+                
+                self.SameIntervalDistance()
+            }
+            
+        }
+
+       
     }
     
     /**
@@ -312,8 +348,30 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         locationDic.setValue(HelperManager.converLocalTime(), forKey: "locationDate")
         locationDic.setValue(HelperManager.converLocalTime(), forKey: "locationName")
         locationDic.setValue(1, forKey: "locationID")
-        CoredataManager.coredataManagerLocation(LocationDic: locationDic, coordinatesArray: arrayExample)
+        uploadToNetwork()
+//        CoredataManager.coredataManagerLocation(LocationDic: locationDic, coordinatesArray: arrayExample)
+//
         
+    }
+    //MARK:上传数据到服务器
+    func uploadToNetwork()
+    {
+        let  jsonStr = HelperManager.dataTypeTurnJson(element: arrayExample)
+        let parameters2      = ["filesName":HelperManager.converLocalTime(),"time":HelperManager.converLocalTime(),"location":jsonStr,"locaitonName":"newland"]
+        Alamofire.request("http://192.168.123.1:8000/blindLanter/locationRequest/",method:.post, parameters: parameters2)
+            .responseJSON { response in
+               
+                print("result==\(response.result)")// 返回结果，是否成功
+                if String(describing: response.result) == "SUCCESS"
+                {
+                 
+                }
+                else
+                {
+                    
+                }
+                
+        }
     }
 
     func testSaveArrayPlist(arrayObject:NSMutableArray) ->NSData{
@@ -325,8 +383,6 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         //locationSoundName
        
     }
-    
-    
     //MARK: 保存特定的坐标数据
     func userLocationData(array:[AnyObject])->NSData
     {

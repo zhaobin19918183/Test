@@ -346,14 +346,26 @@
                     <view key="view" contentMode="scaleToFill" id="a21-4R-AOB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12221111111111wwwwwwwwwwwwwwwwwwwwwww" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u21-8M-Pcu">
+                                <rect key="frame" x="47" y="178" width="280" height="310"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="fFj-N1-NiL"/>
                     </view>
                     <navigationItem key="navigationItem" title="设置" id="B6g-ID-3IH"/>
+                    <connections>
+                        <outlet property="testLabel" destination="u21-8M-Pcu" id="kqP-Fd-z20"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NaJ-5c-CJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2113" y="745"/>
+            <point key="canvasLocation" x="2112.8000000000002" y="744.3778110944528"/>
         </scene>
         <!--详细列表-->
         <scene sceneID="cua-sN-SA8">

@@ -33,6 +33,8 @@ class CoredataManager: NSObject
                     coorEntity.locationX = LocationDic.value(forKey: "locationlat") as! Double
                     coorEntity.locationY = LocationDic.value(forKey: "locationlon") as! Double
                     coorEntity.heading   = LocationDic.value(forKey: "headering") as! Double
+                    coorEntity.soundName   = (LocationDic.value(forKey: "soundName") as! String)
+                    
                     coorEntity.relationship = locatiobEntity
                     
                 }

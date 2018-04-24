@@ -77,19 +77,16 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     {
         start.cancleSpeek()
     }
-
     @objc func customLocationAccuracyCircle()
     {
         self.navigationController?.popViewController(animated: true)
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         locationService.delegate = self
         informationMapView.delegate = self
         informationMapView.viewWillAppear()
     }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         locationService.delegate = nil
@@ -103,7 +100,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     func willStartLocatingUser() {
         print("willStartLocatingUser");
     }
-    
     /**
      *用户方向更新后，会调用此函数
      *@param userLocation 新的用户位置
@@ -112,7 +108,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         print("didUpdateUserHeading")
         LostToJudge(location: userLocation, number: nextdistance)
     }
-
     /**
      *用户位置更新后，会调用此函数
      *@param userLocation 新的用户位置
@@ -125,7 +120,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         {
          ClosestPointOfDistance(userLocation: userLocation)
         }
-       
     }
     //MARK:最近点
     func  ClosestPointOfDistance(userLocation: BMKUserLocation)
@@ -136,16 +130,11 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
             let  coordinates:Coordinates = CoordinatesArray[i]
             let  locationlat =  coordinates.locationX
             let  locationlon =  coordinates.locationY
-    
             let pointBefore:BMKMapPoint =   BMKMapPointForCoordinate(CLLocationCoordinate2DMake(Double(locationlat),Double(locationlon)));
-  
            let distance  =  BMKMetersBetweenMapPoints(pointNow,pointBefore)
             pointDistanceArr.append(distance as AnyObject)
-            
         }
-    
         var min = Int(truncating: pointDistanceArr[0] as! NSNumber)
-        var mindistance:Int = 0
         for i in 1..<pointDistanceArr.count - 1 {
             
             let mindis = Int(truncating: pointDistanceArr[i] as! NSNumber)
@@ -154,18 +143,15 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
                 // mindistance 最近导航点在已知数组中的位置
                 mindistance = i
             }
-            
         }
         let numberInt:Int = mindistance + 1
         numberLabel.text = String(numberInt)
         if  lostBool == true
         {
             lostBool = false
-            if  mindistance > 10
+            if  min > 10
             {
-               
                 goToFitstLoactionHeader(startLoaciton: userLocation, number: mindistance)
-                
             }
             else
             {
@@ -180,7 +166,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     //MARK:是否到达下一个坐标点
     func nextPoint(location:BMKUserLocation, number:Int)
     {
-
         let  coordinates:Coordinates = CoordinatesArray[number]
         let distance = HelperManager.distanceBetweenTheCoordinates(startPointlat: coordinates.locationX, startPointlon: coordinates.locationY, endPointLat:location.location.coordinate.latitude, endPointLon: location.location.coordinate.longitude)
  
@@ -205,7 +190,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         
     }
     //MARK:判断是否迷路 == 线外
-    
     func goToFitstLoactionHeader(startLoaciton:BMKUserLocation,number:Int)
     {
         let  coordinates:Coordinates = CoordinatesArray[number]
@@ -214,17 +198,14 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         if routeSearchBool == true
         {
             routeSearchBool = false
-        
             let from = BMKPlanNode()
             from.pt = startLoaciton.location.coordinate
             let to = BMKPlanNode()
             to.pt = CLLocationCoordinate2DMake(locationlat, locationlon)
-            
             let walkingRouteSearchOption = BMKWalkingRoutePlanOption()
             walkingRouteSearchOption.from = from
             walkingRouteSearchOption.to = to
             let flag = routeSearch.walkingSearch(walkingRouteSearchOption)
-            
             if flag {
                 print("步行检索发送成功")
             }else {
@@ -249,14 +230,13 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         let  coordinates:Coordinates = CoordinatesArray[number]
         let  heading:Double =  coordinates.heading
         let distance = HelperManager.distanceBetweenTheCoordinates(startPointlat: coordinates.locationX, startPointlon: coordinates.locationY, endPointLat:location.location.coordinate.latitude, endPointLon: location.location.coordinate.longitude)
-        
         if distance > 2 && RouteAnnotationArr.count != 0 && stepInt < RouteAnnotationArr.count
         {
            // RouteAnnotationArr
             let transitStep:BMKWalkingStep = RouteAnnotationArr[stepInt]
             let  headingStep:Double =  Double(transitStep.direction)*30
             HelperManager.Angularvibration(beforeHeading: location.heading.trueHeading, nowHeading: headingStep)
-//            self.targetImageVIew.transform = CGAffineTransform(rotationAngle: CGFloat(headingStep))
+            self.targetImageVIew.transform = CGAffineTransform(rotationAngle: CGFloat(headingStep))
             let distanceStep = HelperManager.distanceBetweenTheCoordinates(startPointlat: transitStep.points[stepInt].x, startPointlon: transitStep.points[stepInt].y, endPointLat:location.location.coordinate.latitude, endPointLon: location.location.coordinate.longitude)
             if distanceStep < 1
             {
@@ -309,9 +289,8 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
                 // 轨迹点总数累计
                 planPointCounts = Int(transitStep.pointsCount) + planPointCounts
             }
-            
+
             // 轨迹点
-    
             var tempPoints = Array(repeating: BMKMapPoint(x: 0, y: 0), count: planPointCounts)
             var i = 0
             for j in 0..<size {
@@ -322,27 +301,23 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
                     i += 1
                 }
             }
-            
             // 通过 points 构建 BMKPolyline
             let polyLine = BMKPolyline(points: &tempPoints, count: UInt(planPointCounts))
             informationMapView.add(polyLine)  // 添加路线 overlay
 //            mapViewFitPolyLine(polyLine)
         } else if error == BMK_SEARCH_AMBIGUOUS_ROURE_ADDR {
-         
-        }
+    }
     }
     //根据polyline设置地图范围
    func mapViewFitPolyLine(_ polyline: BMKPolyline!) {
         if polyline.pointCount < 1 {
             return
         }
-        
         let pt = polyline.points[0]
         var leftTopX = pt.x
         var leftTopY = pt.y
         var rightBottomX = pt.x
         var rightBottomY = pt.y
-        
         for i in 1..<polyline.pointCount {
             let pt = polyline.points[Int(i)]
             leftTopX = pt.x < leftTopX ? pt.x : leftTopX;
@@ -350,12 +325,9 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
             rightBottomX = pt.x > rightBottomX ? pt.x : rightBottomX;
             rightBottomY = pt.y > rightBottomY ? pt.y : rightBottomY;
         }
-        
         let rect = BMKMapRectMake(leftTopX, leftTopY, rightBottomX - leftTopX, rightBottomY - leftTopY)
         informationMapView.visibleMapRect = rect
     }
-    
-    
     /**
      *在地图View停止定位后，会调用此函数
      *@param mapView 地图View
@@ -363,27 +335,19 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     func didStopLocatingUser() {
         print("didStopLocatingUser")
     }
-   
     func getDictionaryFromJSONString(jsonString:String) ->NSArray{
-        
         let jsonData:Data = jsonString.data(using: .utf8)!
-        
         let dict = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
         if dict != nil {
             return dict as! NSArray
         }
         return NSArray()
-        
-        
     }
-  
-    
     //MARK:画出地图上的运动轨迹和记录点
     func CoordinatesLine()
     {
         AnnotationViewID = "renameMark"
         for i in 0...CoordinatesArray.count - 1 {
-            
             let  coordinates:Coordinates = CoordinatesArray[i]
             let coords2DMake = CLLocationCoordinate2DMake(coordinates.locationX,coordinates.locationY )
             coord.add(coords2DMake)
@@ -392,10 +356,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
             informationMapView.addAnnotation(pointAnnotation)
         }
          self.addOverlayViews()
-      
-        self.routeSearchBMK()
-        
-        
+         self.routeSearchBMK()
     }
     func  routeSearchBMK()
     {
@@ -429,23 +390,17 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
                     label.text = String(numberint )
                     annotationView?.addSubview(label)
                     annotationView?.image = nil
-                    
             }
         }
-
         annotationView?.annotation = annotation
         return annotationView
     }
     //添加内置覆盖物
     func addOverlayViews() {
-        
         // 添加折线覆盖物
         if polyline == nil {
-            
             var coords = [
                 self.coord[0] as!  CLLocationCoordinate2D]
-            
-            
             for i in 1...coord.count - 1
             {
                 coords.append(self.coord[i] as!  CLLocationCoordinate2D)
@@ -453,7 +408,6 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
             polyline = BMKPolyline(coordinates: &coords, count: UInt(coord.count))
         }
         informationMapView.add(polyline)
-  
     }
     // MARK: - BMKMapViewDelegate
     /**

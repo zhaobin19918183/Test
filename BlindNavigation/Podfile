@@ -1,5 +1,8 @@
-platform :ios, '7.0' #手机的系统
+platform :ios, '10.0' #手机的系统
+use_frameworks!
 target 'BlindNavigation' do #工程名字
   pod 'BaiduMapKit'
+  pod 'Alamofire','~> 4.7'
+
  
 end  

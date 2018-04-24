@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86A746CD0867A13963F36DE7 /* Pods_BlindNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE68310A984373891A6EE8ED /* Pods_BlindNavigation.framework */; };
 		8A19BC802071BF8C0071992E /* BaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC7F2071BF8B0071992E /* BaseDAO.swift */; };
 		8A19BC842071BFD20071992E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC812071BFCC0071992E /* Common.swift */; };
 		8A19BC852071BFD20071992E /* FolderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A19BC822071BFCF0071992E /* FolderManager.swift */; };
@@ -28,6 +29,7 @@
 		8A5B7EA1206E33AB0078AC9E /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8A5B7EA0206E33AA0078AC9E /* mapapi.bundle */; };
 		8A5B7EA5206E379A0078AC9E /* NavigationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B7EA3206E379A0078AC9E /* NavigationTableViewCell.swift */; };
 		8A5B7EA6206E379A0078AC9E /* NavigationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5B7EA4206E379A0078AC9E /* NavigationTableViewCell.xib */; };
+		8A7921A4208830B2005DE588 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7921A3208830B1005DE588 /* NetWorkManager.swift */; };
 		8A995A54206B34C400ADB63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A995A53206B34C400ADB63A /* AppDelegate.swift */; };
 		8A995A56206B34C400ADB63A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A995A55206B34C400ADB63A /* ViewController.swift */; };
 		8A995A59206B34C400ADB63A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A995A57206B34C400ADB63A /* Main.storyboard */; };
@@ -89,7 +91,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		615660D3BE925C625AF5EBA6 /* libPods-BlindNavigation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlindNavigation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C09145EAB9BB7C0B775430 /* Pods-BlindNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindNavigation.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlindNavigation/Pods-BlindNavigation.release.xcconfig"; sourceTree = "<group>"; };
 		8A19BC7F2071BF8B0071992E /* BaseDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDAO.swift; sourceTree = "<group>"; };
 		8A19BC812071BFCC0071992E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 		8A5B7EA0206E33AA0078AC9E /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
 		8A5B7EA3206E379A0078AC9E /* NavigationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTableViewCell.swift; sourceTree = "<group>"; };
 		8A5B7EA4206E379A0078AC9E /* NavigationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationTableViewCell.xib; sourceTree = "<group>"; };
+		8A7921A3208830B1005DE588 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		8A995A50206B34C400ADB63A /* BlindNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlindNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A995A53206B34C400ADB63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A995A55206B34C400ADB63A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		8AF95C18207F2CE300742006 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		8AF95C19207F2CE300742006 /* RouteAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteAnnotation.swift; sourceTree = "<group>"; };
 		AFFA6947E28CDF1216275153 /* Pods-BlindNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindNavigation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlindNavigation/Pods-BlindNavigation.debug.xcconfig"; sourceTree = "<group>"; };
+		BE68310A984373891A6EE8ED /* Pods_BlindNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlindNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +193,7 @@
 				8A995A86206B439900ADB63A /* libssl.a in Frameworks */,
 				8A995A87206B439A00ADB63A /* libcrypto.a in Frameworks */,
 				8AC722D2206B66D000821DF6 /* BMKLocationKit.framework in Frameworks */,
+				86A746CD0867A13963F36DE7 /* Pods_BlindNavigation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +238,7 @@
 				8A995A8A206B5F2000ADB63A /* CoreLocation.framework */,
 				8A995A85206B439800ADB63A /* libcrypto.a */,
 				8A995A84206B439500ADB63A /* libssl.a */,
-				615660D3BE925C625AF5EBA6 /* libPods-BlindNavigation.a */,
+				BE68310A984373891A6EE8ED /* Pods_BlindNavigation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -395,6 +399,7 @@
 				8A19BC822071BFCF0071992E /* FolderManager.swift */,
 				8A19BC832071BFD20071992E /* HelperManager.swift */,
 				8A19BC7F2071BF8B0071992E /* BaseDAO.swift */,
+				8A7921A3208830B1005DE588 /* NetWorkManager.swift */,
 				8A19BC872071C1450071992E /* NavigationModel.xcdatamodeld */,
 				8A5B7E9F206E33AA0078AC9E /* Resources */,
 				8A5B7E87206DD9660078AC9E /* timg1.jpg */,
@@ -588,9 +593,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BlindNavigation/Pods-BlindNavigation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -626,7 +634,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -646,6 +654,7 @@
 				8A5B7E84206DCCDF0078AC9E /* HomeViewController.swift in Sources */,
 				8A5B7E82206DCCD30078AC9E /* LoginViewController.swift in Sources */,
 				8A19BC842071BFD20071992E /* Common.swift in Sources */,
+				8A7921A4208830B2005DE588 /* NetWorkManager.swift in Sources */,
 				8AF95C1B207F2CE300742006 /* CustomOverlay.swift in Sources */,
 				8A995A56206B34C400ADB63A /* ViewController.swift in Sources */,
 				8A19BC892071C1450071992E /* NavigationModel.xcdatamodeld in Sources */,
