@@ -9,8 +9,8 @@
 import UIKit
 //导入头文件
 import MessageUI
-
 import Alamofire
+import SwiftyJSON
 
 class SettingViewController: UIViewController, UINavigationControllerDelegate, MFMessageComposeViewControllerDelegate {
 
@@ -34,12 +34,9 @@ class SettingViewController: UIViewController, UINavigationControllerDelegate, M
             .responseJSON { response in
                 self.testLabel.text = String(describing: response.result.value)
                 if let jsonValue = response.result.value {
-                    /*
-                     error_code = 0
-                     reason = ""
-                     result = 数组套字典的城市列表
-                     */
-                    print("code: \(jsonValue)")
+                    let json = JSON(jsonValue)
+                
+                    print("code: \(json["result"]["phone"])")
                 }
 
         }

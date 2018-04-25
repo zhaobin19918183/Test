@@ -7,33 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E11D6E68B7E9EFDF567352D9E175B34 /* Timeline.swift */; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 896E1B1CEF6E5958F5344AECC622DAD8 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC39C7515103529C90A89C81B80850EE /* TaskDelegate.swift */; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF937B09C73637BA6B32191B4819140 /* Request.swift */; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B710E93D77B3C4FFBAAE9B7008C071 /* DispatchQueue+Alamofire.swift */; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0165AB8C8DA81FC14E5FBCC22DF9A9 /* ServerTrustPolicy.swift */; };
+		0B0CD8679C6C82633A629F492F5F96CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60053A66FC6A1EC05BC9B53DA0E3D2 /* Timeline.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9168413C1D1D2076E9A5AA00E5EB65E4 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2016A3C4F5692EDD54C3B53A42B3D383 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A1879ECDC3200209FC4F19319C3499 /* SwiftyJSON.swift */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317EF3F1D45B267B25AE95218ABA41C /* TaskDelegate.swift */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1395002F5B020B4C1FDABBC23839DE10 /* Request.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC7E7BB563F205518E74AA07CAE50DF /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0629934A0A72C0B1CBE34B1887E40 /* ServerTrustPolicy.swift */; };
+		6B83EE124EB40E819DD40EAA083A8C31 /* Pods-BlindNavigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA78113E8202B8C2B01285BF8DD7A70C /* Pods-BlindNavigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CD82A45BEADAF20534E65543A10B078 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FFE3E1B9BE6C2DD48515AB8B2D9D50D /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761200029BDFBD43DACD8CE71F7CBD04 /* SessionDelegate.swift */; };
-		7D48C47BA9E0C0B3FD00C286AB0478B1 /* Pods-BlindNavigation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA78113E8202B8C2B01285BF8DD7A70C /* Pods-BlindNavigation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A7AC9C26D0C4D3D769FF3E15D766CF /* Result.swift */; };
-		8445B3405AAEA57118FB8E3BC0F809F4 /* Pods-BlindNavigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6EF55F315C9D3D707EBC46D0FE852 /* Pods-BlindNavigation-dummy.m */; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07517AD7E61137340B0CCD0F106448 /* AFError.swift */; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E49AE790D9B616B6DAC72EB2B533C /* NetworkReachabilityManager.swift */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E756A63AB8E4552CE984B4DABEAE0A /* Alamofire-dummy.m */; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EBD9B5C8AA6C4D1F5C0E0B4FA9B956 /* SessionManager.swift */; };
-		B1EB51C67210965E6121E5356714B5FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6299582CD2AA63812F0D85CF29DDB27 /* MultipartFormData.swift */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF183B5C4506F02FE52160CE7576C3F4 /* Validation.swift */; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C7D07C74897424BC7EF7E2A4C38FC /* ParameterEncoding.swift */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DAC4208B975E9304E696CDFF964336 /* Response.swift */; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63C581B89A2A8865BAFEBFC357937E5 /* Notifications.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F8CAA2143FAADD9124A334C086D08 /* ResponseSerialization.swift */; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490ADD67947E0A3F081383870155B47 /* Alamofire.swift */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C43AEA19C1AEB4729E08330CEF9CC /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B7CD8A204FBA376A90576039AF28F2 /* Result.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DFCFD304DBD694DE021B9725E15284 /* AFError.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC34F34FC8B186D5EA1D71DA3027E0 /* NetworkReachabilityManager.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD78225CE84F424EC11F35EABA2AEB4F /* Alamofire-dummy.m */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7796A8CA622D8E59031811CD028C2B1E /* SessionManager.swift */; };
+		B1DD5E317A0F92D806E6A1C4E7B3CD30 /* Pods-BlindNavigation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6EF55F315C9D3D707EBC46D0FE852 /* Pods-BlindNavigation-dummy.m */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C478D051DD6DAEC41D7D0F065CF3592 /* MultipartFormData.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EC0DE320E53364F161DDC4AD4D2A99 /* Validation.swift */; };
+		BDF3635605C1E484B07447AB633C0AAE /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C59BC116CF455400FDED6DB0986AF67 /* SwiftyJSON-dummy.m */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EA14B839187F14E369A05D602EE09 /* ParameterEncoding.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D469B739A65AF0CA334D93B16E7F1 /* Response.swift */; };
+		DA20E0B3BC24547D86F88278802E20AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C752DC2E61BA65B5BA94FC660DF6A796 /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F47D45420DC90D7C63BB7379834559 /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335E3BA14BDA3AA0EEF6E1F080F31917 /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C822AD70E6E347F6B30BD9ACFB702B75 /* PBXContainerItemProxy */ = {
+		18072B3870BD955900C0A9EB82846515 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F17DF99C695AD195417219BC4A39DFF0;
+			remoteInfo = SwiftyJSON;
+		};
+		733FB199EA2BED55AAE6D1A2CE186E42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -43,144 +54,152 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		007D0ED0A85BD62F15CC29A7C689D47D /* BMKTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKTypes.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKTypes.h; sourceTree = "<group>"; };
 		036E6EF853B68ABB7DE1576164B069DA /* Pods-BlindNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlindNavigation.debug.xcconfig"; sourceTree = "<group>"; };
-		042C7D07C74897424BC7EF7E2A4C38FC /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		0685E154B8CE8DCDE6A7E63D6440556E /* BMKLocationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationService.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationService.h; sourceTree = "<group>"; };
-		07A7CC04006F756A170A87436128C7FD /* BMKNavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKNavigation.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKNavigation.h; sourceTree = "<group>"; };
-		08EF13A378A7FC985A7849D407E8D724 /* BMKUserLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKUserLocation.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKUserLocation.h; sourceTree = "<group>"; };
-		0B772368DCEB408B4C2DE339441E2AAC /* BMKMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapView.h; sourceTree = "<group>"; };
-		0C03C8F4F871A6E5734986B463969598 /* BMKPolygonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolygonView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolygonView.h; sourceTree = "<group>"; };
-		14868068E124D54B47C871BF3CAF4350 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		149CA9B934AE7165AB572CD10C96BD22 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Cloud.framework; path = BaiduMapKit/BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
-		14B0EE4F9CA6C28D4EFF0401C88294BE /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		19099B70BDFB60E18E519DCADC29C875 /* BMKTileLayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKTileLayerView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKTileLayerView.h; sourceTree = "<group>"; };
-		1AE9767F0DEFD7769F0FF4F28D1E18A9 /* BMKCloudPOIList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudPOIList.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudPOIList.h; sourceTree = "<group>"; };
-		1DCF2272DE49E0A0BB8EFA061DFCFD87 /* BMKSearchComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSearchComponent.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSearchComponent.h; sourceTree = "<group>"; };
-		2091EF25D64FDE6955E016C40F4778D4 /* BMKPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolyline.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolyline.h; sourceTree = "<group>"; };
-		21B30748ADC43CAB9908ABD6371FFC9D /* BMKRouteSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearchOption.h; sourceTree = "<group>"; };
-		24554FFEE5137D003271638995F1E814 /* BMKSearchBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSearchBase.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSearchBase.h; sourceTree = "<group>"; };
-		24D5F64A3A793B2AAC588F38FF23D965 /* BMKGroundOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGroundOverlay.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGroundOverlay.h; sourceTree = "<group>"; };
-		25AA13F62149BE72C79E847D67839A8D /* BMKVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKVersion.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKVersion.h; sourceTree = "<group>"; };
-		2878EED93E27F2E3E4D84A699DA9463D /* BaiduMapAPI_Radar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Radar.framework; path = BaiduMapKit/BaiduMapAPI_Radar.framework; sourceTree = "<group>"; };
-		28995103BFFB82E1189072086957466C /* BMKBusLineSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBusLineSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKBusLineSearchOption.h; sourceTree = "<group>"; };
-		2AFEF821ABFF98E95DC0BD25EE2B6F73 /* BMKCloudSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudSearch.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudSearch.h; sourceTree = "<group>"; };
-		30E5DFBB36CE51C7CA2326D68075281E /* BMKOpenOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenOption.h; sourceTree = "<group>"; };
-		353448EA5F1C64349EDD697FF639587D /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Map.framework; path = BaiduMapKit/BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
-		35DAC4208B975E9304E696CDFF964336 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		04A9C5AE0D58B35153D2F28A6264739D /* BMKCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCircleView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKCircleView.h; sourceTree = "<group>"; };
+		05983366AE04FFD78F96E70644650A3C /* BMKPinAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPinAnnotationView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPinAnnotationView.h; sourceTree = "<group>"; };
+		0B8AC839F342D62801CCC79ED0E001F3 /* BMKFavPoiManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKFavPoiManager.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKFavPoiManager.h; sourceTree = "<group>"; };
+		13721DEC218B7AB4BDFC1EB925EB0D07 /* BMKOpenRoute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenRoute.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenRoute.h; sourceTree = "<group>"; };
+		1395002F5B020B4C1FDABBC23839DE10 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		16765311E22E20332F1C391422A89D1C /* BMKShape.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShape.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKShape.h; sourceTree = "<group>"; };
+		1A7ECC8AE5D0271E25215A18585684C6 /* BMKVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKVersion.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKVersion.h; sourceTree = "<group>"; };
+		1CBFEB5F6F7C24FB154CF4811919DF86 /* BMKCloudSearchInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudSearchInfo.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudSearchInfo.h; sourceTree = "<group>"; };
+		1D55204D663A33F5B2F522F6AA491442 /* BMKGroundOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGroundOverlayView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGroundOverlayView.h; sourceTree = "<group>"; };
+		1E16A211BC85B3750E6A61FAB956D1F4 /* BMKLocationComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationComponent.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationComponent.h; sourceTree = "<group>"; };
+		22567713FB5208229EAAE2126F77E9EE /* BMKRadarManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarManager.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarManager.h; sourceTree = "<group>"; };
+		25BE4339058E35F3E927CEFBE4755E95 /* BMKGeocodeType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeocodeType.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKGeocodeType.h; sourceTree = "<group>"; };
+		29492319746405CA052CCA35B860AF7F /* BMKLocationVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationVersion.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationVersion.h; sourceTree = "<group>"; };
+		29FDE65DE9EBC4F2D17AB849E7C99E9B /* BaiduMapAPI_Radar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Radar.framework; path = BaiduMapKit/BaiduMapAPI_Radar.framework; sourceTree = "<group>"; };
+		2B82F8063A954B9DC7C163C5B07D8D1B /* BMKOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlayView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlayView.h; sourceTree = "<group>"; };
+		2C53527022312B293767043EB7B6E4AA /* BMKOpenOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenOption.h; sourceTree = "<group>"; };
+		2D60053A66FC6A1EC05BC9B53DA0E3D2 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		2E58C0B32467422D4B369D367E4E2950 /* BMKShareURLSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShareURLSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKShareURLSearch.h; sourceTree = "<group>"; };
+		300A7B8A1BD9552DA377A859667AF503 /* BMKRouteSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearchOption.h; sourceTree = "<group>"; };
+		3101D6C9FFCADB886532BE2B90E43D48 /* BMKOpenPoiOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPoiOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPoiOption.h; sourceTree = "<group>"; };
+		31774FFAC2567F1076CF0E0CB72EC79A /* BMKGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeometry.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKGeometry.h; sourceTree = "<group>"; };
+		32360246C31A2BA41FB96D9CB61C6BEA /* BMKMapVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapVersion.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapVersion.h; sourceTree = "<group>"; };
+		334938B62F87239CD224CF07B49FD1F9 /* BMKBaseComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBaseComponent.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKBaseComponent.h; sourceTree = "<group>"; };
+		335E3BA14BDA3AA0EEF6E1F080F31917 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		34567A4CFB3B5D62B5ECC6994DD2CCE9 /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Location.framework; path = BaiduMapKit/BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
+		34D77598BD9636F714029B341547EB93 /* BMKOpenPoi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPoi.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPoi.h; sourceTree = "<group>"; };
+		35A1879ECDC3200209FC4F19319C3499 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		3620EE0CFA0BA7C4A69474891E2E0BA7 /* Pods-BlindNavigation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlindNavigation-acknowledgements.markdown"; sourceTree = "<group>"; };
-		382FD54454E7BE177F2337CDF648511F /* BMKOpenRouteOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenRouteOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenRouteOption.h; sourceTree = "<group>"; };
+		3708CA21B6499BEEDE837BEE700E2406 /* BMKSearchComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSearchComponent.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSearchComponent.h; sourceTree = "<group>"; };
+		37C1B102269C83978A3CC9D0BEDE9E85 /* BMKCloudSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudSearch.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudSearch.h; sourceTree = "<group>"; };
+		37EE453CDA7D0247E4EFAC7A10EBF49B /* BMKLocationViewDisplayParam.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationViewDisplayParam.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKLocationViewDisplayParam.h; sourceTree = "<group>"; };
+		3ACD04D410DC8745194969CCB8844F1B /* BMKTileLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKTileLayer.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKTileLayer.h; sourceTree = "<group>"; };
 		3C57E5EB06182E4AD707D71FE0B4F7FA /* Pods-BlindNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlindNavigation.release.xcconfig"; sourceTree = "<group>"; };
-		3C8C9F50598683096C97DCED099B9493 /* BMKShape.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShape.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKShape.h; sourceTree = "<group>"; };
-		3D2F42E34590A560CC47C00F7385695D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E11D6E68B7E9EFDF567352D9E175B34 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		3E3CD27C47069B1FA7B936E9DCB868B6 /* Pods_BlindNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlindNavigation.framework; path = "Pods-BlindNavigation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E65FE1D296EC4C1FF302E3643B89321 /* Pods-BlindNavigation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlindNavigation-acknowledgements.plist"; sourceTree = "<group>"; };
-		40927368B16B59FFB42430DDAF1D25F1 /* BMKOpenPoiOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPoiOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPoiOption.h; sourceTree = "<group>"; };
-		483A11C74D30C78424AB8FF77128D6A8 /* BMKOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlay.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlay.h; sourceTree = "<group>"; };
-		48F3F2AB94D6C571CB7B3E4E92CB5E98 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapKit/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
-		4CE9A3454E3024A1FB50B63079D2F2CA /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		4D9113DFF3964B5DC1B5380110A5D7F1 /* BMKArcline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKArcline.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKArcline.h; sourceTree = "<group>"; };
-		4F5A6886C8B6EAE39AC602991871576A /* BMKTileLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKTileLayer.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKTileLayer.h; sourceTree = "<group>"; };
+		418C558965CCD6A4E6123A8FF7A47B70 /* BMKSuggestionSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSuggestionSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSuggestionSearchOption.h; sourceTree = "<group>"; };
+		4416A58310FCDC2EB7C9FD10CC2C3E27 /* BMKPoiSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPoiSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKPoiSearchOption.h; sourceTree = "<group>"; };
+		4593F71C461A22819BA41CC2B289162D /* BMKPolylineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolylineView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolylineView.h; sourceTree = "<group>"; };
+		47E0629934A0A72C0B1CBE34B1887E40 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		4C7D469B739A65AF0CA334D93B16E7F1 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		4FAA3DEADED92654128697A640341131 /* BMKPolygonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolygonView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolygonView.h; sourceTree = "<group>"; };
+		508B1EB72D74FFA525E23C21E33053FD /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		51B1C37EE8664B63B43DF12416357297 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53F8F6FE49E20CF4F8AC212E6A5EBE95 /* BMKOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlayView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlayView.h; sourceTree = "<group>"; };
-		544D5B1AE40BC1DB638752B5D3A1FE2B /* BMKFavPoiInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKFavPoiInfo.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKFavPoiInfo.h; sourceTree = "<group>"; };
-		552A572BD17C80FDF42DD37352046600 /* BMKMultiPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMultiPoint.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMultiPoint.h; sourceTree = "<group>"; };
-		55B710E93D77B3C4FFBAAE9B7008C071 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		56E756A63AB8E4552CE984B4DABEAE0A /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		5825FBA20CAE77428755DCED2A2E657F /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Base.framework; path = BaiduMapKit/BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
-		58988A31A08087E3D34F71A5700A19DF /* BMKGeocodeType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeocodeType.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKGeocodeType.h; sourceTree = "<group>"; };
-		5B6072760FFA28771420CBEE3060D793 /* BMKRouteSearchType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearchType.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearchType.h; sourceTree = "<group>"; };
-		5C05FEB70C58C3385D6938DE2D79D9CE /* BMKMapVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapVersion.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapVersion.h; sourceTree = "<group>"; };
-		5DBB2B176C6DB3A844AFD28B89426BC6 /* BMKRadarComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarComponent.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarComponent.h; sourceTree = "<group>"; };
-		64DE9F5D61FF3BBC9582E7D5745E2690 /* BMKTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKTypes.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKTypes.h; sourceTree = "<group>"; };
-		6526684B2E0580652E56FA46E5C13289 /* BMKPoiSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPoiSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKPoiSearch.h; sourceTree = "<group>"; };
-		65B19BD25839A15760810CCE5923CFD6 /* BMKSearchVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSearchVersion.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSearchVersion.h; sourceTree = "<group>"; };
+		52F7804A0C3C9D880793CC742999784D /* BMKBusLineSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBusLineSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKBusLineSearchOption.h; sourceTree = "<group>"; };
+		532BE382DC0952C7CC3144B4BE7C994D /* BMKRadarOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarOption.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarOption.h; sourceTree = "<group>"; };
+		545C785F5F55A123BFC43BC0E38B22B9 /* BMKGeneralDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeneralDelegate.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKGeneralDelegate.h; sourceTree = "<group>"; };
+		57729D22A87FEF4E031E50118835B4CC /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Map.framework; path = BaiduMapKit/BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
+		5A9C43AEA19C1AEB4729E08330CEF9CC /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		5D2FD4856DA36557D390A20916AB1279 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		5F0E76C078E838FF7C812D7F4A8AAF85 /* BMKRadarComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarComponent.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarComponent.h; sourceTree = "<group>"; };
+		619931777F3680EF97A7367E791917E5 /* BMKMapComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapComponent.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapComponent.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		661FE391562D595EBE71D229C02E7DE8 /* BMKOpenPanorama.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPanorama.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPanorama.h; sourceTree = "<group>"; };
-		671CAA62DFD8D5F041614B9E4F52FEC8 /* BMKLocationViewDisplayParam.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationViewDisplayParam.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKLocationViewDisplayParam.h; sourceTree = "<group>"; };
-		677AA2ECE44EBD75E703265E7DA05FC9 /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = BaiduMapKit/thirdlibs/libcrypto.a; sourceTree = "<group>"; };
-		682F1D64375B35F706247D63220DCB34 /* BMKRadarOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarOption.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarOption.h; sourceTree = "<group>"; };
-		6A4E49AE790D9B616B6DAC72EB2B533C /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		6C590A3D738C5244628BB2BE790FBE7B /* BMKRadarResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarResult.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarResult.h; sourceTree = "<group>"; };
-		6EB9B6B9658081091BA1F77D1914CFB4 /* BMKOverlayGLBasicView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlayGLBasicView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlayGLBasicView.h; sourceTree = "<group>"; };
+		67A8E65A72000B6B70712BEF2ECBF340 /* BMKNavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKNavigation.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKNavigation.h; sourceTree = "<group>"; };
+		693C1371B1CCA89D696F71C0628985FB /* BMKCloudVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudVersion.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudVersion.h; sourceTree = "<group>"; };
+		6F0D561D25F193EA9BA18A471E8D14AF /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapKit/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
+		6F59741C986D7961D0FAA5FD5490E8EC /* BMKShareUrlSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShareUrlSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKShareUrlSearchOption.h; sourceTree = "<group>"; };
+		71DFCFD304DBD694DE021B9725E15284 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		7245C6B680131F472AD87D11348C320C /* BMKFavPoiInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKFavPoiInfo.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKFavPoiInfo.h; sourceTree = "<group>"; };
+		72708DC59948B5E41ACD3803107BF5DD /* BMKPointAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPointAnnotation.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPointAnnotation.h; sourceTree = "<group>"; };
 		731D5D7B7D3E70EF9BCF64D3D59E1144 /* Pods-BlindNavigation-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlindNavigation-frameworks.sh"; sourceTree = "<group>"; };
-		761200029BDFBD43DACD8CE71F7CBD04 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		7656109C6A445F96BE50BB327D97C219 /* BMKMapComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapComponent.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapComponent.h; sourceTree = "<group>"; };
-		79B70BE533C1D87964F0BDD731003054 /* BMKRadarManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarManager.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarManager.h; sourceTree = "<group>"; };
-		7ABA68C2573FDA207DA8511F206042FE /* BMKCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCircle.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKCircle.h; sourceTree = "<group>"; };
-		7B0165AB8C8DA81FC14E5FBCC22DF9A9 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		7BF937B09C73637BA6B32191B4819140 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		7D1F92303206D9CA296A08B27782CB91 /* BMKMapStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapStatus.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapStatus.h; sourceTree = "<group>"; };
-		7D9FDD6D81EDCC318CFD7DB616C90991 /* BMKSuggestionSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSuggestionSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSuggestionSearch.h; sourceTree = "<group>"; };
-		7EC6476B6D96512E786B4D5C5E41EB0D /* BMKMapManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapManager.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKMapManager.h; sourceTree = "<group>"; };
-		7EFD61C45FB542E73FF11EC986FD8B1B /* libssl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssl.a; path = BaiduMapKit/thirdlibs/libssl.a; sourceTree = "<group>"; };
-		896E1B1CEF6E5958F5344AECC622DAD8 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		8A423D6AB368CB1320545D8E59D521DD /* BMKUtilsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKUtilsVersion.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKUtilsVersion.h; sourceTree = "<group>"; };
+		75683D22C5058D14988B9D8821966BA1 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		75FEA6A4859B52721CAD995B362EE3E6 /* BMKUtilsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKUtilsVersion.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKUtilsVersion.h; sourceTree = "<group>"; };
+		764B1B779EBE4DA972E69FAB69F79EF8 /* BMKMapStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapStatus.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapStatus.h; sourceTree = "<group>"; };
+		7712764B34CBE00C0C9BDB76EE5E8A84 /* BMKBaseIndoorMapInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBaseIndoorMapInfo.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKBaseIndoorMapInfo.h; sourceTree = "<group>"; };
+		7796A8CA622D8E59031811CD028C2B1E /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		77F47D45420DC90D7C63BB7379834559 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		7AD56734151BFAA26D5BE13303AE9AF2 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C59BC116CF455400FDED6DB0986AF67 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		7CC7F78443422AF956E1B2E74F68AAB5 /* BMKUserLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKUserLocation.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKUserLocation.h; sourceTree = "<group>"; };
+		7F5C3C6B2E97E5DD16A736742F6D32F5 /* BMKRadarVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarVersion.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarVersion.h; sourceTree = "<group>"; };
+		7FFE3E1B9BE6C2DD48515AB8B2D9D50D /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		8050D03284B02582B579D70983150011 /* BMKUtilsComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKUtilsComponent.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKUtilsComponent.h; sourceTree = "<group>"; };
+		81E30EF38EECA64E59CD5663718E9CF4 /* BMKPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolygon.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolygon.h; sourceTree = "<group>"; };
+		83BBBE1CDCA232C25C4A6896A877FB46 /* BMKHeatMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKHeatMap.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKHeatMap.h; sourceTree = "<group>"; };
+		85428D12B961B340C0D4DF58E0BD4632 /* BMKPoiSearchType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPoiSearchType.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKPoiSearchType.h; sourceTree = "<group>"; };
+		876CD246E71E0F7F6DC5E458930CE6E5 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Base.framework; path = BaiduMapKit/BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
+		89EC0DE320E53364F161DDC4AD4D2A99 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		8D5CE900B08E4F840FCB8F0D8CA7C5C8 /* BMKAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKAnnotationView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKAnnotationView.h; sourceTree = "<group>"; };
 		8DF6EF55F315C9D3D707EBC46D0FE852 /* Pods-BlindNavigation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlindNavigation-dummy.m"; sourceTree = "<group>"; };
-		8F5609A11B25E731C8126642CA541A4B /* BMKOpenRoute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenRoute.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenRoute.h; sourceTree = "<group>"; };
-		933C6A030ACEFF46215F947AE71253D1 /* BMKPoiSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPoiSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKPoiSearchOption.h; sourceTree = "<group>"; };
+		90A5F8974CD4971CA748C0C2A9C3E56F /* BMKTileLayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKTileLayerView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKTileLayerView.h; sourceTree = "<group>"; };
+		9168413C1D1D2076E9A5AA00E5EB65E4 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		91825ED0A71DF20D3185DC5B8F81895E /* BMKArclineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKArclineView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKArclineView.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9449C95AD5F84C7A904C857F0F43DF91 /* BMKGeneralDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeneralDelegate.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKGeneralDelegate.h; sourceTree = "<group>"; };
-		98EBD9B5C8AA6C4D1F5C0E0B4FA9B956 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		99A7AC9C26D0C4D3D769FF3E15D766CF /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		9C60818C74DC1595AE6D5D58F651F5AF /* BMKPinAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPinAnnotationView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPinAnnotationView.h; sourceTree = "<group>"; };
-		9CBCE65A75D40A73F68D7502E855A61C /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		9D01EB49BC703487C44E1DBAAE102629 /* BMKLocationVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationVersion.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationVersion.h; sourceTree = "<group>"; };
-		9E024DFA6D5F331A5CB9F54EAD087618 /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Location.framework; path = BaiduMapKit/BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
-		9F4F2F113D620105151542468D9FA095 /* BMKGeocodeSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeocodeSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKGeocodeSearch.h; sourceTree = "<group>"; };
-		A48FACD8A9DF97D52F887012ED6261F6 /* BMKAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKAnnotation.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKAnnotation.h; sourceTree = "<group>"; };
-		A5804F3595860BE595CB7D5929F47F1A /* BMKCloudSearchInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudSearchInfo.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudSearchInfo.h; sourceTree = "<group>"; };
+		9460A478CAE129B6B784E7AAB81C9CC4 /* BMKBusLineSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBusLineSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKBusLineSearch.h; sourceTree = "<group>"; };
+		9C478D051DD6DAEC41D7D0F065CF3592 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		9E571B58C72E5127ACF83BBB704F20BF /* libssl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssl.a; path = BaiduMapKit/thirdlibs/libssl.a; sourceTree = "<group>"; };
+		9E9550062AC42EBD5C8455AEEBA790CB /* BMKMultiPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMultiPoint.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMultiPoint.h; sourceTree = "<group>"; };
+		9EC7E7BB563F205518E74AA07CAE50DF /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		9FAC8D9D49DBAD4796401F8435FAF4F5 /* BMKSearchVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSearchVersion.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSearchVersion.h; sourceTree = "<group>"; };
+		A2B7CD8A204FBA376A90576039AF28F2 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		A93CAC929AAD007FC8001028BF664826 /* BMKCloudPOIList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudPOIList.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudPOIList.h; sourceTree = "<group>"; };
+		AA38EB036423DF298B64FB958F7A1BBF /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Cloud.framework; path = BaiduMapKit/BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
 		AA549DD46F691B888CBECD391FE2A96A /* Pods-BlindNavigation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BlindNavigation.modulemap"; sourceTree = "<group>"; };
-		AA7F411EFEA0BCFEC914E6E2313EF80A /* BMKPolylineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolylineView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolylineView.h; sourceTree = "<group>"; };
-		AECBB6EBE6C7C264AFCF55209923DFB1 /* BMKPointAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPointAnnotation.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPointAnnotation.h; sourceTree = "<group>"; };
-		B27988BE5E5A1FFAD0E0752C79CC9BC0 /* BMKCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCircleView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKCircleView.h; sourceTree = "<group>"; };
-		B2DD64B55FC69B249CC1F7FCC0D8A908 /* BMKArclineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKArclineView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKArclineView.h; sourceTree = "<group>"; };
-		B5E931D81A67DD7E843DFC90D9CC488B /* BMKOverlayPathView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlayPathView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlayPathView.h; sourceTree = "<group>"; };
-		B6993D9CF1F1CBC37BBC2E1F10CBD2A7 /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKActionPaopaoView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKActionPaopaoView.h; sourceTree = "<group>"; };
-		B88B682B803A4ABB961B717E36AC9B9B /* BMKOpenPoi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPoi.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPoi.h; sourceTree = "<group>"; };
+		AD78225CE84F424EC11F35EABA2AEB4F /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		B0FEBE3A85F4E45EE1DE23E88163AD10 /* BMKCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCircle.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKCircle.h; sourceTree = "<group>"; };
+		B5FA0FD114670CB0A6E4EFE04E3B2CF0 /* BMKRadarResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarResult.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarResult.h; sourceTree = "<group>"; };
+		B96FB4F4C8139E7B2669037D3CF13D51 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapKit/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
+		BA2BAC9A19BFDD23AA282F90075E29BF /* BMKOfflineMapType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOfflineMapType.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOfflineMapType.h; sourceTree = "<group>"; };
 		BA78113E8202B8C2B01285BF8DD7A70C /* Pods-BlindNavigation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BlindNavigation-umbrella.h"; sourceTree = "<group>"; };
-		BBC77695511BEB58F87FACCFDE71207C /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapKit/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
-		BCCD5954824392D914CBC2F60640AECC /* BMKPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolygon.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolygon.h; sourceTree = "<group>"; };
-		BCE6938B733431A70190230222799786 /* BMKSuggestionSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSuggestionSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSuggestionSearchOption.h; sourceTree = "<group>"; };
-		BFB4EA0F5F68AEC4821288A7D0611AAA /* BMKBusLineSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBusLineSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKBusLineSearch.h; sourceTree = "<group>"; };
-		C2333FC23818C706584029DAC2C0A8CD /* BMKGradient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGradient.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGradient.h; sourceTree = "<group>"; };
-		C2810DD72BD5914DB0E222744E8DF467 /* BMKGroundOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGroundOverlayView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGroundOverlayView.h; sourceTree = "<group>"; };
-		C4DD85BDE03A25AFF726D06D33F952A0 /* BMKGeocodeSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeocodeSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKGeocodeSearchOption.h; sourceTree = "<group>"; };
-		C5456746CBF2835ACD5FAAB6C7B6EF34 /* BMKShareUrlSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShareUrlSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKShareUrlSearchOption.h; sourceTree = "<group>"; };
-		C5CA9DBDA867502608A1516D9DE4676B /* BMKLocationComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationComponent.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationComponent.h; sourceTree = "<group>"; };
-		C64747E8D3005653D4F267E185310FC2 /* BMKHeatMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKHeatMap.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKHeatMap.h; sourceTree = "<group>"; };
-		C87F8CAA2143FAADD9124A334C086D08 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		C9483F36A47D9668492C5BBFD6429268 /* BMKBaseIndoorMapInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBaseIndoorMapInfo.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKBaseIndoorMapInfo.h; sourceTree = "<group>"; };
-		CCD020AF09D74089AD093B448B620E18 /* BMKCloudVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudVersion.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudVersion.h; sourceTree = "<group>"; };
-		D2329D6C6AFCB42EB3A41941671CCDC8 /* mapapi.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
-		D4BE85C82368376256B2E8696817492B /* BMKShareURLSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShareURLSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKShareURLSearch.h; sourceTree = "<group>"; };
-		D6299582CD2AA63812F0D85CF29DDB27 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		D63C581B89A2A8865BAFEBFC357937E5 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		D66EA4D01FDC6A0D80BFA4C0D8376E21 /* BMKAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKAnnotationView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKAnnotationView.h; sourceTree = "<group>"; };
-		D70D4F82E1151B3FCF4FDDEC21849B79 /* BMKGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeometry.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKGeometry.h; sourceTree = "<group>"; };
-		D7B51ED6AD1CA810532B1B409AA8FA16 /* BMKPoiSearchType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPoiSearchType.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKPoiSearchType.h; sourceTree = "<group>"; };
-		D96C703E76A99EA5EAA78BAA114AC6F3 /* BMKCloudSearchComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudSearchComponent.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudSearchComponent.h; sourceTree = "<group>"; };
-		DC39C7515103529C90A89C81B80850EE /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		DE7C8DF7835AA46235B1C74936C4B7BB /* BMKUtilsComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKUtilsComponent.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKUtilsComponent.h; sourceTree = "<group>"; };
-		DFE003B573FD36C212C131955D7E8FA3 /* BMKDistrictSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKDistrictSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKDistrictSearch.h; sourceTree = "<group>"; };
-		E0501F9E83CB6CD62CC8E104A595B901 /* BMKOfflineMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOfflineMap.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOfflineMap.h; sourceTree = "<group>"; };
-		E38BF5CABA0701F25B81088273001400 /* BMKRouteSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearch.h; sourceTree = "<group>"; };
-		E490ADD67947E0A3F081383870155B47 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		E7814A87AFAAA9171D6731783FDA015A /* BMKFavPoiManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKFavPoiManager.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKFavPoiManager.h; sourceTree = "<group>"; };
-		ED07517AD7E61137340B0CCD0F106448 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		EF183B5C4506F02FE52160CE7576C3F4 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		F5FF0648DF88C6D55438734BF24BFFE0 /* BMKBaseComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBaseComponent.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKBaseComponent.h; sourceTree = "<group>"; };
+		BC5BABC14186FD752834A3FC7743BCE7 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		BC699B861655E2FF246D0A849DB2A882 /* BMKGroundOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGroundOverlay.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGroundOverlay.h; sourceTree = "<group>"; };
+		BDE35CA3EBA1A1CCB4B2329DD6F745F8 /* BMKMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapView.h; sourceTree = "<group>"; };
+		C142C79DC4286909BDA661A8DA594073 /* BMKMapManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapManager.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKMapManager.h; sourceTree = "<group>"; };
+		C320B59945C55E8A8744F0CD2144715B /* BMKCloudSearchComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudSearchComponent.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudSearchComponent.h; sourceTree = "<group>"; };
+		C3693509E4E50FE0E7E20826DD1DC0F5 /* BMKGeocodeSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeocodeSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKGeocodeSearch.h; sourceTree = "<group>"; };
+		C38831A662EEBC2E8405A198E7FE9765 /* BMKGeocodeSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeocodeSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKGeocodeSearchOption.h; sourceTree = "<group>"; };
+		C3FAD6E9132313AEE6150B1F70F3990A /* BMKOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlay.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlay.h; sourceTree = "<group>"; };
+		C752DC2E61BA65B5BA94FC660DF6A796 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		CA207D132A0472999DC7E5C7A905E98D /* BMKOverlayGLBasicView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlayGLBasicView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlayGLBasicView.h; sourceTree = "<group>"; };
+		CCEC326179B6BE5CF11608D6DD11356C /* BMKPoiSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPoiSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKPoiSearch.h; sourceTree = "<group>"; };
+		CD3EA14B839187F14E369A05D602EE09 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		CDF9CB44BD088776CEA672FB6680F216 /* BMKSearchBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSearchBase.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSearchBase.h; sourceTree = "<group>"; };
+		CEA04B70026E24856B2B763EC8083CCC /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = BaiduMapKit/thirdlibs/libcrypto.a; sourceTree = "<group>"; };
+		D0C80D7F8D03D0648C82AA20D61843CE /* BMKOpenPanorama.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPanorama.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPanorama.h; sourceTree = "<group>"; };
+		D317EF3F1D45B267B25AE95218ABA41C /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		D387BE6BC0714D840132FC18431EAADC /* BMKOpenRouteOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenRouteOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenRouteOption.h; sourceTree = "<group>"; };
+		D3B604BDCBB3627AA5A6B665673585BE /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D568E5D1F42E525F43C24C444BD1F2F7 /* BMKOfflineMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOfflineMap.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOfflineMap.h; sourceTree = "<group>"; };
+		D86812480512C2CC737FDDA5B411E4D2 /* BMKOverlayPathView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlayPathView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlayPathView.h; sourceTree = "<group>"; };
+		DC588CDB09B6932644B087944AB505AC /* BMKGradient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGradient.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGradient.h; sourceTree = "<group>"; };
+		DDFF767D36C564F44D2B017A5313245D /* BMKArcline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKArcline.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKArcline.h; sourceTree = "<group>"; };
+		E0482E8F580097D423E127B5B3F58BB2 /* BMKPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolyline.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolyline.h; sourceTree = "<group>"; };
+		E07D43DEBF9FFDDCF898E38DFAE7DE4E /* BMKRouteSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearch.h; sourceTree = "<group>"; };
+		E37E8F6A95DA71F0548A8AE56EC41E06 /* BMKAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKAnnotation.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKAnnotation.h; sourceTree = "<group>"; };
+		E423DD1D8A68ACABE62CDFA3EF2B77AD /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKActionPaopaoView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKActionPaopaoView.h; sourceTree = "<group>"; };
+		E72A26C1EB4E630A1FBE2D1732AB1C54 /* BMKDistrictSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKDistrictSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKDistrictSearch.h; sourceTree = "<group>"; };
+		E73BC468B85D8C52852B719B272F62FB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA9287EDE71A12FBD3AC2426AD9CF3EE /* Pods_BlindNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BlindNavigation.framework; path = "Pods-BlindNavigation.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1A6107F16784033D96C84841232525 /* BMKRouteSearchType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearchType.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearchType.h; sourceTree = "<group>"; };
+		EB7A6D4F5FE1AA3F152E35F003BBC568 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBFC34F34FC8B186D5EA1D71DA3027E0 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		ECEC9E1CC9C786959BFA213197496F94 /* BMKLocationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationService.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationService.h; sourceTree = "<group>"; };
+		F30BFF0249734C2EBC46F9A59FB77412 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		F621EA68E42ECF895F128ED3F943B24E /* Pods-BlindNavigation-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlindNavigation-resources.sh"; sourceTree = "<group>"; };
-		F8816E58B3F2C05AD4EB64EB4EF8F2F3 /* BMKRadarVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarVersion.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarVersion.h; sourceTree = "<group>"; };
-		F9A5585CB768B2A9437BD4972D511F9C /* BMKOfflineMapType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOfflineMapType.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOfflineMapType.h; sourceTree = "<group>"; };
+		F9F62326930896F7BEA9FEEA3AE7D6A4 /* mapapi.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		FB3ECC80A55E029E84DF3CCE86678A7B /* BMKSuggestionSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSuggestionSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSuggestionSearch.h; sourceTree = "<group>"; };
+		FD9391BEAF88555C16865521E09880B9 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6E67F53C55390DC05A1BD43DC5802EF3 /* Frameworks */ = {
+		4D82BE2F00C7FD317616D2E92FB423E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1EB51C67210965E6121E5356714B5FF /* Foundation.framework in Frameworks */,
+				DA20E0B3BC24547D86F88278802E20AB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,71 +211,144 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B310E6BC48F398EE1CD0DF54EA39A1D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B0CD8679C6C82633A629F492F5F96CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14B44B5595A14F6B5281CF5A56FAA6FB /* Alamofire */ = {
+		0265CFEADC7B3AD1C1B85DA0DA64B971 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ED07517AD7E61137340B0CCD0F106448 /* AFError.swift */,
-				E490ADD67947E0A3F081383870155B47 /* Alamofire.swift */,
-				55B710E93D77B3C4FFBAAE9B7008C071 /* DispatchQueue+Alamofire.swift */,
-				D6299582CD2AA63812F0D85CF29DDB27 /* MultipartFormData.swift */,
-				6A4E49AE790D9B616B6DAC72EB2B533C /* NetworkReachabilityManager.swift */,
-				D63C581B89A2A8865BAFEBFC357937E5 /* Notifications.swift */,
-				042C7D07C74897424BC7EF7E2A4C38FC /* ParameterEncoding.swift */,
-				7BF937B09C73637BA6B32191B4819140 /* Request.swift */,
-				35DAC4208B975E9304E696CDFF964336 /* Response.swift */,
-				C87F8CAA2143FAADD9124A334C086D08 /* ResponseSerialization.swift */,
-				99A7AC9C26D0C4D3D769FF3E15D766CF /* Result.swift */,
-				7B0165AB8C8DA81FC14E5FBCC22DF9A9 /* ServerTrustPolicy.swift */,
-				761200029BDFBD43DACD8CE71F7CBD04 /* SessionDelegate.swift */,
-				98EBD9B5C8AA6C4D1F5C0E0B4FA9B956 /* SessionManager.swift */,
-				DC39C7515103529C90A89C81B80850EE /* TaskDelegate.swift */,
-				3E11D6E68B7E9EFDF567352D9E175B34 /* Timeline.swift */,
-				EF183B5C4506F02FE52160CE7576C3F4 /* Validation.swift */,
-				1B239D433D3CAC04D057E8C6D7E97C3C /* Support Files */,
+				F9F62326930896F7BEA9FEEA3AE7D6A4 /* mapapi.bundle */,
 			);
-			name = Alamofire;
-			path = Alamofire;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		1B239D433D3CAC04D057E8C6D7E97C3C /* Support Files */ = {
+		14842AD714ABDFEDB6DD2D95045F028B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				14B0EE4F9CA6C28D4EFF0401C88294BE /* Alamofire.modulemap */,
-				9CBCE65A75D40A73F68D7502E855A61C /* Alamofire.xcconfig */,
-				56E756A63AB8E4552CE984B4DABEAE0A /* Alamofire-dummy.m */,
-				4CE9A3454E3024A1FB50B63079D2F2CA /* Alamofire-prefix.pch */,
-				896E1B1CEF6E5958F5344AECC622DAD8 /* Alamofire-umbrella.h */,
-				3D2F42E34590A560CC47C00F7385695D /* Info.plist */,
+				5D2FD4856DA36557D390A20916AB1279 /* Alamofire.modulemap */,
+				FD9391BEAF88555C16865521E09880B9 /* Alamofire.xcconfig */,
+				AD78225CE84F424EC11F35EABA2AEB4F /* Alamofire-dummy.m */,
+				75683D22C5058D14988B9D8821966BA1 /* Alamofire-prefix.pch */,
+				9168413C1D1D2076E9A5AA00E5EB65E4 /* Alamofire-umbrella.h */,
+				E73BC468B85D8C52852B719B272F62FB /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
-		1EE42FD6ED3D75D0C13E5446B2B0CD81 /* Resources */ = {
+		237089D073349139A6BE9F887E74A290 /* BaiduMapKit */ = {
 			isa = PBXGroup;
 			children = (
-				D2329D6C6AFCB42EB3A41941671CCDC8 /* mapapi.bundle */,
+				E423DD1D8A68ACABE62CDFA3EF2B77AD /* BMKActionPaopaoView.h */,
+				E37E8F6A95DA71F0548A8AE56EC41E06 /* BMKAnnotation.h */,
+				8D5CE900B08E4F840FCB8F0D8CA7C5C8 /* BMKAnnotationView.h */,
+				DDFF767D36C564F44D2B017A5313245D /* BMKArcline.h */,
+				91825ED0A71DF20D3185DC5B8F81895E /* BMKArclineView.h */,
+				334938B62F87239CD224CF07B49FD1F9 /* BMKBaseComponent.h */,
+				7712764B34CBE00C0C9BDB76EE5E8A84 /* BMKBaseIndoorMapInfo.h */,
+				9460A478CAE129B6B784E7AAB81C9CC4 /* BMKBusLineSearch.h */,
+				52F7804A0C3C9D880793CC742999784D /* BMKBusLineSearchOption.h */,
+				B0FEBE3A85F4E45EE1DE23E88163AD10 /* BMKCircle.h */,
+				04A9C5AE0D58B35153D2F28A6264739D /* BMKCircleView.h */,
+				A93CAC929AAD007FC8001028BF664826 /* BMKCloudPOIList.h */,
+				37C1B102269C83978A3CC9D0BEDE9E85 /* BMKCloudSearch.h */,
+				C320B59945C55E8A8744F0CD2144715B /* BMKCloudSearchComponent.h */,
+				1CBFEB5F6F7C24FB154CF4811919DF86 /* BMKCloudSearchInfo.h */,
+				693C1371B1CCA89D696F71C0628985FB /* BMKCloudVersion.h */,
+				E72A26C1EB4E630A1FBE2D1732AB1C54 /* BMKDistrictSearch.h */,
+				7245C6B680131F472AD87D11348C320C /* BMKFavPoiInfo.h */,
+				0B8AC839F342D62801CCC79ED0E001F3 /* BMKFavPoiManager.h */,
+				545C785F5F55A123BFC43BC0E38B22B9 /* BMKGeneralDelegate.h */,
+				C3693509E4E50FE0E7E20826DD1DC0F5 /* BMKGeocodeSearch.h */,
+				C38831A662EEBC2E8405A198E7FE9765 /* BMKGeocodeSearchOption.h */,
+				25BE4339058E35F3E927CEFBE4755E95 /* BMKGeocodeType.h */,
+				31774FFAC2567F1076CF0E0CB72EC79A /* BMKGeometry.h */,
+				DC588CDB09B6932644B087944AB505AC /* BMKGradient.h */,
+				BC699B861655E2FF246D0A849DB2A882 /* BMKGroundOverlay.h */,
+				1D55204D663A33F5B2F522F6AA491442 /* BMKGroundOverlayView.h */,
+				83BBBE1CDCA232C25C4A6896A877FB46 /* BMKHeatMap.h */,
+				1E16A211BC85B3750E6A61FAB956D1F4 /* BMKLocationComponent.h */,
+				ECEC9E1CC9C786959BFA213197496F94 /* BMKLocationService.h */,
+				29492319746405CA052CCA35B860AF7F /* BMKLocationVersion.h */,
+				37EE453CDA7D0247E4EFAC7A10EBF49B /* BMKLocationViewDisplayParam.h */,
+				619931777F3680EF97A7367E791917E5 /* BMKMapComponent.h */,
+				C142C79DC4286909BDA661A8DA594073 /* BMKMapManager.h */,
+				764B1B779EBE4DA972E69FAB69F79EF8 /* BMKMapStatus.h */,
+				32360246C31A2BA41FB96D9CB61C6BEA /* BMKMapVersion.h */,
+				BDE35CA3EBA1A1CCB4B2329DD6F745F8 /* BMKMapView.h */,
+				9E9550062AC42EBD5C8455AEEBA790CB /* BMKMultiPoint.h */,
+				67A8E65A72000B6B70712BEF2ECBF340 /* BMKNavigation.h */,
+				D568E5D1F42E525F43C24C444BD1F2F7 /* BMKOfflineMap.h */,
+				BA2BAC9A19BFDD23AA282F90075E29BF /* BMKOfflineMapType.h */,
+				2C53527022312B293767043EB7B6E4AA /* BMKOpenOption.h */,
+				D0C80D7F8D03D0648C82AA20D61843CE /* BMKOpenPanorama.h */,
+				34D77598BD9636F714029B341547EB93 /* BMKOpenPoi.h */,
+				3101D6C9FFCADB886532BE2B90E43D48 /* BMKOpenPoiOption.h */,
+				13721DEC218B7AB4BDFC1EB925EB0D07 /* BMKOpenRoute.h */,
+				D387BE6BC0714D840132FC18431EAADC /* BMKOpenRouteOption.h */,
+				C3FAD6E9132313AEE6150B1F70F3990A /* BMKOverlay.h */,
+				CA207D132A0472999DC7E5C7A905E98D /* BMKOverlayGLBasicView.h */,
+				D86812480512C2CC737FDDA5B411E4D2 /* BMKOverlayPathView.h */,
+				2B82F8063A954B9DC7C163C5B07D8D1B /* BMKOverlayView.h */,
+				05983366AE04FFD78F96E70644650A3C /* BMKPinAnnotationView.h */,
+				72708DC59948B5E41ACD3803107BF5DD /* BMKPointAnnotation.h */,
+				CCEC326179B6BE5CF11608D6DD11356C /* BMKPoiSearch.h */,
+				4416A58310FCDC2EB7C9FD10CC2C3E27 /* BMKPoiSearchOption.h */,
+				85428D12B961B340C0D4DF58E0BD4632 /* BMKPoiSearchType.h */,
+				81E30EF38EECA64E59CD5663718E9CF4 /* BMKPolygon.h */,
+				4FAA3DEADED92654128697A640341131 /* BMKPolygonView.h */,
+				E0482E8F580097D423E127B5B3F58BB2 /* BMKPolyline.h */,
+				4593F71C461A22819BA41CC2B289162D /* BMKPolylineView.h */,
+				5F0E76C078E838FF7C812D7F4A8AAF85 /* BMKRadarComponent.h */,
+				22567713FB5208229EAAE2126F77E9EE /* BMKRadarManager.h */,
+				532BE382DC0952C7CC3144B4BE7C994D /* BMKRadarOption.h */,
+				B5FA0FD114670CB0A6E4EFE04E3B2CF0 /* BMKRadarResult.h */,
+				7F5C3C6B2E97E5DD16A736742F6D32F5 /* BMKRadarVersion.h */,
+				E07D43DEBF9FFDDCF898E38DFAE7DE4E /* BMKRouteSearch.h */,
+				300A7B8A1BD9552DA377A859667AF503 /* BMKRouteSearchOption.h */,
+				EB1A6107F16784033D96C84841232525 /* BMKRouteSearchType.h */,
+				CDF9CB44BD088776CEA672FB6680F216 /* BMKSearchBase.h */,
+				3708CA21B6499BEEDE837BEE700E2406 /* BMKSearchComponent.h */,
+				9FAC8D9D49DBAD4796401F8435FAF4F5 /* BMKSearchVersion.h */,
+				16765311E22E20332F1C391422A89D1C /* BMKShape.h */,
+				2E58C0B32467422D4B369D367E4E2950 /* BMKShareURLSearch.h */,
+				6F59741C986D7961D0FAA5FD5490E8EC /* BMKShareUrlSearchOption.h */,
+				FB3ECC80A55E029E84DF3CCE86678A7B /* BMKSuggestionSearch.h */,
+				418C558965CCD6A4E6123A8FF7A47B70 /* BMKSuggestionSearchOption.h */,
+				3ACD04D410DC8745194969CCB8844F1B /* BMKTileLayer.h */,
+				90A5F8974CD4971CA748C0C2A9C3E56F /* BMKTileLayerView.h */,
+				007D0ED0A85BD62F15CC29A7C689D47D /* BMKTypes.h */,
+				7CC7F78443422AF956E1B2E74F68AAB5 /* BMKUserLocation.h */,
+				8050D03284B02582B579D70983150011 /* BMKUtilsComponent.h */,
+				75FEA6A4859B52721CAD995B362EE3E6 /* BMKUtilsVersion.h */,
+				1A7ECC8AE5D0271E25215A18585684C6 /* BMKVersion.h */,
+				FF8361AA8505566A33A028B8094B0308 /* Frameworks */,
+				0265CFEADC7B3AD1C1B85DA0DA64B971 /* Resources */,
 			);
-			name = Resources;
+			name = BaiduMapKit;
+			path = BaiduMapKit;
 			sourceTree = "<group>";
 		};
-		5A1AF5D2918D5818349C2DB35B667DB1 /* Frameworks */ = {
+		2A3DBF1CB4E17242362C1C49AC5BDC2F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5825FBA20CAE77428755DCED2A2E657F /* BaiduMapAPI_Base.framework */,
-				149CA9B934AE7165AB572CD10C96BD22 /* BaiduMapAPI_Cloud.framework */,
-				9E024DFA6D5F331A5CB9F54EAD087618 /* BaiduMapAPI_Location.framework */,
-				353448EA5F1C64349EDD697FF639587D /* BaiduMapAPI_Map.framework */,
-				2878EED93E27F2E3E4D84A699DA9463D /* BaiduMapAPI_Radar.framework */,
-				BBC77695511BEB58F87FACCFDE71207C /* BaiduMapAPI_Search.framework */,
-				48F3F2AB94D6C571CB7B3E4E92CB5E98 /* BaiduMapAPI_Utils.framework */,
-				677AA2ECE44EBD75E703265E7DA05FC9 /* libcrypto.a */,
-				7EFD61C45FB542E73FF11EC986FD8B1B /* libssl.a */,
+				EB7A6D4F5FE1AA3F152E35F003BBC568 /* Info.plist */,
+				F30BFF0249734C2EBC46F9A59FB77412 /* SwiftyJSON.modulemap */,
+				508B1EB72D74FFA525E23C21E33053FD /* SwiftyJSON.xcconfig */,
+				7C59BC116CF455400FDED6DB0986AF67 /* SwiftyJSON-dummy.m */,
+				BC5BABC14186FD752834A3FC7743BCE7 /* SwiftyJSON-prefix.pch */,
+				7FFE3E1B9BE6C2DD48515AB8B2D9D50D /* SwiftyJSON-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -264,19 +356,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				96D9A4520E1BDE574A4424D5AE5BA53E /* Pods */,
-				CFE8A2EF20606E5B4833D9A3653DD1A8 /* Products */,
+				FB8BE9409DC21178A9176DBECDEF3FBA /* Pods */,
+				B6BF7610EC461371B9121340D5EE7AF0 /* Products */,
 				A23960885FF16D06046EDA92D94C3B15 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		96D9A4520E1BDE574A4424D5AE5BA53E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				14B44B5595A14F6B5281CF5A56FAA6FB /* Alamofire */,
-				EDBD8C13F7E72A8F545B2F5D9621B5EE /* BaiduMapKit */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		A23960885FF16D06046EDA92D94C3B15 /* Targets Support Files */ = {
@@ -305,21 +388,22 @@
 			path = "Target Support Files/Pods-BlindNavigation";
 			sourceTree = "<group>";
 		};
+		B6BF7610EC461371B9121340D5EE7AF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3B604BDCBB3627AA5A6B665673585BE /* Alamofire.framework */,
+				EA9287EDE71A12FBD3AC2426AD9CF3EE /* Pods_BlindNavigation.framework */,
+				7AD56734151BFAA26D5BE13303AE9AF2 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CFE8A2EF20606E5B4833D9A3653DD1A8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				14868068E124D54B47C871BF3CAF4350 /* Alamofire.framework */,
-				3E3CD27C47069B1FA7B936E9DCB868B6 /* Pods_BlindNavigation.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -330,107 +414,76 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EDBD8C13F7E72A8F545B2F5D9621B5EE /* BaiduMapKit */ = {
+		E5D2B76E22ACD7BEEDAF506E9585CBFC /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				B6993D9CF1F1CBC37BBC2E1F10CBD2A7 /* BMKActionPaopaoView.h */,
-				A48FACD8A9DF97D52F887012ED6261F6 /* BMKAnnotation.h */,
-				D66EA4D01FDC6A0D80BFA4C0D8376E21 /* BMKAnnotationView.h */,
-				4D9113DFF3964B5DC1B5380110A5D7F1 /* BMKArcline.h */,
-				B2DD64B55FC69B249CC1F7FCC0D8A908 /* BMKArclineView.h */,
-				F5FF0648DF88C6D55438734BF24BFFE0 /* BMKBaseComponent.h */,
-				C9483F36A47D9668492C5BBFD6429268 /* BMKBaseIndoorMapInfo.h */,
-				BFB4EA0F5F68AEC4821288A7D0611AAA /* BMKBusLineSearch.h */,
-				28995103BFFB82E1189072086957466C /* BMKBusLineSearchOption.h */,
-				7ABA68C2573FDA207DA8511F206042FE /* BMKCircle.h */,
-				B27988BE5E5A1FFAD0E0752C79CC9BC0 /* BMKCircleView.h */,
-				1AE9767F0DEFD7769F0FF4F28D1E18A9 /* BMKCloudPOIList.h */,
-				2AFEF821ABFF98E95DC0BD25EE2B6F73 /* BMKCloudSearch.h */,
-				D96C703E76A99EA5EAA78BAA114AC6F3 /* BMKCloudSearchComponent.h */,
-				A5804F3595860BE595CB7D5929F47F1A /* BMKCloudSearchInfo.h */,
-				CCD020AF09D74089AD093B448B620E18 /* BMKCloudVersion.h */,
-				DFE003B573FD36C212C131955D7E8FA3 /* BMKDistrictSearch.h */,
-				544D5B1AE40BC1DB638752B5D3A1FE2B /* BMKFavPoiInfo.h */,
-				E7814A87AFAAA9171D6731783FDA015A /* BMKFavPoiManager.h */,
-				9449C95AD5F84C7A904C857F0F43DF91 /* BMKGeneralDelegate.h */,
-				9F4F2F113D620105151542468D9FA095 /* BMKGeocodeSearch.h */,
-				C4DD85BDE03A25AFF726D06D33F952A0 /* BMKGeocodeSearchOption.h */,
-				58988A31A08087E3D34F71A5700A19DF /* BMKGeocodeType.h */,
-				D70D4F82E1151B3FCF4FDDEC21849B79 /* BMKGeometry.h */,
-				C2333FC23818C706584029DAC2C0A8CD /* BMKGradient.h */,
-				24D5F64A3A793B2AAC588F38FF23D965 /* BMKGroundOverlay.h */,
-				C2810DD72BD5914DB0E222744E8DF467 /* BMKGroundOverlayView.h */,
-				C64747E8D3005653D4F267E185310FC2 /* BMKHeatMap.h */,
-				C5CA9DBDA867502608A1516D9DE4676B /* BMKLocationComponent.h */,
-				0685E154B8CE8DCDE6A7E63D6440556E /* BMKLocationService.h */,
-				9D01EB49BC703487C44E1DBAAE102629 /* BMKLocationVersion.h */,
-				671CAA62DFD8D5F041614B9E4F52FEC8 /* BMKLocationViewDisplayParam.h */,
-				7656109C6A445F96BE50BB327D97C219 /* BMKMapComponent.h */,
-				7EC6476B6D96512E786B4D5C5E41EB0D /* BMKMapManager.h */,
-				7D1F92303206D9CA296A08B27782CB91 /* BMKMapStatus.h */,
-				5C05FEB70C58C3385D6938DE2D79D9CE /* BMKMapVersion.h */,
-				0B772368DCEB408B4C2DE339441E2AAC /* BMKMapView.h */,
-				552A572BD17C80FDF42DD37352046600 /* BMKMultiPoint.h */,
-				07A7CC04006F756A170A87436128C7FD /* BMKNavigation.h */,
-				E0501F9E83CB6CD62CC8E104A595B901 /* BMKOfflineMap.h */,
-				F9A5585CB768B2A9437BD4972D511F9C /* BMKOfflineMapType.h */,
-				30E5DFBB36CE51C7CA2326D68075281E /* BMKOpenOption.h */,
-				661FE391562D595EBE71D229C02E7DE8 /* BMKOpenPanorama.h */,
-				B88B682B803A4ABB961B717E36AC9B9B /* BMKOpenPoi.h */,
-				40927368B16B59FFB42430DDAF1D25F1 /* BMKOpenPoiOption.h */,
-				8F5609A11B25E731C8126642CA541A4B /* BMKOpenRoute.h */,
-				382FD54454E7BE177F2337CDF648511F /* BMKOpenRouteOption.h */,
-				483A11C74D30C78424AB8FF77128D6A8 /* BMKOverlay.h */,
-				6EB9B6B9658081091BA1F77D1914CFB4 /* BMKOverlayGLBasicView.h */,
-				B5E931D81A67DD7E843DFC90D9CC488B /* BMKOverlayPathView.h */,
-				53F8F6FE49E20CF4F8AC212E6A5EBE95 /* BMKOverlayView.h */,
-				9C60818C74DC1595AE6D5D58F651F5AF /* BMKPinAnnotationView.h */,
-				AECBB6EBE6C7C264AFCF55209923DFB1 /* BMKPointAnnotation.h */,
-				6526684B2E0580652E56FA46E5C13289 /* BMKPoiSearch.h */,
-				933C6A030ACEFF46215F947AE71253D1 /* BMKPoiSearchOption.h */,
-				D7B51ED6AD1CA810532B1B409AA8FA16 /* BMKPoiSearchType.h */,
-				BCCD5954824392D914CBC2F60640AECC /* BMKPolygon.h */,
-				0C03C8F4F871A6E5734986B463969598 /* BMKPolygonView.h */,
-				2091EF25D64FDE6955E016C40F4778D4 /* BMKPolyline.h */,
-				AA7F411EFEA0BCFEC914E6E2313EF80A /* BMKPolylineView.h */,
-				5DBB2B176C6DB3A844AFD28B89426BC6 /* BMKRadarComponent.h */,
-				79B70BE533C1D87964F0BDD731003054 /* BMKRadarManager.h */,
-				682F1D64375B35F706247D63220DCB34 /* BMKRadarOption.h */,
-				6C590A3D738C5244628BB2BE790FBE7B /* BMKRadarResult.h */,
-				F8816E58B3F2C05AD4EB64EB4EF8F2F3 /* BMKRadarVersion.h */,
-				E38BF5CABA0701F25B81088273001400 /* BMKRouteSearch.h */,
-				21B30748ADC43CAB9908ABD6371FFC9D /* BMKRouteSearchOption.h */,
-				5B6072760FFA28771420CBEE3060D793 /* BMKRouteSearchType.h */,
-				24554FFEE5137D003271638995F1E814 /* BMKSearchBase.h */,
-				1DCF2272DE49E0A0BB8EFA061DFCFD87 /* BMKSearchComponent.h */,
-				65B19BD25839A15760810CCE5923CFD6 /* BMKSearchVersion.h */,
-				3C8C9F50598683096C97DCED099B9493 /* BMKShape.h */,
-				D4BE85C82368376256B2E8696817492B /* BMKShareURLSearch.h */,
-				C5456746CBF2835ACD5FAAB6C7B6EF34 /* BMKShareUrlSearchOption.h */,
-				7D9FDD6D81EDCC318CFD7DB616C90991 /* BMKSuggestionSearch.h */,
-				BCE6938B733431A70190230222799786 /* BMKSuggestionSearchOption.h */,
-				4F5A6886C8B6EAE39AC602991871576A /* BMKTileLayer.h */,
-				19099B70BDFB60E18E519DCADC29C875 /* BMKTileLayerView.h */,
-				64DE9F5D61FF3BBC9582E7D5745E2690 /* BMKTypes.h */,
-				08EF13A378A7FC985A7849D407E8D724 /* BMKUserLocation.h */,
-				DE7C8DF7835AA46235B1C74936C4B7BB /* BMKUtilsComponent.h */,
-				8A423D6AB368CB1320545D8E59D521DD /* BMKUtilsVersion.h */,
-				25AA13F62149BE72C79E847D67839A8D /* BMKVersion.h */,
-				5A1AF5D2918D5818349C2DB35B667DB1 /* Frameworks */,
-				1EE42FD6ED3D75D0C13E5446B2B0CD81 /* Resources */,
+				35A1879ECDC3200209FC4F19319C3499 /* SwiftyJSON.swift */,
+				2A3DBF1CB4E17242362C1C49AC5BDC2F /* Support Files */,
 			);
-			name = BaiduMapKit;
-			path = BaiduMapKit;
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		EA6AF78584A80D157C4C93C6142AE2D1 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				71DFCFD304DBD694DE021B9725E15284 /* AFError.swift */,
+				335E3BA14BDA3AA0EEF6E1F080F31917 /* Alamofire.swift */,
+				9EC7E7BB563F205518E74AA07CAE50DF /* DispatchQueue+Alamofire.swift */,
+				9C478D051DD6DAEC41D7D0F065CF3592 /* MultipartFormData.swift */,
+				EBFC34F34FC8B186D5EA1D71DA3027E0 /* NetworkReachabilityManager.swift */,
+				C752DC2E61BA65B5BA94FC660DF6A796 /* Notifications.swift */,
+				CD3EA14B839187F14E369A05D602EE09 /* ParameterEncoding.swift */,
+				1395002F5B020B4C1FDABBC23839DE10 /* Request.swift */,
+				4C7D469B739A65AF0CA334D93B16E7F1 /* Response.swift */,
+				77F47D45420DC90D7C63BB7379834559 /* ResponseSerialization.swift */,
+				A2B7CD8A204FBA376A90576039AF28F2 /* Result.swift */,
+				47E0629934A0A72C0B1CBE34B1887E40 /* ServerTrustPolicy.swift */,
+				5A9C43AEA19C1AEB4729E08330CEF9CC /* SessionDelegate.swift */,
+				7796A8CA622D8E59031811CD028C2B1E /* SessionManager.swift */,
+				D317EF3F1D45B267B25AE95218ABA41C /* TaskDelegate.swift */,
+				2D60053A66FC6A1EC05BC9B53DA0E3D2 /* Timeline.swift */,
+				89EC0DE320E53364F161DDC4AD4D2A99 /* Validation.swift */,
+				14842AD714ABDFEDB6DD2D95045F028B /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		FB8BE9409DC21178A9176DBECDEF3FBA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA6AF78584A80D157C4C93C6142AE2D1 /* Alamofire */,
+				237089D073349139A6BE9F887E74A290 /* BaiduMapKit */,
+				E5D2B76E22ACD7BEEDAF506E9585CBFC /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF8361AA8505566A33A028B8094B0308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				876CD246E71E0F7F6DC5E458930CE6E5 /* BaiduMapAPI_Base.framework */,
+				AA38EB036423DF298B64FB958F7A1BBF /* BaiduMapAPI_Cloud.framework */,
+				34567A4CFB3B5D62B5ECC6994DD2CCE9 /* BaiduMapAPI_Location.framework */,
+				57729D22A87FEF4E031E50118835B4CC /* BaiduMapAPI_Map.framework */,
+				29FDE65DE9EBC4F2D17AB849E7C99E9B /* BaiduMapAPI_Radar.framework */,
+				6F0D561D25F193EA9BA18A471E8D14AF /* BaiduMapAPI_Search.framework */,
+				B96FB4F4C8139E7B2669037D3CF13D51 /* BaiduMapAPI_Utils.framework */,
+				CEA04B70026E24856B2B763EC8083CCC /* libcrypto.a */,
+				9E571B58C72E5127ACF83BBB704F20BF /* libssl.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7968217323C7E7BB33E99C41E2DC0C02 /* Headers */ = {
+		4049AC86AA7D1CFFAE95DCD105D63CE6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D48C47BA9E0C0B3FD00C286AB0478B1 /* Pods-BlindNavigation-umbrella.h in Headers */,
+				6B83EE124EB40E819DD40EAA083A8C31 /* Pods-BlindNavigation-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +492,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E1A8B54303FF2381AD31D95861CB99 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CD82A45BEADAF20534E65543A10B078 /* SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,25 +520,43 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 14868068E124D54B47C871BF3CAF4350 /* Alamofire.framework */;
+			productReference = D3B604BDCBB3627AA5A6B665673585BE /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A388493CB1F8F33EF70C536C1F403CDC /* Pods-BlindNavigation */ = {
+		AC964A81A3BA9EE2EF9258FD0FA001D1 /* Pods-BlindNavigation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5EF682AABF3775DCED7441D007101DF /* Build configuration list for PBXNativeTarget "Pods-BlindNavigation" */;
+			buildConfigurationList = 1EA05EE091513269D344EFE9106E81F8 /* Build configuration list for PBXNativeTarget "Pods-BlindNavigation" */;
 			buildPhases = (
-				8FF4BF3278699997EA15BF1E6B24527F /* Sources */,
-				6E67F53C55390DC05A1BD43DC5802EF3 /* Frameworks */,
-				7968217323C7E7BB33E99C41E2DC0C02 /* Headers */,
+				6D3E1AA66F03137AB6C847F8EFEEC62E /* Sources */,
+				4D82BE2F00C7FD317616D2E92FB423E9 /* Frameworks */,
+				4049AC86AA7D1CFFAE95DCD105D63CE6 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E28D781396D8F94BD274E36CF481DB2B /* PBXTargetDependency */,
+				75FB7F84C0BAD819A99753A5AB4A4DE6 /* PBXTargetDependency */,
+				E622D8BD214CE6F655FD59E9C73BDE03 /* PBXTargetDependency */,
 			);
 			name = "Pods-BlindNavigation";
 			productName = "Pods-BlindNavigation";
-			productReference = 3E3CD27C47069B1FA7B936E9DCB868B6 /* Pods_BlindNavigation.framework */;
+			productReference = EA9287EDE71A12FBD3AC2426AD9CF3EE /* Pods_BlindNavigation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F17DF99C695AD195417219BC4A39DFF0 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02D403429C239F63F9E52CB2D1A7E67 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				348DBD0C7695522E06FDB60426415741 /* Sources */,
+				B310E6BC48F398EE1CD0DF54EA39A1D1 /* Frameworks */,
+				F9E1A8B54303FF2381AD31D95861CB99 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 7AD56734151BFAA26D5BE13303AE9AF2 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -497,12 +576,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CFE8A2EF20606E5B4833D9A3653DD1A8 /* Products */;
+			productRefGroup = B6BF7610EC461371B9121340D5EE7AF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
-				A388493CB1F8F33EF70C536C1F403CDC /* Pods-BlindNavigation */,
+				AC964A81A3BA9EE2EF9258FD0FA001D1 /* Pods-BlindNavigation */,
+				F17DF99C695AD195417219BC4A39DFF0 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
@@ -533,22 +613,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FF4BF3278699997EA15BF1E6B24527F /* Sources */ = {
+		348DBD0C7695522E06FDB60426415741 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8445B3405AAEA57118FB8E3BC0F809F4 /* Pods-BlindNavigation-dummy.m in Sources */,
+				BDF3635605C1E484B07447AB633C0AAE /* SwiftyJSON-dummy.m in Sources */,
+				2016A3C4F5692EDD54C3B53A42B3D383 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D3E1AA66F03137AB6C847F8EFEEC62E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1DD5E317A0F92D806E6A1C4E7B3CD30 /* Pods-BlindNavigation-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E28D781396D8F94BD274E36CF481DB2B /* PBXTargetDependency */ = {
+		75FB7F84C0BAD819A99753A5AB4A4DE6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
-			targetProxy = C822AD70E6E347F6B30BD9ACFB702B75 /* PBXContainerItemProxy */;
+			targetProxy = 733FB199EA2BED55AAE6D1A2CE186E42 /* PBXContainerItemProxy */;
+		};
+		E622D8BD214CE6F655FD59E9C73BDE03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = F17DF99C695AD195417219BC4A39DFF0 /* SwiftyJSON */;
+			targetProxy = 18072B3870BD955900C0A9EB82846515 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -611,7 +706,7 @@
 			};
 			name = Release;
 		};
-		509F968235D534A2C8D99B0AD9E100E3 /* Release */ = {
+		76241C0D226D93DE96121EBF7A2A9280 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C57E5EB06182E4AD707D71FE0B4F7FA /* Pods-BlindNavigation.release.xcconfig */;
 			buildSettings = {
@@ -646,9 +741,41 @@
 			};
 			name = Release;
 		};
+		A8529B2285A89FB8E5650CE465DD2472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508B1EB72D74FFA525E23C21E33053FD /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B0F5F1530D3F4E518BE2B1A52F98487A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CBCE65A75D40A73F68D7502E855A61C /* Alamofire.xcconfig */;
+			baseConfigurationReference = FD9391BEAF88555C16865521E09880B9 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -679,7 +806,7 @@
 		};
 		B8CA02655A4B738D82484691EE8CA58F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CBCE65A75D40A73F68D7502E855A61C /* Alamofire.xcconfig */;
+			baseConfigurationReference = FD9391BEAF88555C16865521E09880B9 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -772,7 +899,7 @@
 			};
 			name = Debug;
 		};
-		E69AD8499F215EB997D467534316BD02 /* Debug */ = {
+		F0D6FD4CB04B62E05692D06759967C15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 036E6EF853B68ABB7DE1576164B069DA /* Pods-BlindNavigation.debug.xcconfig */;
 			buildSettings = {
@@ -807,9 +934,49 @@
 			};
 			name = Debug;
 		};
+		F7B6E56E934674C6B97669709F063ADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508B1EB72D74FFA525E23C21E33053FD /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1EA05EE091513269D344EFE9106E81F8 /* Build configuration list for PBXNativeTarget "Pods-BlindNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0D6FD4CB04B62E05692D06759967C15 /* Debug */,
+				76241C0D226D93DE96121EBF7A2A9280 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -828,11 +995,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5EF682AABF3775DCED7441D007101DF /* Build configuration list for PBXNativeTarget "Pods-BlindNavigation" */ = {
+		A02D403429C239F63F9E52CB2D1A7E67 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E69AD8499F215EB997D467534316BD02 /* Debug */,
-				509F968235D534A2C8D99B0AD9E100E3 /* Release */,
+				F7B6E56E934674C6B97669709F063ADC /* Debug */,
+				A8529B2285A89FB8E5650CE465DD2472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
