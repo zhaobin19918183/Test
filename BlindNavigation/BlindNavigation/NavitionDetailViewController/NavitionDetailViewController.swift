@@ -58,9 +58,11 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     var nextStepInt:Int = 0
     
     @IBOutlet weak var naviView: UIView!
+    
+    @IBOutlet weak var detailTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        numberLabel.isHidden = true
         locationService = BMKLocationService()
         locationService.allowsBackgroundLocationUpdates = true
         locationService.startUserLocationService()
@@ -146,6 +148,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         }
         let numberInt:Int = mindistance + 1
         numberLabel.text = String(numberInt)
+        self.detailTextView.text = String("ClosestPointOfDistance === 最近距离\(min),当前第\(numberInt)个点")
         if  lostBool == true
         {
             lostBool = false
@@ -166,10 +169,11 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     //MARK:是否到达下一个坐标点
     func nextPoint(location:BMKUserLocation, number:Int)
     {
+        naviView.isHidden = true
         let  coordinates:Coordinates = CoordinatesArray[number]
         let distance = HelperManager.distanceBetweenTheCoordinates(startPointlat: coordinates.locationX, startPointlon: coordinates.locationY, endPointLat:location.location.coordinate.latitude, endPointLon: location.location.coordinate.longitude)
  
-        if distance  < 2
+        if distance  <= 2
         {
             locaitonBool = false
             start.startTranslattion(message: "距离第\(number)目标位置还有2米,请注意", countrylanguage: "11")
@@ -183,7 +187,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
     {
         start.pauseTranslation()
         let  coordinates:Coordinates = CoordinatesArray[number]
-        if coordinates.soundName != nil
+        if coordinates.soundName != ""
         {
           record.play(HelperManager.file_pathString(nameString: coordinates.soundName!))
         }
@@ -230,6 +234,8 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         let  coordinates:Coordinates = CoordinatesArray[number]
         let  heading:Double =  coordinates.heading
         let distance = HelperManager.distanceBetweenTheCoordinates(startPointlat: coordinates.locationX, startPointlon: coordinates.locationY, endPointLat:location.location.coordinate.latitude, endPointLon: location.location.coordinate.longitude)
+        
+         self.detailTextView.text = String("next === 目标角度\(heading),当前角度\(location.heading.trueHeading) ,距离 ==\(distance)")
         if distance > 2 && RouteAnnotationArr.count != 0 && stepInt < RouteAnnotationArr.count
         {
            // RouteAnnotationArr
@@ -246,7 +252,8 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
         
         if distance <= 2
         {
-            self.targetImageVIew.transform = CGAffineTransform(rotationAngle: CGFloat(heading))
+           
+                self.targetImageVIew.transform =  CGAffineTransform(rotationAngle: CGFloat(heading))
             HelperManager.Angularvibration(beforeHeading: location.heading.trueHeading, nowHeading: heading)
         }
 

@@ -15,7 +15,7 @@ struct HelperManager {
      static   func file_pathString(nameString:String)->String
     {
         let file_path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first?.appending("/\(nameString)")
-        
+        print(file_path as Any)
         return file_path!
     }
     

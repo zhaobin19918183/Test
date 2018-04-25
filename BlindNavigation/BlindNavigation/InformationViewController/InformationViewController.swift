@@ -13,6 +13,8 @@ import Alamofire
 
 class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate,CLLocationManagerDelegate {
 
+    @IBOutlet weak var clearLabel: UILabel!
+    @IBOutlet weak var clearView: UIView!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var EmergencyContactButton: UIButton!
     @IBOutlet weak var informationMapView: BMKMapView!
@@ -59,7 +61,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         
         let customRightBarButtonItem = UIBarButtonItem(title: "结束", style: .plain, target: self, action: #selector(InformationViewController.customLocationAccuracyCircle))
         self.navigationItem.rightBarButtonItem = customRightBarButtonItem
-        numberLabel.isHidden = true
+//        numberLabel.isHidden = true
         
         
     }
@@ -69,7 +71,7 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
 //        coredataDic()
         stopRecordAction()
         coredatamanager()
-        self.navigationController?.popViewController(animated: true)
+      
     }
     //MARK:停止录音
     func stopRecordAction()
@@ -136,20 +138,28 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
                 timeCount = timeCount - 1
                 // 每秒计时一次
                 // 时间到了取消时间源
-                print(timeCount)
-                if timeCount <= 0 {
-                    //
-                    if self.arrayExample.count == 0 && self.locaitonUser.heading != nil
+                DispatchQueue.main.async {
+                    
+                     self.clearLabel.text = String("\(timeCount)秒后开始记录,GPS精度获取中,请勿移动")
+                    if timeCount <= 0
                     {
-                        //              startToRecord()
-                        self.locationUserMessage(nameString:"")
+                        //
+                        if self.arrayExample.count == 0 && self.locaitonUser.heading != nil
+                        {
+                            //              startToRecord()
+                            self.locationUserMessage(nameString:"")
+                        }
+                        self.clearView.isHidden = true
+                        
+                        self.stopRecordAction()
+                        
+                        codeTimer.cancel()
+                      
                     }
-                   
-                    
-                    self.stopRecordAction()
-                    
-                    codeTimer.cancel()
+                
+                    print(timeCount)
                 }
+               
             })
             // 启动时间源
             codeTimer.resume()
@@ -205,14 +215,10 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
             
             pointAnnotation = BMKPointAnnotation()
             pointAnnotation?.coordinate = CLLocationCoordinate2DMake(locationlat, locationlon)
-//            pointAnnotation?.title = locationlat
-//            pointAnnotation?.subtitle = locationlon
-            
             informationMapView.addAnnotation(pointAnnotation)
         }
     }
 
-    
     // MARK: - BMKMapViewDelegate
     
     /**
@@ -348,23 +354,25 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         locationDic.setValue(HelperManager.converLocalTime(), forKey: "locationDate")
         locationDic.setValue(HelperManager.converLocalTime(), forKey: "locationName")
         locationDic.setValue(1, forKey: "locationID")
-        uploadToNetwork()
-//        CoredataManager.coredataManagerLocation(LocationDic: locationDic, coordinatesArray: arrayExample)
+//        uploadToNetwork()
+        
+        CoredataManager.coredataManagerLocation(LocationDic: locationDic, coordinatesArray: arrayExample)
+         self.navigationController?.popViewController(animated: true)
+      
 //
         
     }
     //MARK:上传数据到服务器
     func uploadToNetwork()
     {
-        let  jsonStr = HelperManager.dataTypeTurnJson(element: arrayExample)
-        let parameters2      = ["filesName":HelperManager.converLocalTime(),"time":HelperManager.converLocalTime(),"location":jsonStr,"locaitonName":"newland"]
-        Alamofire.request("http://192.168.123.1:8000/blindLanter/locationRequest/",method:.post, parameters: parameters2)
+
+        Alamofire.request(locationRequest,method:.post, parameters: parametersDic())
             .responseJSON { response in
                
                 print("result==\(response.result)")// 返回结果，是否成功
                 if String(describing: response.result) == "SUCCESS"
                 {
-                 
+//                   self.navigationController?.popViewController(animated: true)
                 }
                 else
                 {
@@ -373,7 +381,14 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
                 
         }
     }
+    func parametersDic()->([String:AnyObject])
+    {
+        let  jsonStr = HelperManager.dataTypeTurnJson(element: arrayExample)
+        let parameters     = ["filesName":HelperManager.converLocalTime(),"time":HelperManager.converLocalTime(),"location":jsonStr,"locaitonName":"newland"]
+        return parameters as ([String : AnyObject])
+    }
 
+    
     func testSaveArrayPlist(arrayObject:NSMutableArray) ->NSData{
         //JSONSerialization
         let data = try? JSONSerialization.data(withJSONObject: arrayObject, options: JSONSerialization.WritingOptions.prettyPrinted)

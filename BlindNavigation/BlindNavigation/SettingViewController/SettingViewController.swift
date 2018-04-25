@@ -29,22 +29,29 @@ class SettingViewController: UIViewController, UINavigationControllerDelegate, M
 //                print("result==\(response.result)")   // 返回结果，是否成功
 //
 //        }
-//        let parameters1      = ["username":"newland", "password" :"zb123456789"]
-//        Alamofire.request("http://192.168.123.1:8000/blindLanter/loginLocation/",method:.post, parameters: parameters1)
+        let parameters1      = ["username":"newland", "password" :"zb123456789"]
+        Alamofire.request("http://192.168.123.1:8000/blindLanter/loginLocation/",method:.post, parameters: parameters1)
+            .responseJSON { response in
+                self.testLabel.text = String(describing: response.result.value)
+                if let jsonValue = response.result.value {
+                    /*
+                     error_code = 0
+                     reason = ""
+                     result = 数组套字典的城市列表
+                     */
+                    print("code: \(jsonValue)")
+                }
+
+        }
+        
+        
+//        let parameters2      = ["username":"newland"]
+//        Alamofire.request("http://192.168.123.1:8000/blindLanter/locationMessage/",method:.post, parameters: parameters2)
 //            .responseJSON { response in
 //                self.testLabel.text = String(describing: response)
 //                print("result==\(response.result)")   // 返回结果，是否成功
 //
 //        }
-        
-        
-        let parameters2      = ["username":"newland"]
-        Alamofire.request("http://192.168.123.1:8000/blindLanter/locationMessage/",method:.post, parameters: parameters2)
-            .responseJSON { response in
-                self.testLabel.text = String(describing: response)
-                print("result==\(response.result)")   // 返回结果，是否成功
-                
-        }
         //locationMessage
  
         

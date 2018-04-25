@@ -33,6 +33,7 @@ let kPathSQLITE = kPathCoreData + "/Model.Sqlite"
 let Common_busUrl = "http://op.juhe.cn/189/bus/busline"
 let Common_OK = " 确认"
 let Common_Warning = "警告"
+let locationRequest = "http://192.168.123.1:8000/blindLanter/locationRequest/"
 
 
 
