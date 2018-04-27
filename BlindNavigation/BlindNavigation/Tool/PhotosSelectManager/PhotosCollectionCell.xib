@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCellId" id="gTV-IL-0wX" customClass="PhotosCollectionCell" customModule="PhotoSelect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tFV-ge-nnC">
+                        <rect key="frame" x="2" y="0.0" width="81" height="85"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select.png" translatesAutoresizingMaskIntoConstraints="NO" id="UXX-vl-WYM">
+                        <rect key="frame" x="53" y="0.0" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="vLs-XJ-8uq"/>
+                            <constraint firstAttribute="width" constant="32" id="wel-1n-1f8"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tFV-ge-nnC" secondAttribute="bottom" id="4j5-0e-HEu"/>
+                <constraint firstAttribute="trailing" secondItem="UXX-vl-WYM" secondAttribute="trailing" id="FEs-Yg-J0M"/>
+                <constraint firstAttribute="trailing" secondItem="tFV-ge-nnC" secondAttribute="trailing" constant="2" id="IQ4-pc-XgW"/>
+                <constraint firstItem="tFV-ge-nnC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="N5y-zg-gST"/>
+                <constraint firstItem="UXX-vl-WYM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NIo-Ye-mdO"/>
+                <constraint firstItem="tFV-ge-nnC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="nMl-xB-dbl"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundImageVIew" destination="tFV-ge-nnC" id="put-ao-y8Z"/>
+                <outlet property="selectImage" destination="UXX-vl-WYM" id="88Z-aS-hbP"/>
+            </connections>
+            <point key="canvasLocation" x="863.5" y="540.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="select.png" width="32" height="32"/>
+    </resources>
+</document>

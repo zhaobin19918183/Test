@@ -274,7 +274,7 @@ class NavitionDetailViewController: UIViewController,BMKMapViewDelegate,BMKLocat
                     let item = RouteAnnotation()
                     item.coordinate = plan.starting.location
                     item.title = "起点"
-                    item.type = 0
+                    item.type  = 0
                     informationMapView.addAnnotation(item)  // 添加起点标注
                 }
                 if i == size - 1 {

@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlindNavigation/InformationViewController/InformationViewController.swift"
-            timestampString = "546317125.2941411"
+            timestampString = "546406740.313319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
             landmarkName = "locationUserMessage(nameString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlindNavigation/NavitionDetailViewController/NavitionDetailViewController.swift"
-            timestampString = "546317125.294291"
+            timestampString = "546406740.326385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "263"
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlindNavigation/InformationViewController/InformationViewController.swift"
-            timestampString = "546317125.294381"
+            timestampString = "546406740.32658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376"
+            startingLineNumber = "360"
+            endingLineNumber = "360"
             landmarkName = "uploadToNetwork()"
             landmarkType = "7">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlindNavigation/Tool/HelperManager.swift"
-            timestampString = "546317125.2944649"
+            timestampString = "546406740.326793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "Angularvibration(beforeHeading:nowHeading:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,27 +84,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlindNavigation/Tool/HelperManager.swift"
-            timestampString = "546317125.294512"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "Angularvibration(beforeHeading:nowHeading:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BlindNavigation/Tool/HelperManager.swift"
-            timestampString = "546317125.294553"
+            timestampString = "546406740.326928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
+            landmarkName = "Angularvibration(beforeHeading:nowHeading:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlindNavigation/Tool/HelperManager.swift"
+            timestampString = "546406740.327515"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "Angularvibration(beforeHeading:nowHeading:)"
             landmarkType = "7">
          </BreakpointContent>

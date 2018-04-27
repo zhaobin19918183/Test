@@ -14,46 +14,51 @@ import SwiftyJSON
 
 class SettingViewController: UIViewController, UINavigationControllerDelegate, MFMessageComposeViewControllerDelegate {
 
-    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var userPhoto: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var useraddressLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+    @IBOutlet weak var usersexLabel: UILabel!
+    @IBOutlet weak var userPhoneLabel: UILabel!
+    var dataDic = NSMutableDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let parameters      = ["username":"新城1", "birthday": "2011-10-11", "address" : "百年汇","password" : "newland2017","sex": "男","photo":"base64","phone":"13624249960"]
-////
-////        filesName             = request.POST.get('filesName')
-////        location              = request.POST.get('location')
-////        locaitonName          = request.POST.get('locaitonName')
-////        time                  = request.POST.get('time')
-//        Alamofire.request("http://192.168.123.1:8000/blindLanter/blindRequest/",method:.post, parameters: parameters)
-//            .responseJSON { response in
-//                self.testLabel.text = String(describing: response)
-//                print("result==\(response.result)")   // 返回结果，是否成功
-//
-//        }
+       
+         netWorkData()
+   
+    }
+    func netWorkData()
+    {
         let parameters1      = ["username":"newland", "password" :"zb123456789"]
-        Alamofire.request("http://192.168.123.1:8000/blindLanter/loginLocation/",method:.post, parameters: parameters1)
+        Alamofire.request(loginLocation,method:.post, parameters: parameters1)
             .responseJSON { response in
-                self.testLabel.text = String(describing: response.result.value)
-                if let jsonValue = response.result.value {
+                if let jsonValue = response.result.value
+                {
                     let json = JSON(jsonValue)
-                
-                    print("code: \(json["result"]["phone"])")
+                    self.dataDic = self.jsonLogin(json: json)
+                    // 将 base64的图片字符串转化成Data
+                    print(self.dataDic)
+                    let photoString = self.dataDic.value(forKey: "photo") as! String
+                    self.userPhoto.image = HelperManager.base64StringToImage(imageString: photoString)
+                   
                 }
-
         }
         
+    }
+   
+    
+    func jsonLogin(json:JSON)->NSMutableDictionary
+    {
+         let dic = NSMutableDictionary()
+        dic.setValue(String(describing: json["result"]["username"]), forKey: "username")
+        dic.setValue(String(describing:json["result"]["phone"]), forKey: "phone")
+        dic.setValue(String(describing:json["result"]["birthday"]) , forKey: "birthday")
+        dic.setValue(String(describing:json["result"]["photo"]), forKey: "photo")
+        dic.setValue(String(describing:json["result"]["sex"])  , forKey: "sex")
+        dic.setValue(String(describing:json["result"]["address"]) , forKey: "address")
+        return dic
         
-//        let parameters2      = ["username":"newland"]
-//        Alamofire.request("http://192.168.123.1:8000/blindLanter/locationMessage/",method:.post, parameters: parameters2)
-//            .responseJSON { response in
-//                self.testLabel.text = String(describing: response)
-//                print("result==\(response.result)")   // 返回结果，是否成功
-//
-//        }
-        //locationMessage
- 
         
-        
-        // Do any additional setup after loading the view.
     }
    
 

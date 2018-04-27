@@ -12,11 +12,13 @@ import MessageUI
 import Alamofire
 
 class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocationServiceDelegate,CLLocationManagerDelegate {
-
+    //遮罩层
     @IBOutlet weak var clearLabel: UILabel!
     @IBOutlet weak var clearView: UIView!
+    //倒计时
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var EmergencyContactButton: UIButton!
+    //地图
     @IBOutlet weak var informationMapView: BMKMapView!
     @IBOutlet weak var informationButton: UIButton!
     var locaitonUser : BMKUserLocation!
@@ -42,15 +44,13 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
     var intoBool:Bool = true
     var firstBool:Bool = true
     var nameString:String = ""
-    var  record = RecordManager()
+    var record = RecordManager()
     var number :Int = 9990
     var soundName = NSMutableArray()
     //TODO:数据库优化参数
-        let coordinatesDic = NSMutableDictionary()
+    let coordinatesDic = NSMutableDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         locationService = BMKLocationService()
         locationService.allowsBackgroundLocationUpdates = true
         locationService.startUserLocationService()
@@ -61,22 +61,19 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         
         let customRightBarButtonItem = UIBarButtonItem(title: "结束", style: .plain, target: self, action: #selector(InformationViewController.customLocationAccuracyCircle))
         self.navigationItem.rightBarButtonItem = customRightBarButtonItem
-//        numberLabel.isHidden = true
+       numberLabel.isHidden = true
         
         
     }
     
     @objc func customLocationAccuracyCircle()
     {
-//        coredataDic()
         stopRecordAction()
         coredatamanager()
-      
     }
     //MARK:停止录音
     func stopRecordAction()
     {
-        
         record.stopRecord(HelperManager.file_pathString(nameString: "\(HelperManager.converLocalTime())_\(number + 1).wav"))
          self.numberLabel.isHidden = true
         
@@ -139,43 +136,31 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
                 // 每秒计时一次
                 // 时间到了取消时间源
                 DispatchQueue.main.async {
-                    
                      self.clearLabel.text = String("\(timeCount)秒后开始记录,GPS精度获取中,请勿移动")
                     if timeCount <= 0
                     {
-                        //
                         if self.arrayExample.count == 0 && self.locaitonUser.heading != nil
                         {
-                            //              startToRecord()
                             self.locationUserMessage(nameString:"")
                         }
                         self.clearView.isHidden = true
-                        
                         self.stopRecordAction()
-                        
                         codeTimer.cancel()
-                      
                     }
-                
                     print(timeCount)
                 }
                
             })
             // 启动时间源
             codeTimer.resume()
-            
         }
         else
         {
             if self.arrayExample.count != 0 && self.locaitonUser.heading != nil
             {
-                
                 self.SameIntervalDistance()
             }
-            
         }
-
-       
     }
     
     /**
@@ -212,7 +197,6 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
             let  locationlon:Double =  dictionary.value(forKey: "locationlon") as! Double
             let coords2DMake = CLLocationCoordinate2DMake(locationlat ,locationlon )
             coord.add(coords2DMake)
-            
             pointAnnotation = BMKPointAnnotation()
             pointAnnotation?.coordinate = CLLocationCoordinate2DMake(locationlat, locationlon)
             informationMapView.addAnnotation(pointAnnotation)
@@ -387,8 +371,6 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         let parameters     = ["filesName":HelperManager.converLocalTime(),"time":HelperManager.converLocalTime(),"location":jsonStr,"locaitonName":"newland"]
         return parameters as ([String : AnyObject])
     }
-
-    
     func testSaveArrayPlist(arrayObject:NSMutableArray) ->NSData{
         //JSONSerialization
         let data = try? JSONSerialization.data(withJSONObject: arrayObject, options: JSONSerialization.WritingOptions.prettyPrinted)
@@ -413,6 +395,4 @@ class InformationViewController: UIViewController,BMKMapViewDelegate,BMKLocation
         locationUserMessage(nameString: HelperManager.converLocalTime())
 
     }
-    
-
 }

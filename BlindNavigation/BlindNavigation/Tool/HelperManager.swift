@@ -5,7 +5,6 @@
 //  Created by Kilin on 16/3/15.
 //  Copyright © 2016年 Innocellence. All rights reserved.
 //
-
 import UIKit
 import AudioToolbox
 struct HelperManager {
@@ -113,6 +112,24 @@ struct HelperManager {
         }
         
         return resultAnyObject
+    }
+    static func base64StringToImage(imageString:String)->UIImage
+    {
+        //data:image/jpeg;base64,
+        if imageString.contains(",")
+        {
+            var  index = imageString.index(of: ",")
+            index = imageString.index(index!, offsetBy: 1)
+            let names = imageString.suffix(from: index!)
+            let imageData2 = Data(base64Encoded: String(names))
+            let image2 = UIImage(data: imageData2!)
+            return  image2!
+        }
+        let imageData = Data(base64Encoded: imageString)
+        // 将Data转化成图片
+        let image = UIImage(data: imageData!)
+        return  image!
+        
     }
     
     static func converLocalTime()->String

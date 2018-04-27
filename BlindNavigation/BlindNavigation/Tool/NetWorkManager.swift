@@ -11,6 +11,7 @@ import Foundation
 import UIKit
 import SystemConfiguration
 import Alamofire
+import SwiftyJSON
 
 
 class NetWorkManager: NSObject
@@ -33,47 +34,11 @@ class NetWorkManager: NSObject
         }
 
     }
-
+//    let parameters1      = ["username":"newland", "password" :"zb123456789"]
+//
 
     
-    static  func alamofireUploadFile(url:String,parameters:[String:String])
-    {
-        //
-        Alamofire.upload(multipartFormData: { (multipartFormData) in
-       
-            for (key, value) in parameters
-            {
-                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
-            }
-            
-            
-        }, to: url) { (encodingResult) in
-                switch encodingResult
-                {
-                case .success(let upload, _, _):
-                upload.responseJSON
-                {
-                response in
-                debugPrint(response)
-                let string : String = String(data: response.data!, encoding: String.Encoding.utf8)!
-                if string == "success"
-                {
-                print("成功")
-                }
-                else
-                {
-                print("失败")
-                }
-
-                }
-                case .failure(let encodingError):
-                print(encodingError)
-                print("error")
-                }
-            
-        }
-    
-    }
+  
     
 
 }
