@@ -1,0 +1,34 @@
+.CommentTitle
+{
+    display: flex;
+    justify-content: space-between;;
+    background-color: white;
+    margin:5vw
+    /* border-bottom:1px dashed #999999; */
+}
+.CommentTitle1
+{
+    width: 45vw;
+    height: 8vw;
+    font-weight: bold;
+    font-size: 5vw;
+    line-height: 8vw
+
+}
+.CommentTitle2
+{
+    width: 45vw;
+    height: 8vw;
+    font-size:4vw;
+    text-align: right;
+    line-height: 8vw;
+    color:  #999999;;
+
+}
+.nocomment
+{
+    width: 30vw;
+    height: 30vw;
+    margin-left: 35vw
+
+}

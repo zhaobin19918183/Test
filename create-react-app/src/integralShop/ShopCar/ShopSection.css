@@ -1,0 +1,200 @@
+.selectImage
+{
+    width: 5vw;
+    height: 5vw;
+    margin-top: 5vw;
+    margin-left: 4vw
+}
+.Order
+{
+    width: 96vw;
+    margin: 2vw;
+    border-radius: 5vw;
+    background-color: white
+}
+.OrderShopName
+{
+    display: flex;
+    width: 96vw;
+    height: 15vw;
+    line-height: 15vw;
+    border-bottom:1px solid #F4F4F4;
+}
+.OrderShopImage
+{
+    width: 8vw;
+    height: 8vw;
+    margin: 3vw
+
+}
+.OrderShopTitle
+{
+    width: 80vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 15vw;
+    line-height: 15vw;
+    font-size: 7vw;
+    font-weight: bold
+}
+.OrderFooter
+{
+    width: 96vw;
+    border-bottom:1px solid #F4F4F4;
+}
+.OrderFooterNumber
+{
+    display: flex;
+    height:10vw;
+    width: 96vw;
+}
+.OrderFooterNumber1
+{
+    height:10vw;
+    width: 25vw;
+    line-height: 15vw;
+    text-align: center;
+    color:#363830;
+    font-size: 4vw  
+}
+.OrderFooterNumber2
+{
+    height:10vw;
+    width: 70vw;
+    line-height: 15vw;
+    color: #666666;
+    font-size: 4vw  
+}
+.OrderFooterALl
+{
+   display: flex;
+   width: 96vw;
+   height: 10vw;
+   line-height: 10vw;
+   text-align: right;
+   margin-left: 36vw;
+   margin-top: 2vw;
+   margin-bottom: 2vw
+
+}
+.OrderFooterALl1
+{
+
+   width: 15vw;
+   height: 10vw;
+   line-height: 10vw;
+   text-align: center;
+   font-size: 4vw
+}
+
+.OrderFooterALl2
+{
+
+   width: 20vw;
+   height: 10vw;
+   line-height: 10vw;
+   text-align: center;
+   font-size: 4vw
+
+}
+
+.OrderFooterALl3
+{
+
+   width: 20vw;
+   height: 10vw;
+   line-height: 10vw;
+   text-align: left;
+   color: #FB437A;
+   font-size: 4vw
+}
+
+
+.payButton
+{
+   color: #FB437A;
+   border:1px solid #FB437A;
+   height: 10vw;
+   width: 30vw;
+   border-radius: 5vw;
+   line-height: 10vw;
+   text-align: center;
+   margin-top: 2vw;
+   margin-left: 60vw;
+
+
+}
+.payButtonComment
+{
+   color: #999999;
+   border:1px solid #999999;
+   height: 10vw;
+   width: 30vw;
+   border-radius: 5vw;
+   line-height: 10vw;
+   text-align: center;
+   margin-top: 2vw;
+   margin-left: 60vw;
+
+
+}
+
+.payButtonCancle
+{
+   color: #F4F4F4;
+   border:1px solid #F4F4F4;
+   height: 10vw;
+   width: 30vw;
+   border-radius: 5vw;
+   line-height: 10vw;
+   text-align: center;
+   margin-top: 2vw;
+
+
+
+}
+.buttonDiv
+{
+    display: flex;
+    width: 60vw;
+    margin-left: 30vw
+}
+.payButton1
+{
+   color: #FB437A;
+   border:1px solid #FB437A;
+   height: 10vw;
+   width: 30vw;
+   border-radius: 5vw;
+   line-height: 10vw;
+   text-align: center;
+   margin-top: 2vw;
+   margin-left: 2vw
+   
+ 
+
+
+}
+
+.payButtonCancle1
+{
+   color: #999999;
+   border:1px solid #999999;
+   height: 10vw;
+   width: 30vw;
+   border-radius: 5vw;
+   line-height: 10vw;
+   text-align: center;
+   margin-top: 2vw;
+   margin-left: 1vw;
+ 
+ 
+
+
+}
+.line
+{
+    width: 96vw;
+    height: 4vw;
+}

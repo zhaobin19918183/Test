@@ -1,0 +1,163 @@
+.Currency
+{
+    height: 40vw;
+    width: 94vw;
+    display: flex;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    background-color: white;
+    border-bottom: 1px solid #F4F4F4;
+    
+}
+/* overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis; */
+.CurrencyImage
+{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 2vw;
+    margin-top: 2vw;
+    margin-left: 2vw
+}
+.CurrencyTitle
+{
+    width: 60vw;
+    height: 10vw;
+    justify-content: space-between;
+    display: flex;
+}
+.CurrencyTitle1
+{
+    width: 40vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 10vw;
+    line-height: 10vw;
+    color: black;
+    font-size: 6vw;
+    margin-left: 2vw
+
+    /* font-weight: bold */
+       
+   
+}
+.CurrencyTitle2
+{
+    width: 13vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 10vw;
+    line-height: 10vw;
+    color: #38A70A;
+    font-size: 4vw;
+
+}
+.CurrencyTitle22
+{
+    width: 13vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 10vw;
+    line-height: 10vw;
+    color: #999999;
+    font-size: 4vw;
+
+}
+.CurrencyTitle3
+{
+    width: 55vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 5vw;
+    color: #999999;
+    font-size: 3.5vw;
+    margin-left: 2vw;
+    margin-top: 1vw
+}
+.CurrencyTitle4
+{
+    width: 55vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 5vw;
+    color: #FFB623 ;
+    font-size: 3.5vw;
+    margin-left: 2vw;
+
+}
+
+/* color: lightslategray;
+text-decoration:line-through; */
+
+.CurrencyMoney
+{
+    display: flex;
+    width: 60vw;
+    height: 10vw;
+    margin-left: 2vw
+}
+.CurrencyMoney1
+{
+    color:  #FB437A;
+    font-size: 7vw;
+    height: 10vw;
+    line-height: 10vw;
+    font-weight: bold
+}
+.CurrencyMoney2
+{
+     color: #F59C28;
+     font-size: 4vw;
+     height: 10vw;
+     line-height: 10vw;
+     padding-top: 1vw
+}
+.CurrencyMoneyDelete
+{
+    display: flex;
+    width: 60vw;
+    height: 10vw; 
+    margin-left: 3vw
+}
+.CurrencyMoney3
+{
+    color: lightslategray;
+    text-decoration:line-through; 
+    font-size: 3vw;
+    height: 10vw;
+    line-height: 10vw;
+    width: 20vw;
+}
+.CurrencyNumber
+{
+    color: lightslategray;
+    font-size: 3vw;
+    height: 10vw;
+    line-height: 10vw;
+    width: 30vw;
+    text-align: right
+}
+.CancleButton
+{
+    width: 15vw;
+    height: 6vw;
+ 
+    border-radius: 10vw;
+    line-height: 6vw;
+    font-size: 3vw;
+    text-align: center;
+    margin-left: 5vw
+}
+.selectImage
+{
+    width: 5vw;
+    height: 5vw;
+    margin-top: 15vw;
+    margin-left:2vw
+}

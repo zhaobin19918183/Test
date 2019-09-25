@@ -1,0 +1,75 @@
+.editAddress
+{
+    
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    height: 25vw;
+    line-height: 25vw;
+    background-color: white
+
+
+}
+.editAddressImage
+{
+    width: 7vw;
+    height: 7vw;
+    padding-top: 8vw;
+    padding-left: 6vw;
+    padding-right: 5vw
+}
+.title
+{
+    display: flex;
+    width: 60vw;
+    height: 10vw;
+    margin-top: 3vw
+
+}
+.titleName
+{
+   width: 17vw;
+   height: 10vw;
+   line-height: 10vw;
+   font-size: 4vw;
+}
+.titlePhone
+{
+    width: 30vw;
+    height: 10vw;
+    line-height: 10vw;
+    color: #999999; 
+    font-size: 4vw   
+}
+.editAddressdiv
+{
+    display:flex;
+    width: 60vw;
+}
+.defualtButton
+{
+    width: 10vw;
+    height: 5vw;
+    font-size: 4vw;
+    color: #FF8B33;
+    background-color: #FED9BD;
+    line-height: 5vw;
+    
+}
+.editAddressContent
+{
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    font-size: 4vw   
+
+}
+.editButtton
+{
+    width: 15vw;
+    height: 15vw;
+    line-height: 15vw;
+    border-left: 1px solid #DFDFDF;
+    margin-top: 5vw;
+    text-align: center;
+    color: #999999
+}

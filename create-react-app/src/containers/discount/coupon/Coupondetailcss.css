@@ -1,0 +1,66 @@
+.coupon
+{
+    background-color: white;
+    overflow-x:hidden; 
+
+}
+.couponTitle
+{
+    display: flex;
+    justify-content: space-between;;
+    background-color: white;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-bottom:1px dashed #DFDFDF;
+}
+.couponTitle1
+{
+    width: 170vw;
+    height: 8vw;
+    margin-top: 2vw;
+    /* font-size: 4vw; */
+    font-size: 13px;
+}
+.couponTitle2
+{
+    width: 45vw;
+    height: 8vw;
+    margin-top: 2vw;
+    /* font-size: 4vw; */
+    text-align: right;
+    color: #363830;
+    font-size: 13px;
+}
+.couponConttitle1
+{
+    width: 45vw;
+    height: 8vw;
+    line-height: 7vw;
+    margin-left: 4vw;
+    font-size:16px;
+    /* font-weight: bold; */
+    margin-top: 4vw;
+    /* margin-bottom:2vw; */
+    color: #363830;
+    font-weight: bold;
+}
+.couponConttitle2
+{
+   
+    font-size:13px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    color: #666666
+
+}
+.bottiomComment
+{
+    margin-bottom: 14vw
+}
+.nocommentImage
+{
+    width: 25vw;
+    height: 30vw;
+    margin-left: 30vw;
+    padding: 10vw
+}

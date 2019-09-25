@@ -1,0 +1,72 @@
+.BusinessInformantion
+{
+    /* height: 35vw; */
+
+    background-color: white;
+    border-top:1px solid #F4F4F4;
+    margin-top: 2vw;
+    padding: 4vw
+    
+}
+.BusinessInformantionTitle
+{
+    font-weight: bold;
+    font-size: 5vw;
+    color: #363830
+}
+.BusinessInformantionContent
+{
+    display: flex;
+    margin-right: 5vw;
+    width: 100vw;
+
+}
+.BusinessInformantionImage
+{
+    width: 30vw;
+    height: 30vw;
+    margin-top: 5vw;
+    margin-right: 2vw;
+    border-radius: 10px;
+}
+.BusinessInformantionCount
+{
+    width: 60vw;
+    margin-top: 3vw;
+}
+.BusinessInformantionTitle1
+{
+    padding-top: 2vw;
+    margin-left: 2vw;
+    font-size: 4vw;
+    color: #363830;
+
+}
+.tag
+{
+
+    margin-top: 2vw;
+    font-size: 3vw;
+    color: #999999;
+    border:1px solid #DFDFDF;
+    margin-left: 4px;
+    border-radius: 1vw;
+    height: 3vw;
+    line-height: 3vw;
+    text-align: center;
+    padding: 1vw
+
+}
+.tagDiv
+{
+    height: 2vw;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.startImage
+{
+    width: 25vw;
+    height: 4vw;
+}

@@ -1,0 +1,112 @@
+
+.itemDiv
+{
+    display: flex;
+    background-color: white;
+    border-bottom:1px solid #DFDFDF;
+    padding: 2vw 0;
+}
+.itemDivImage
+{
+    height: 100%;
+    width: 88%;
+    display: flex;
+}
+.list_box_img{
+    width: 30vw;
+    height: 30vw;
+    background: #ccc;
+    position:absolute;
+    border-radius: 10px;
+ 
+}
+.title1
+{
+    height: 6vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 40vw;
+    font-size: 4.2vw;
+    /* font-weight: bold; */
+
+}
+.title2
+{
+    height: 5vw;
+    color: #999999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 40vw;
+    /* font-size: 3vw; */
+    font-size: 13px;
+    margin-top: 1.5vw;
+}
+.title3
+{
+    color: #FB437A;
+    height: 5vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 40vw;
+    font-size: 4.2vw;
+    margin-top: 8vw;
+}
+.title4
+{
+    border: 0.5px solid #C0C0C0;
+    color: #999999;
+    font-size: 3vw;
+    border-radius: 1vw;
+    margin-top: 6vw;
+    line-height: 4vw;   
+    
+    width:fit-content;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+    padding: 0 0.8vw;
+
+    /* text-align: center; */
+    /* width: 15vw; */
+    /* height:5vw; */
+    /* white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; */
+}
+.tagDiv
+{
+    height: 7vw;
+}
+.listul
+{
+	display: flex;
+	flex-wrap: wrap;
+    margin-left: -50px;
+    height: 6vw;
+
+
+	
+}
+.content
+{
+    margin-left: 2vw;
+    align-content: space-around;
+    height: 30vw;
+    margin-left: 32vw;
+    width: 50vw;
+
+}
+.distance
+{    color: #999999;
+    font-size: 3vw
+
+}
+.kuanghuan
+{
+
+   width: 30vw;
+    height: 30vw;
+    position:absolute;
+}

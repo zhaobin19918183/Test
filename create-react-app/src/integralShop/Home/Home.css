@@ -1,0 +1,72 @@
+.xuanfu
+{
+	margin-top:15vw
+}
+.h22{
+    border-left: 4px solid #FB437A;
+    margin: 3vw;
+    font-size: 5vw;
+    font-weight: bold
+   
+}
+
+.HomeItemHotDiv
+{
+  width: 96vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw;
+  height: 40vw;
+
+}
+.HomeItemHot
+{
+    width: 31vw;
+    height: 40vw;
+
+}
+.HomeItemHotTitle
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vw
+}
+.HomeItemHotTitle1
+{
+    color: #FB437A;
+    font-size: 5vw
+}
+.HomeItemHotTitle2
+{
+    color: lightslategray;
+    text-decoration:line-through;
+    font-size: 3vw;
+    padding-top: 1.5vw
+}
+.HomeItemHotLine
+{
+    width: 1px;
+    height: 40vw;
+
+
+}
+.HomeItemHotImage
+{
+    width: 31vw;
+    height: 30vw;
+}
+.listul
+{
+	display: flex;
+    flex-wrap: wrap;
+    width:100%+45px;
+    margin-left: -40px;
+  
+
+
+}
+.listItem
+{
+    margin: 1vw;
+    border-bottom:1px solid #F4F4F4;
+}

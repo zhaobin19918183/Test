@@ -1,0 +1,142 @@
+.commentContentAdmin
+{
+    width: 100vw;
+    height: 80vh;
+}
+
+.CommentList
+{
+    background-color: white;
+  
+    margin-bottom: 5vw;
+    margin: 2vw;
+    border-radius: 5vw
+ 
+}
+.list_box_img{
+	width: 20vw;
+    height: 20vw;
+    padding-top: 2vw
+    
+}
+.listul
+{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+    padding-bottom: 5px;
+    margin-left: 6vw
+	
+}
+.maplicss
+{
+	width: 22vw;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.commentContent
+{
+    padding: 4vw;
+
+  
+}
+.commentContentTitle
+{
+    padding: 0 3vw;
+    display: flex;
+    height: 20vw;
+}
+.CommentListItemTitle
+{
+    display: flex;
+    margin-right: 2vw;  
+}
+.CommentListImg
+{
+    width: 14vw;
+    height: 14vw;
+    border-radius: 10vw;
+    margin-top: 3vw
+}
+.commentContentName
+{
+    height: 5vw;
+    width:  73vw;
+    display: flex;
+    justify-content: space-between
+    
+}
+.commentContentName1
+{
+    height: 5vw;
+    width:  25vw;
+    margin-left: 5vw;
+    margin-top: 8vw
+}
+
+.commentContentName2
+{
+    height: 5vw;
+    width:  40vw;
+    margin-top: 3vw;
+    font-size: 4vw;
+}
+
+
+.commentContentName3
+{
+    height: 5vw;
+    /* width:  25vw; */
+    /* margin-left: 5vw; */
+    margin-top: 7vw;
+    font-size: 3vw;
+    color: #999999
+}
+.startImage
+{
+    width: 25vw;
+    height: 4vw;
+}
+.buttonYes
+{
+    color: #6C98F7;
+    width: 30vw;
+    height: 8vw;
+    line-height: 8vw;
+    text-align: center;
+    font-size: 4vw;
+    border-radius: 10vw;
+    border:1px solid #6C98F7;
+    margin-left: 40vw
+}
+
+.buttonNo
+{
+    color: #999999;
+    width: 30vw;
+    height: 8vw;
+    font-size: 4vw;
+    border-radius: 10vw;
+    line-height: 8vw;
+    text-align: center;
+    border:1px solid #999999;
+    margin-left: 5vw
+}
+.buttonDIv
+{
+    width: 90vw;
+    height: 12vw;
+    display: flex;
+    background-color: white;
+    margin-top: 3vw
+    
+}
+.adminImage
+{
+    width: 13vw;
+    height: 12vw;
+    position: relative;
+    top: -14vw;
+    left: 60vw;
+}

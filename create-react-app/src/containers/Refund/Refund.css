@@ -1,0 +1,236 @@
+.TextareaItemCssHeader
+{
+    height: 30vw;
+    width:100vw;
+    margin-bottom: 2vw;
+    background-color: white;
+    display: flex
+
+}
+.TextareaItemCssImage
+{
+    height: 25vw;
+    width: 25vw;
+    margin: 2vw
+
+}
+.TextareaItemCsstitle
+{
+    height: 15vw;
+    line-height: 15vw;
+    width: 50vw;
+    font-size: 5vw
+}
+.TextareaItemCsstitle2
+{
+    height: 15vw;
+    line-height: 15vw;
+    width: 60vw;
+    font-size: 4vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #999999
+}
+.refundMoneyDiv
+{
+    width: 100vw;
+    height: 20vw;
+   
+    background-color: white
+}
+.refundMoneyDiv1
+{
+    display: flex;
+    padding-left: 5vw;
+    width: 100vw;
+    height: 10vw;
+    line-height: 10vw;
+    border-bottom:1px solid #F4F4F4;
+}
+
+.resultDiv
+{
+    width: 100vw;
+    background-color: white;
+    margin-top: 1vw
+}
+.resultDivTitle
+{
+    height: 10vw;
+    padding-left: 5vw;
+    line-height: 10vw;
+    border-bottom:1px solid #F4F4F4;
+
+}
+.refundMoneyTitle
+{
+    font-size: 4vw;
+    height: 10vw;
+    line-height: 10vw
+}
+.refundMoneyTitle2
+{
+    font-size: 4vw;
+    height: 10vw;
+    line-height: 10vw;
+    color: #FB437A;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 0.5vw
+}
+
+.submit
+{
+    width: 90vw;
+    height: 12vw;
+    background-color: #FB437A;
+    color: white;
+    border-radius: 10vw;
+    font-size: 6vw;
+    margin-left: 5vw;
+    text-align: center;
+    line-height: 12vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw
+}
+.Reasons
+{
+    width: 100vw;
+    height: 55vw;
+    background-color: white;
+    margin-top: 3vw
+}
+.Reasonstitle
+{
+    width: 60vw;
+    height: 5vw;
+    font-size: 4vw;
+    line-height: 5vw;
+    padding-top: 5vw;
+    padding-left: 5vw
+}
+.ReasonsContent
+{
+    border:1px solid #F4F4F4;
+    width: 96vw;
+    margin: 2vw
+}
+.refundDiv
+{
+    overflow-x: hidden;
+    background-color: white
+}
+.tuikuan
+{
+    display: flex;
+    height: 6vw;
+    padding: 2vw;
+
+    margin: 2vw
+
+}
+.tuikuanImage
+{
+    width: 6vw;
+    height: 6vw;
+
+}
+.tuikuanTitle
+{
+    height:6vw;
+
+    font-size: 4vw;
+    line-height: 6vw;
+    margin-left: 2vw
+}
+
+.titleDiv
+{
+    display: flex;
+    background-color: white;
+    height: 28vw;
+    padding-left: 3vw;
+    padding-top: 3vw;
+ 
+    border-bottom: 1px solid #F4F4F4;
+}
+.titleImage
+{
+  width: 15vw;
+  height: 15vw;
+  border-radius: 10vw;
+  margin-right: 3vw
+
+}
+.title1
+{
+    font-size: 12pt;
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    margin-left: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.title2
+{
+    font-size: 4vw;
+    width: 60vw;
+    height: 8vw;
+    line-height: 8vw;
+    margin-left: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.success
+{
+    font-size: 12pt;
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    margin-left: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    margin-top: 2vw
+}
+.successMoney
+{
+    font-size: 12pt;
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+.successTag
+{
+    font-size: 12pt;
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    margin-left: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    color: #999999;
+    margin-top: 2vw
+}
+.backDetailImage
+{
+    width: 2vw;
+    height: 25vw;
+    
+}
+.buyDetailtitleImage
+{
+    width: 25vw;
+    height: 25vw;
+    padding-left: 2vw
+}

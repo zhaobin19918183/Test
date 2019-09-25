@@ -1,0 +1,86 @@
+.mask{
+    background: rgba(0,0,0,0.4) !important;
+    z-index: 10;
+    height: 200vh;
+    position: fixed;
+    width: 100vw;
+  }
+  .selectMask_box{
+    background: rgba(0,0,0,0);
+    transition: all .2s linear
+  }
+  .whiteBackground
+  {
+      width: 80vw;
+      height: 80vw;
+      margin-left:10vw;
+      margin-right:10vw;
+      margin-top: 30vw;
+      background-color: white ;
+      border-radius: 10vw
+  }
+  .maskTitle
+  {
+      text-align: center;
+      width: 80vw;
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+      border-bottom: 1px solid #E9ECF1;
+      font-size: 4vw;
+      font-weight: bold;
+      height: 2vw;
+  }
+  .maskcontent
+  {
+
+    width: 80vw;
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+    font-size: 4vw;
+    height: 40vw; 
+
+  }
+  
+  .maskcontentList1
+  {
+      height: 4vw;
+      width: 60vw;
+      margin-left: 6vw;
+ 
+  }
+  .maskcontentList2
+  {
+      height: 4vw;
+      width: 60vw;
+      margin-left: 6vw;
+      margin-top: 8vw
+  }
+  .maskcontentList3
+  {
+      height: 4vw;
+      width: 60vw;
+      margin-left: 6vw;
+      margin-top: 8vw
+  }
+  .maskcontentList4
+  {
+      height: 4vw;
+      width: 60vw;
+      margin-left: 6vw;
+      margin-top: 8vw
+  }
+  .maskclose
+  {
+      text-align: center;
+      color: #FB437A;
+      width: 80vw;
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+      border-top: 1px solid #E9ECF1;
+      font-size: 4vw;
+      font-weight: bold;
+      height: 2vw;
+
+  }
+  
+  

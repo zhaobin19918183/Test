@@ -1,0 +1,358 @@
+.SureOrder
+{
+    height: 40vw;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+   
+}
+.SureOrderImage1
+{
+    width:26vw ;
+    height:26vw ;
+    padding: 2vw
+}
+.SureOrderContent
+{
+    width: 60vw;
+    height: 30vw;
+ 
+}
+.SureOrdertitle
+{
+    width:60vw ;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 8vw;
+    line-height: 8vw;
+    font-size: 5vw;
+    padding-top: 2vw
+}
+.SureOrdertitle1
+{
+    width:60vw ;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 8vw;
+    line-height: 8vw;
+    font-size: 3vw;
+    color :#999999;
+ 
+}
+.SureOrderMoneyDIv
+{
+    width: 60vw;
+    height: 10vw;
+    display: flex;
+    line-height: 10vw
+}
+.SureOrderMoney
+{
+    color: #FB437A;
+    font-size: 6vw;
+     height: 10vw;
+     line-height: 10vw;
+}
+.SureOrderIntegral
+{
+    color: #F59C28;
+    font-size: 4vw;
+    height: 10vw;
+    line-height: 10vw; 
+    padding-top: 1vw
+}
+.SureOrderCancleDiv
+{
+    width: 70vw;
+    height: 10vw;
+    display: flex;
+    justify-content: space-between
+}
+.SureOrderCancle
+{
+   
+    color: lightslategray;
+    text-decoration:line-through;
+    height: 10vw;
+    line-height: 10vw; 
+    width: 30vw;
+    font-size: 4vw;
+
+}
+.SureOrderCancleNUmber
+{
+    color: lightslategray;
+    height: 10vw;
+    line-height: 10vw; 
+    width: 20vw;
+    font-size: 4vw;
+}
+.location
+{
+    border-top: 2vw solid #F4F4F4;
+    border-bottom: 2vw solid #F4F4F4;
+    display: flex;
+    width: 100vw;
+    height: 13vw;
+    background-color: white
+}
+.locationimage
+{
+    width: 4vw;
+    height:5vw;
+    padding: 3.5vw
+}
+.locationName
+{
+    width: 30vw;
+    height: 13vw;
+    line-height: 13vw;
+    font-size: 5vw
+}
+
+.mode
+{ 
+    width: 100vw;
+    height: 13vw;
+    display: flex;
+    border-bottom: 1px solid #F4F4F4;
+    background-color: white
+  
+}
+
+.modeimage
+{
+    width: 5vw;
+    height:5vw;
+    padding: 3.5vw
+}
+.modeName
+{
+    width: 30vw;
+    height: 13vw;
+    line-height: 13vw;
+    font-size: 5vw
+}
+
+.SureOrderInputDiv
+{
+    width: 100vw;
+    background-color: white;
+  
+
+}
+
+.inputtitle
+{
+    width: 40vw;
+    height: 5vw;
+    font-size: 4vw;
+    padding-top: 5vw;
+    padding-left: 4vw;
+    padding-bottom: 1vw
+
+}
+
+.inputDiv
+{
+    width: 90vw;
+    height: 10vw;
+    border: 1px solid #F4F4F4;
+    margin-left: 5vw;
+    margin-bottom: 2vw
+}
+
+.SureOrderDivRule
+{
+    display: flex;
+    width: 100vw;
+    height: 15vw;
+    justify-content: space-between;
+    border-bottom: 1px solid #F4F4F4;
+    background-color: white;
+    border-top: 5px solid #F4F4F4;
+
+
+}
+.SureOrderDivMoney
+{
+    display: flex;
+    width: 100vw;
+    height: 15vw;
+    justify-content: space-between;
+    border-bottom: 1px solid #F4F4F4;
+    background-color: white;
+    border-top: 1px solid #F4F4F4;
+}
+
+.SureOrderDivRule1
+{
+    display: flex;
+    width: 50vw;
+    height: 15vw; 
+    line-height: 15vw;
+    background-color: white
+}
+.SureOrderDivRulemame
+{
+    height: 15vw; 
+    line-height: 15vw;
+    font-size: 5vw;
+    margin-left: 4vw
+}
+.SureOrderImage
+{
+    width: 7vw;
+    height: 7vw;
+    margin-top: 4vw   
+}
+
+
+.SureOrderDivRule11
+{
+    width: 50vw;
+    height: 15vw; 
+    line-height: 15vw
+}
+.SureOrderlook
+{
+    width: 30vw;
+    height: 15vw; 
+    line-height: 15vw;
+    font-size: 4vw;
+    margin-right: 3vw;
+    text-align: right
+}
+
+.SureOrderMode
+{
+    width: 30vw;
+    height: 15vw; 
+    line-height: 15vw;
+    font-size: 5vw;
+    margin-right: 33vw;
+    text-align: left;
+    margin-left: 4vw
+}
+
+.SureOrderAll
+{
+    display: flex;
+    width: 100vw;
+    height: 30vw;
+    line-height: 15vw;
+    border-bottom: 1px solid #F4F4F4;
+    background-color: white;
+    border-top: 1px solid #F4F4F4;
+    font-size: 5vw;
+   
+}
+.titlecolor
+{
+    color: #FB437A;
+}
+.SureOrderAllDiv
+{
+    width: 60vw;
+    text-align: right;
+    margin-left: 36vw;
+ 
+    background-color: white
+}
+.footer
+{
+    border-top: 1px solid #F4F4F4;
+    position: fixed;
+    bottom: 0;
+    height: 15vw;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.footerALl
+{
+    width: 10vw;
+    height: 15vw;
+    line-height: 15vw;
+    margin-left: 5vw;
+    font-size: 5vw;
+
+
+}
+.footermoney
+{
+    width: 20vw;
+    height: 15vw;
+    line-height: 15vw;
+     color: #FB437A;
+     font-size: 4vw;
+     font-weight: bold;
+
+
+
+}
+.footermoneydiv
+{
+    width: 50vw;
+    height: 15vw;
+    display: flex
+}
+.heji
+{
+    width: 20vw;
+    height: 15vw;
+    line-height: 15vw;
+    text-align: right;
+    font-size: 4vw;
+    margin-left: 1vw
+
+
+}
+
+
+.footSure
+{
+
+    color: white;
+    width: 30vw;
+    height: 15vw;
+    text-align: center;
+    line-height: 15vw;
+    font-size: 4vw;
+    background-color: #FB437A
+  
+
+}
+
+
+.footercacle
+{
+    width: 30vw;
+    height: 15vw;
+    line-height: 15vw;
+     color: #999999;
+     font-size: 4vw;
+
+
+
+
+}
+.footercaclediv
+{
+    width: 40vw;
+    height: 15vw;
+    display: flex
+}
+.cacleheji
+{
+    width: 20vw;
+    height: 15vw;
+    line-height: 15vw;
+    text-align: right;
+    font-size: 4vw;
+
+
+}

@@ -1,0 +1,62 @@
+.mask{
+    background: rgba(0,0,0,0.4) !important;
+    z-index: 10;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+  }
+  .selectMask_box{
+    background: rgba(0,0,0,0);
+    transition: all .2s linear
+  }
+  .whiteBackground
+  {
+      width: 100vw;
+      height: 100vw;
+      background-color: white ;
+ 
+  }
+  
+  .maskcontentList2
+  {
+      height: 4vw;
+      width: 60vw;
+      margin-left: 6vw;
+      margin-top: 8vw
+  }
+  .maskcontentList3
+  {
+      height: 4vw;
+      width: 60vw;
+      margin-left: 6vw;
+      margin-top: 8vw
+  }
+  .maskcontentList4
+  {
+      height: 4vw;
+      width: 60vw;
+      margin-left: 6vw;
+      margin-top: 8vw
+  }
+.tagDiv
+{
+    width: 25vw;
+    height: 10vw;
+    border: 1px solid #FE3786;
+    color: #FE3786;
+    border-radius: 5vw;
+    line-height: 10vw;
+    text-align: center;
+    font-size: 5vw;
+    margin: 3vw
+}
+ .maskul
+ {
+     width: 100vw;
+     display: flex;
+     flex-wrap: wrap;
+     width:100%+42px;
+     margin-left: -37px;
+     background-color: white;
+     margin-top: 0vw
+ } 

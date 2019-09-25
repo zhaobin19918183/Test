@@ -1,0 +1,100 @@
+.login {
+    background-color: #ffffff;
+}
+
+.login_center {
+    margin: 3%;
+}
+
+.header_bg_img {
+    background-color: #ffffff;
+    width: 100%;
+
+}
+
+.header_bg_img img {
+    width: 100%;
+}
+
+.header_center {
+    width: 30%;
+    margin: -20% auto 0;
+}
+
+.login_form {
+    display: block;
+    margin-top: 20%;
+}
+
+.user_input {
+    border: 2px solid #6C98F7;
+    opacity: 1;
+    padding: 5px;
+    border-radius: 44px;
+    margin-top: 15%;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #666666;
+    font-size: 18px;
+    padding-left: 15%;
+}
+
+.user_input input {
+    border: 0 solid #ffffff;
+    height: 30px;
+    width: 75%;
+    margin-left: 20%;
+    border-left: 2px solid #DFDFDF;
+}
+
+.user_input div {
+    position: absolute;
+    margin-left: 5%;
+    width: 29px;
+    height: 30px;
+    background-image: url('.././img/zxy-shouji.png');
+}
+
+.pwd_input {
+    border: 2px solid #6C98F7;
+    opacity: 1;
+    padding: 5px;
+    border-radius: 44px;
+    margin-top: 15%;
+}
+
+.pwd_input input {
+    border: 0 solid #ffffff;
+    height: 30px;
+    width: 75%;
+    margin-left: 20%;
+    border-left: 2px solid #DFDFDF;
+}
+
+.pwd_input div {
+    position: absolute;
+    margin-left: 5%;
+    width: 25px;
+    height: 30px;
+    background-image: url('.././img/zxy-suo.png');
+}
+
+.login_form p {
+    margin-left: 20%;
+    color: red;
+    margin-top: 2%;
+    font-size: 15px;
+}
+
+.sub_button {
+    border: 2px solid #6C98F7;
+    opacity: 1;
+    padding: 5px;
+    border-radius: 44px;
+    width: 100%;
+    height: 40px;
+    background-color: #6C98F7;
+    color: #FFFFFF;
+    font-size: 18px;
+}

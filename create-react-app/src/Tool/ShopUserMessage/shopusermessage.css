@@ -1,0 +1,23 @@
+.title1
+{
+  font-size: 5vw;
+  color: #363830;
+  font-weight: bold
+}
+.title2
+{
+ color: #999999;
+ /* font-size: 3vw; */
+ font-size: 13px;
+ margin-bottom: 2vw;
+ margin-top: 2vw
+}
+.message
+{
+    padding: 3vw 3vw 1vw 3vw;
+}
+.startImage
+{
+    width: 25vw;
+    height: 4vw;
+}

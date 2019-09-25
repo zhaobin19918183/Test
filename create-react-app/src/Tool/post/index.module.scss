@@ -1,0 +1,343 @@
+.post{
+
+    .headernav{
+        height: 80px;
+        margin: 0 100px;
+        display: flex;
+        justify-content: space-between;
+
+        .headernav_left{
+            display: flex;
+            align-items: center;
+
+            .headernav_left_route{
+                margin-left: 102px;
+
+                .headernav_left_route_link{
+                    color: #212121;
+                    font-size: 16px;
+                    margin-left: 40px;
+                    position: relative;
+                    right: 40px;
+                    font-family: "SourceHanSansSC-Normal";
+                }
+                .headernav_left_route_onlink{
+                    color: #1F55FF;
+                }
+            }
+        }
+
+        .headernav_right{
+            display: flex;
+            align-items: center;
+
+            a{
+                color: #0C0A0C;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .post_banner{
+        position: relative;
+
+        .post_banner_search{
+            position: absolute;
+            top: 40%;
+            left: 28%;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .post_main{
+        
+        .post_main_demand{
+            padding-top: 48px;
+            // padding: 0 375px;
+            padding-left: 18%;
+            padding-right: 18%;
+            background-color:#F3F5F7;
+
+            .post_main_demand_Apart{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .post_main_demand_Apart_p{
+                    margin: 0;
+                    color:#212121;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .post_main_demand_Apart_div{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .post_main_demand_Apart_div1{
+                        border-radius: 15px;
+                        width: 110px;
+                        height: 30px;
+                        background-color: #9037FF;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        text-align: center;
+                        line-height: 30px;
+                        margin-right: 30px;
+
+                        img{
+                            position: relative;
+                            bottom: 1px;
+                            right: 1px;
+                        }
+                    }
+
+                    .post_main_demand_Apart_div2{
+                        border-radius: 15px;
+                        width: 80px;
+                        height: 30px;
+                        background-color: #1F55FF;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+
+                }
+            }
+
+            .post_main_demand_Twopart{
+                color: #BEC0C8;
+                font-size: 20px;
+            }
+
+            .post_main_demand_Threepart{
+
+                .Threepart{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    padding-bottom: 45px;
+
+                    .Threepart_list{
+                        background-color: #FFFFFF;
+                        padding: 15px;
+                        box-shadow: 0px 4px 15px #d5d7db;
+                        margin-top: 50px;
+                        width: 380px;
+
+                        .Threepart_list_box{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .list_box_left{
+                                display: flex;
+                                justify-content: space-between;
+
+                                .left_title{
+                                    margin-left: 9px;
+                                    position: relative;
+                                    bottom: 2px;
+
+                                    .title_name{
+                                        margin: 0;
+                                        color:#212121;
+                                        font-size: 20px;
+                                    }
+
+                                    .title_fabu{
+                                        font-size: 14px;
+                                        margin: 0;
+
+                                        i{
+                                            color: #818389;
+                                        }
+
+                                        span{
+                                            color: #212121;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .Threepart_list_con{
+                            color:#212121;
+                            font-size: 18px;
+                            margin-top: 20px;
+                        }
+
+                        .Threepart_list_foo{
+                            margin-top: 20px;
+                            display: flex;
+                            align-items: center;
+
+                            .foo_location{
+                                display: flex;
+                                align-items: center;
+
+                                .location{
+                                    margin-left: 15px;
+                                    color: #212121;
+                                    font-size: 14px;
+
+                                    span{
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+
+                            .foo_time{
+                                display: flex;
+                                align-items: center;
+                                margin-left: 66px;
+
+                                .time{
+                                    margin-left: 15px;
+                                    color: #212121;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .post_main_resources{
+            // padding: 0 375px;
+            padding-left: 18%;
+            padding-right: 18%;
+
+            .post_main_demand_Apart{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 60px;
+
+                .post_main_demand_Apart_p{
+                    margin: 0;
+                    color:#212121;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .post_main_demand_Apart_div{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .post_main_demand_Apart_div2{
+                        border-radius: 15px;
+                        width: 80px;
+                        height: 30px;
+                        background-color: #1F55FF;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+
+                }
+            }
+
+            .post_main_demand_Twopart{
+                color: #BEC0C8;
+                font-size: 20px;
+            }
+
+            .post_main_resources_Threepart{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 19px;
+                
+                .resources_list{
+                    box-shadow: 0px 4px 15px #d5d7db;
+                    margin-top: 30px;
+
+                    .resources_text{
+
+                        .text_content{
+                            padding: 0 10px;
+                            color:#323334;
+                            font-size: 16px;
+                            margin: 0;
+                            margin-top: 10px;
+                        }
+
+                        .text_price{
+                            padding: 0 10px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-top: 6px;
+
+                            .price_va{
+                                color: #1F55FF;
+                                font-weight: bold;
+
+                                i{
+                                    font-size: 12px;
+                                }
+
+                                span{
+                                    font-size: 20px;
+                                }
+                            }
+
+                            .price_sold{
+                                color: #BABCC1;
+                                font-size: 16px;
+                            }
+                        }
+
+                        .text_user{
+                            padding: 8px 10px;
+                            margin-top: 10px;
+                            border-top: 1px solid #E7EBEF;
+                            
+                            .user_name{
+                                margin-left: 10px;
+                                color: #212121;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .post_advertisement{
+            margin-top: 81px;
+            margin-bottom: 53px;
+        }
+    }
+}
+// antd 搜索框样式
+:global(.ant-input-wrapper){
+}
+:global(.ant-input){
+    // border-radius: 30px;
+    width:730px;
+    height: 60px;
+}
+:global(.ant-input-group-addon){
+    width: 100px;
+    height: 50px;
+    // border-radius: 50px;
+}
+:global(.ant-input-search-button){
+    width: 50px;
+    height: 60px;
+    // border-radius: 50px;
+}
+:global(svg){
+    width: 30px;
+    height: 30px;
+}

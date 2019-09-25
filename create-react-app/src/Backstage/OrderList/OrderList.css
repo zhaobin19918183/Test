@@ -1,0 +1,490 @@
+.my-accordion .pad .am-accordion-content-box {
+    padding: 10px;
+}
+
+.data{
+    background-color: #F4F4F4;
+    overflow-x: hidden;
+    /* height: 100vh;
+    overflow-y: "hidden" */
+}
+.data1{
+    background-color: #F4F4F4;
+    overflow-x: hidden;
+    height: 100vh;
+    overflow-y: "hidden"
+}
+.icon_1_img {
+    margin: 0 3% -1% 0;
+    width: 1.5rem;
+}
+
+.icon_list {
+    color: #363830;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* button{
+    outline:#F4F4F4;
+    
+} */
+
+.select_time_button{
+    width: 100%;
+    height: 60px;
+}
+
+.select_time_button div{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    line-height: 47px;
+    font-size: 20px;
+}
+
+.order_list_data{
+    margin:10px;
+
+}
+.timediv
+{
+    display: flex;
+    /* justify-content: space-between; */
+    width: 90vw;
+    padding: 3vw
+}
+.time
+{
+    width: 40vw;
+    height: 10vw;
+    margin-bottom: 3vw;
+    background-color: #F4F4F4;
+    border-radius: 2vw
+
+
+}
+.startTime
+{
+    width: 40vw;
+    height: 10vw;
+    text-align: center;
+    line-height: 10vw;
+}
+.zhi
+{
+    width: 5vw;
+    height: 10vw;
+    text-align: center;
+    line-height: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+}
+.search
+{
+    width: 1vw;
+    height: 9vw;
+    text-align: center;
+    line-height: 9vw;
+
+    font-size: 5vw ;
+    margin-left: 6vw;
+    margin-right: 3vw;
+
+    border-radius: 10vw
+
+}
+.allDIv
+{
+    width: 100vw;
+    height: 15vw;;
+
+    background-color: white;
+    padding: 2vw
+
+
+
+}
+.alldiv1
+{
+    background-color: #F4F4F4;
+     border-radius: 2vw;
+    display: flex;
+    /* justify-content:space-between; */
+     line-height: 15vw;
+    width: 90vw;
+    height: 15vw;
+    padding-left: 5vw;
+    margin-left: 2vw
+
+}
+.alldiv3
+{
+    background-color: white;
+
+    display: flex;
+    justify-content:space-between;
+     line-height: 15vw;
+    width: 100vw;
+    height: 17vw;
+}
+
+.alldiv2
+{
+    background-color: #F4F4F4;
+    border-radius: 2vw;
+    width: 55vw;
+    height: 30vw;;
+    padding-left: 5vw;
+    height: 10vw;
+    border: 0;
+    margin-left: 3vw
+
+
+}
+.button
+{
+    background-color: #6C98F7;
+    width: 30vw;
+    height: 10vw;
+    border-radius: 2vw;
+    line-height: 10vw;
+    text-align: center;
+    color: white;
+    margin-right: 3vw;
+
+}
+
+.order
+{
+    margin-bottom: 70px;
+    background-color: #F4F4F4;
+    padding-top: 3vw
+}
+
+.mask{
+    background: rgba(0,0,0,0.4) !important;
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    bottom: 0
+
+  }
+.pickerDiv
+{
+    background-color: white;
+
+
+}
+.divHeader
+{
+    height: 10vw;
+    justify-content: space-between;
+    border-bottom: 1px solid #999999;
+    width: 100vw;
+    padding: 1vw;
+    display: flex
+}
+.divHeaderleft
+{
+    width: 20vw;
+    height: 10vw;
+    line-height: 10vw;
+    text-align: center;
+    font-size: 4vw
+}
+.divHeaderight
+{
+    width: 20vw;
+    height: 10vw;
+    line-height: 10vw;
+    text-align: center;
+    color: #6C98F7;
+    font-size: 4vw
+
+}
+.Header
+{
+    width: 100vw;
+    height: 13vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid #dedede;
+}
+.Headertitle
+{
+    width: 80vw;
+    height: 13vw;
+    line-height: 13vw;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: bold
+
+}
+.HeaderImage
+{
+    width: 6vw;
+    height: 6vw;
+    padding: 4.5vw;
+}
+.HeaderImageLeft
+{
+    width: 6vw;
+    height: 6vw;
+    padding: 3.5vw;
+
+}
+
+.settlementdiv
+{
+    width: 100vw;
+    height: 45vw;
+    background-color: #F4F4F4
+}
+
+.MoneyListSearch
+{
+    background-color: #6C98F7;
+    color: white;
+    width: 90vw;
+    margin: 5vw;
+    text-align: center;
+    line-height: 10vw;
+    height: 10vw;
+    border-radius: 10vw
+
+}
+.Money
+{
+    padding:3vw 0;
+    width: 100vw;
+    height: 10vw;
+    background-color: white;
+
+}
+.MoneyItemList
+{
+    display: flex;
+    justify-content: space-between;
+
+    width: 94vw;
+    height: 10vw;
+    line-height: 10vw;
+    background-color: white;
+    margin-left: 3vw;
+    margin-right: 3vw
+
+}
+.MoneyItem
+{
+    width: 20vw;
+    height: 8vw;
+    border: 1px solid #FFDD00;
+    text-align: center;
+    line-height: 8vw;
+    border-radius: 5vw;
+    margin-top: 2vw
+}
+
+
+.MoneyItemDetail
+{
+    width: 96vw;
+    height: 40vw;
+    border-radius: 5vw;
+    background-color: white;
+    margin: 2vw;
+}
+
+.MoneyOder
+{
+    padding-bottom: 1vw;
+    border-bottom:1px dashed #999999;
+    display: flex;
+    width: 90;
+    height: 10vw;
+    line-height: 10vw;
+
+}
+.MoneyOderImage
+{
+    width: 6vw;
+    height: 6vw;
+    margin: 3vw;
+
+}
+.MoneyOderTitle
+{
+    width: 70vw;
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 5vw;
+    font-weight: bold;
+    margin-top: 1vw
+
+}
+
+.MoneyOderLeft
+{
+    width: 45vw;
+    height: 25vw;
+    border-right:1px solid #F4F4F4;
+
+}
+
+.MoneyOderRight
+{
+    width: 45vw;
+    height: 25vw;
+
+
+
+}
+.MoneyOderLeftTitle
+{
+  color: #F67C1F;
+  width: 40vw;
+  height: 10vw;
+  line-height: 10vw;
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3vw;
+}
+.MoneyOderLeftCOntent
+{
+
+  width: 40vw;
+  height: 10vw;
+  line-height: 10vw;
+  font-size: 4vw;
+  text-align: center
+}
+
+
+.MoneyOderRIghtTitle
+{
+  color: #FC3F3F;
+  width: 40vw;
+  height: 10vw;
+  line-height: 10vw;
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3vw;
+}
+.MoneyOderRIghtOntent
+{
+
+  width: 40vw;
+  height: 10vw;
+  line-height: 10vw;
+  font-size: 4vw;
+  text-align: center
+}
+
+.MoneyItemDetailDiv
+{
+    display: flex;
+    width: 96vw;
+    height: 30vw;
+    justify-content: space-between;
+    margin: 2vw
+}
+.CommentListAdminCss
+{
+    /* width: 100vw;
+    height: 200vw; */
+    /* background-color: red */
+}
+/*
+
+#FC3F3F */
+
+input::-ms-input-placeholder {
+    padding: 10vw;
+}
+
+input::-webkit-input-placeholder {
+    padding: 10vw;
+}
+
+/* 适配苹果（6、7、8）Plus input placeholder属性 */
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    .alldiv2::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .alldiv2{
+        line-height: 9.5vw;
+    }
+}
+
+/*适配，6，7，8*/
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+    .alldiv2::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .alldiv2{
+        line-height: 9.5vw;
+    }
+}
+
+/*适配苹果X*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .alldiv2::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .alldiv2{
+        line-height: 9.5vw;
+    }
+}
+
+
+/*适配苹果X smart Max*/
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+    .alldiv2::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .alldiv2{
+        line-height: 9.5vw;
+    }
+}
+
+/*适配苹果XR */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 2) {
+    .alldiv2::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .alldiv2{
+        line-height: 9.5vw;
+    }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+    .alldiv2::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .alldiv2{
+        line-height: 9.5vw;
+    }
+}

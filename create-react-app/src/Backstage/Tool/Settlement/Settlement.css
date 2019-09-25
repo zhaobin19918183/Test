@@ -1,0 +1,61 @@
+.settlement
+{
+    height: 40vw;
+    width: 90vw;
+    margin: 2vw;
+    background-color: white;
+    border-radius: 5vw;
+    padding: 3vw;
+    
+    /* border: 2px solid #6C98F7; */
+}
+
+.settlementList
+{
+    height: 10vw;
+    border-bottom: 1px solid #e7e7e7;
+    width: 86vw;
+    display: flex;
+    justify-content: space-between;
+    line-height: 10vw;
+    font-size: 5vw
+
+}
+.settlementListItemLeft
+{
+    width: 20vw;
+    height: 10vw;
+    line-height: 10vw;
+    text-align: left;
+    margin-left: 4vw;
+    font-size: 4vw
+}
+.settlementListRight
+{
+    width: 60vw;
+    height: 10vw;
+    line-height: 10vw;
+    text-align: right;
+    font-size: 4vw;  
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.settlementListRight1
+{
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    text-align: right;
+    font-size: 5vw;  
+}
+
+.settlementListRight2
+{
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    text-align: right;
+    font-size: 5vw;  
+}

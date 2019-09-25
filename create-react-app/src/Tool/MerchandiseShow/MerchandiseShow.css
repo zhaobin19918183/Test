@@ -1,0 +1,18 @@
+.MerchandiseShowDiv
+{
+    width: 100vw;
+    height: 30vw;
+    overflow: hidden;
+    white-space:nowrap;
+    overflow-x:auto; 
+    margin-bottom: 1vw
+
+}
+
+.list_box_img{
+	width: 40vw;
+    height: 30vw;
+    margin-left: 1vw;
+    margin-right: 1vw
+
+}

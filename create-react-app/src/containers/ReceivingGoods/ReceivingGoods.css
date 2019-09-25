@@ -1,0 +1,106 @@
+.headerDiv
+{
+    height: 30vw;
+    width: 100vw;
+    background-color: white;
+    margin-top: 3vw;
+    padding-top: 15vw;
+    display: flex
+  
+}
+.headerDiv1
+{
+    height: 20vw;
+    width: 100vw;
+    background-color: white;
+    margin-top: 3vw;
+    padding-top:5vw;
+    display: flex
+  
+}
+.addressButton
+{
+    border: 1px solid #707070;
+    width: 40vw;
+    height: 15vw;
+    color: #707070;
+    line-height: 15vw;
+    border-radius: 10vw;
+    text-align: center;
+    margin-left: 30vw;
+
+
+}
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    height: 15vw;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-between
+    
+}
+.footerALl
+{
+    width: 20vw;
+    height: 15vw;
+    line-height: 15vw;
+    margin-left: 5vw;
+    font-size: 5vw
+
+}
+.footermoney
+{
+    width: 30vw;
+    height: 15vw;
+    line-height: 15vw;
+     color: #FB437A;
+     font-size: 5vw;
+
+
+}
+.heji
+{
+    width: 20vw;
+    height: 15vw;
+    line-height: 15vw;
+    text-align: right;
+
+}
+.footSure
+{
+    background-color: #FB437A;
+    color: white;
+    width: 40vw;
+    height: 13vw;
+    border-radius: 10vw;
+    margin: 1vw;
+    text-align: center;
+    line-height: 13vw;
+    font-size: 6vw;
+  
+
+}
+.addressImage
+{
+    width: 10vw;
+    height: 10vw;
+    margin-left: 5vw;
+    padding-top: 2vw
+}
+.editImage
+{
+    width: 4vw;
+    height: 7vw;
+    margin-left: 5vw;
+    padding-top: 2vw
+}
+.addressEdit
+{
+    margin-left: 4vw;
+    margin-bottom: 3vw;
+    font-size: 4vw;
+    width: 60vw;
+}

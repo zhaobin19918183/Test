@@ -1,0 +1,123 @@
+.ShopCar
+{
+    overflow-x: hidden;
+    margin-bottom: 20vw;
+}
+.ShopCarHeader
+{
+    height: 50vw;
+    width: 100vw;
+    background-color:  #FB437A;
+
+}
+.ShopCarHeaderTitle
+{
+    height: 10vw;
+    width: 100vw;
+    color: white;
+    line-height: 10vw;
+    text-align: center;
+    font-weight: bold;
+    font-size: 6vw
+}
+.ShopCarfooter
+{
+    position: fixed;
+    bottom:13vw;
+    height: 20vw;
+    width: 100vw;
+    display: flex;
+    background-color: white
+
+}
+.ShopCarfooterImage
+{
+    width: 5vw;
+    height: 5vw;
+    margin-top: 8vw;
+    margin-left: 4vw;
+    margin-right: 4vw
+
+
+
+}
+.ShopCarfooterquanxuan
+{
+    height: 20vw;
+    line-height: 20vw;
+    font-size: 4vw;
+
+    width: 10vw;
+
+}
+/* 合计 */
+.ShopCarfooterdiv
+{
+    display: flex;
+    width: 30vw;
+    height: 10vw;
+  
+}
+.hejidiv
+{
+    width: 40vw;
+    height: 20vw;
+    margin-left: 5vw
+
+
+}
+.ShopCarfooterheji
+{
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 4vw;
+    width: 20vw;
+ 
+}
+.ShopCarfootermoney
+{
+    height: 10vw;
+    line-height: 10vw;
+    color: #FB437A;
+    font-size: 5vw;
+    width: 20vw;
+
+}
+/* 省 */
+.ShopCarfootercacle
+{
+  
+    line-height: 10vw;
+    color: #999999;
+    font-size: 4vw;
+    height: 10vw;
+    width: 30vw;
+
+
+}
+
+/* 结算 */
+
+.submit
+{
+    width: 30vw;
+    height: 10vw;
+    margin: 2vw;
+    color: white;
+    text-align: center;
+    line-height: 10vw;
+    border-radius:  10vw;
+    background-color: #FB437A;
+    margin-top: 5vw;
+    font-size: 5vw
+
+}
+.carSection
+{
+    width: 100vw;
+    margin-top: -30vw
+}
+.carIndex
+{
+    margin-bottom: 5vw
+}

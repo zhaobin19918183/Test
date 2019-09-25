@@ -1,0 +1,32 @@
+.Header
+{
+    width: 100vw;
+    height: 15vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: white
+
+}
+.Headertitle
+{
+    width: 80vw;
+    height: 15vw;
+    line-height: 15vw;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: bold
+
+}
+.HeaderImage
+{
+    width: 6vw;
+    height: 6vw;
+    padding: 4.5vw;
+}
+.HeaderImageLeft
+{
+    width: 6vw;
+    height: 6vw;
+    padding: 4.5vw;
+
+}

@@ -1,0 +1,36 @@
+.inputaddress
+{
+    margin-top: 3vw
+}
+.addressButton
+{
+    background-color: #FB437A;
+    width: 80vw;
+    height: 15vw;
+    text-align: center;
+    color: white;
+    line-height: 15vw;
+    margin: 10vw;
+    border-radius: 10vw
+}
+.default
+{
+    height: 20vw;
+    width: 100vw;
+    display: flex;
+    background-color: white
+}
+.defaultImage
+{
+    width: 7vw;
+    height: 7vw;
+    margin: 4vw
+
+}
+.defaultTitle
+{
+    width: 60vw;
+    height: 7vw;
+    line-height: 7vw;
+    margin-top: 4vw
+}

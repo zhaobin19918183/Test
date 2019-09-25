@@ -1,0 +1,53 @@
+.aboutDiv
+{
+
+ height: 8vw;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ line-height: 8vw;
+ width: 100vw;
+ margin-left: 2vw
+}
+.divOne
+{
+    width: 33vw;
+    display: block;
+    text-align: center;
+    border-right:1px solid #F4F4F4;
+
+}
+.divTwo
+{
+    width: 33vw;
+    display: block;
+    border-right:1px solid #F4F4F4;
+    text-align: center;
+}
+.divThree
+{
+    width: 33vw;
+    display: block;
+    text-align: center;
+}
+.aboutImage
+{
+    width: 4vw;
+    height: 4vw;
+    /* margin-right: 1vw; */
+    /* vertical-align: text-bottom; */
+    vertical-align: middle;
+}
+.aboutTitle
+{
+    font-size: 13px;
+    margin-left: 5px;
+}
+.line
+{
+    width: 1px;
+    height: 6vw;
+    padding-top: 2vw;
+    background-color: #F4F4F4;
+    margin-left: 2vw
+}

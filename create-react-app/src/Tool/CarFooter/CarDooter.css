@@ -1,0 +1,91 @@
+.footer{
+    height: 12vw;
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    border-top:1px solid #F4F4F4;
+    display: flex;
+    padding-left: 5vw;
+    padding-top: 3vw;
+  
+    }
+.footernumber
+{
+    /* text-decoration:line-through; */
+    color: #999999;
+    padding-top: 2vw;
+    font-size: 3vw
+}
+.car
+{
+    width: 5vw;
+    height: 5vw;
+    margin-left: 1vw
+}
+.footermoney
+{
+    
+    display: flex
+}
+.footermoney1
+{
+    color: #FB437A;
+    font-size: 5vw
+}
+.footermoney2
+{
+    color: #F59C28;
+    font-size: 3vw;
+    padding-top: 1.5vw
+}
+.footer1
+{
+    width: 20vw;
+    position: relative;
+    /* position: absolute;; */
+}
+.numberDiv
+{
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 3vw;
+    border: 1px solid #FB437A;
+    line-height: 5vw;
+    text-align: center;
+    top:0;
+    color: #FB437A;
+    margin-left: 5vw;
+    font-size: 3vw;
+    margin-top: -2vw
+}
+.footer2
+{
+    width: 25vw;
+    text-align: center;
+    height: 10vw;
+    margin-right: 10vw;
+    line-height: 10vw;
+    background-color: #FB437A;
+    border-radius: 10vw;
+    color: white;
+    font-size: 4vw;
+    margin-left: 60vw
+    
+
+}
+.footer4
+{
+    width: 25vw;
+    text-align: center;
+    height: 10vw;
+    margin-right: 2vw;
+    line-height: 10vw;
+    background-color: #F3B352;
+    border-radius: 10vw;
+    color: white;
+    font-size: 3vw;
+    
+
+}

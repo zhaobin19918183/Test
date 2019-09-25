@@ -1,0 +1,54 @@
+.locationDiv
+{
+    border-top:2vw solid #f4f4f4;
+    display: flex;
+    width: 96vw;
+    height: 7vw;
+    padding: 2vw;
+    line-height: 8vw;
+    border-bottom:2vw solid #f4f4f4;
+    margin-top: 1vw
+    
+}
+.locaitonImage
+{
+    width: 5vw;
+    height: 6vw;
+    padding-top: 1vw
+    /* margin-left:1vw */
+}
+
+.phoneImage
+{
+    width: 7vw;
+    height: 7vw;
+    margin-left: 2vw;
+ 
+}
+.address
+{
+    width: 78vw;
+    height: 7vw;
+    background-color: white;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 4vw;
+    line-height: 7vw;
+    border-right:1px solid #F4F4F4;
+    border-left:1px solid #F4F4F4;
+    padding-left: 2vw
+ 
+    
+}
+.line
+{
+    width: 1px;
+    height: 6vw;
+    padding-top: 2vw;
+    background-color: #F4F4F4;
+    margin-left: 2vw
+}

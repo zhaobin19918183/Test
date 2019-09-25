@@ -1,0 +1,72 @@
+.collection
+{
+    height: 35vw;
+    margin: 2vw;
+    width: 96vw;
+    border-bottom:1px solid #DFDFDF;
+    display: flex;
+     
+}
+.collectionImg
+{
+    height: 30vw;
+    width: 30vw;
+    border-radius: 3vw;
+    padding: 2vw
+}
+.collectionContent
+{
+    width: 60vw;
+    height: 30vw;
+    margin-top: 2vw;
+    background-color: red
+}
+.collectiontitle
+{
+    height: 10vw;
+    width: 60vw;
+    /* word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: olive */
+}
+.collectiontitle1
+{
+    height: 5vw;
+    width: 60vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 4.5vw;
+
+}
+
+.collectiontitle2
+{
+    height: 4vw;
+    width: 60vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.5vw;
+    padding-top: 2vw
+
+}
+
+
+.collectionnumber
+{
+    height: 18vw;
+    width: 60vw;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: darkcyan;
+    margin-top: 2vw
+}

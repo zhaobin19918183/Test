@@ -1,0 +1,231 @@
+.backgorundImage
+{
+    background-image: url('../../image/backgroundDiscount1.png');
+    width: 100vw;
+    height: 38vw;
+    background-size: cover;
+    display: flex;
+    margin-top: 2vw;
+    position: relative;
+    
+}
+.backgorundImage2
+{
+    background-image: url('../../image/backgroundDiscount2.png');
+    width: 100vw;
+    height: 38vw;
+    background-size: contain;
+    display: flex;
+    margin: 3vw 0;
+    position: relative;
+    
+}
+.cardRight{
+    width: 60vw;
+    position: relative;
+    margin-left: 38vw;
+}
+.divClass
+{
+    width: 100vw;
+    height: 100vw;
+  
+}
+.couponImage
+{
+    width: 30vw;
+    height: 30vw;
+    top: 2.5vw;
+    left: 3vw;
+    position:absolute;
+    padding: 1vw;
+    border-radius: 10px;
+}
+.coupontitleDiv
+{
+    width: 60vw;
+    margin-top: 2vw;
+    /* margin-left: 38vw; */
+
+    /* justify-content: space-between;
+   
+    height: 7vw;
+    display: flex;
+    align-items: center; */
+
+}
+.coupontitleDiv1
+{
+    /* margin-left: 5vw;
+    justify-content: space-between;
+    width: 55vw;
+    height: 7vw;
+    margin-top: 14vw;
+    display: flex;
+    align-items: center;
+    margin-left: 40vw */
+    width: 60vw;
+    margin-top: 2vw;
+    
+}
+.coupontitleDivRight
+{
+    /* margin-left: 5vw;
+    width: 55vw;
+    height: 7vw;
+    margin-top: 4vw;
+    margin-left: 38vw */
+    position: absolute;
+    top: 13vw;
+    left: 38vw;
+}
+.coupontitlename
+{
+    width: 58vw;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 2vw;
+    left: 1vw;
+    /* 第二行显示省略号 */
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; 
+}
+.coupontitlename2
+{
+    width: 58vw;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 3.5vw;
+    left: 1vw;
+    /* 第二行显示省略号 */
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; 
+}
+.coupontitlenumber
+{
+  color: white;
+  font-size: 3vw;
+  /* margin-top: 14 vw */
+  position: absolute;
+  top: 27.5vw;
+  /* left: 40vw; */
+  right: 3vw;
+}
+
+.coupontitlenumber1
+{
+    color: white;
+    font-size: 3vw;
+    /* margin-top: 14 vw */
+    position: absolute;
+    top: 29.5vw;
+    right: 3vw;
+    /* left: 40vw; */
+
+}
+.couponcontent
+{
+    display: flex;
+    width: 30vw;
+    position: absolute;
+    top: 22vw;
+   
+}
+.couponcontent_detail{
+    display: flex;
+    width: 30vw;
+    position: absolute;
+    top: 23vw;
+}
+.couponcontent1
+{
+    color: white;
+    font-size: 3vw;
+    padding-top:2vw; 
+    margin-left: 1vw
+}
+.couponcontent11
+{
+    color: white;
+    font-size: 5vw;
+    margin-left: 1vw
+}
+.couponcontent2
+{
+    color: #EEFF00;
+    font-size: 3.5vw;
+    margin-left: 1vw;
+    padding-top: 1.5vw
+
+}
+.couponcontent3
+{
+    color: #c5c5c5;
+    text-decoration:line-through;
+    /* font-size: 3.5vw; */
+    font-size: 12px;
+    text-align: left;
+    width: 60vw;
+    /* margin-left: 39vw;
+    margin-top: 2vw */
+    position: absolute;
+    top: 28vw;
+    left: 1vw;
+}
+.couponcontent4
+{
+    color: #c5c5c5;
+    text-decoration:line-through;
+    /* font-size: 3.5vw; */
+    font-size: 13px;
+    text-align: left;
+    width: 60vw;
+    /* margin-left: 39vw;
+    margin-top: 2vw */
+    position: absolute;
+    top: 30vw;
+    left: 1vw;
+}
+.couponbuy
+{
+    width: 20vw;
+    color: #8705E1;
+    background-color: white;
+    /* margin-left: 39vw; */
+    height: 7vw;
+    font-size: 3vw;
+    text-align: center;
+    line-height: 7vw;
+    border-radius: 4vw
+}
+.couponbuy2
+{
+    width: 20vw;
+    color: #FF5B00;
+    background-color: white;
+    /* margin-left: 39vw; */
+    height: 7vw;
+    font-size: 3vw;
+    text-align: center;
+    line-height: 7vw;
+    border-radius: 4vw
+}
+.kuanghuan
+{
+
+    width: 30vw;
+    height: 30vw;
+    position:absolute;
+}
+.numberdiv
+{
+    display: flex
+}

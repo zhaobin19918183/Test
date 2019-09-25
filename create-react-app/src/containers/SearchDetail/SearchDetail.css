@@ -1,0 +1,121 @@
+.listul
+{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	/* margin-left: -40px; */
+
+	
+	
+
+}
+.searchItem
+{
+    width: 19vw;
+    height: 3vw;
+    text-align: center;
+    border-right: 1px solid #ccc;  
+    padding: 2vw;
+
+    font-size: 4vw;
+    margin-top: 2vw
+ 
+}
+.searchItemTitle
+{
+    /* border-left: 4px solid red; */
+    padding-left: 3vw;
+
+    height: 3vw;
+    font-size: 4vw;
+    padding-top: 2vw
+    
+
+
+}
+.searchDivLeft
+{
+    height: 3vw;
+    display: flex
+}
+.searchDivColor
+{
+    height: 3vw;
+    width: 1vw;
+}
+.search
+{
+    background-color: white
+}
+.searchdiv
+{
+   width: 96vw;
+   background-color:  white;
+   margin-left: 2vw;
+   margin-top: 5vw;
+   padding-bottom: 5vw;
+   padding-top: 2vw;
+   overflow-y: scroll;
+
+   /* 9.16号协商隐藏,暂无分类 */
+   display: none;
+}
+.Recommendationdiv
+{
+
+    background-color: white;
+    padding: 4vw;
+    width: 88vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 15vw;
+
+
+  
+}
+.Recommendation
+{
+    width: 90vw;
+   
+    height: 20vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5vw
+
+
+}
+.listul
+{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%+45px;
+	margin-left: -40px;
+	padding-bottom: 5px
+	
+	
+
+}
+.RecommendationButton
+{
+  
+    height: 3vw;
+    text-align: center;
+    line-height: 3vw;
+    color: #FB437A;
+    border: 1px solid #FB437A;
+    border-radius: 5vw;
+    font-size: 3vw;
+    margin-left: 2vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 1vw;
+    margin: 1vw
+
+
+}
+.RecommendationUser
+{
+    font-size: 5vw
+}

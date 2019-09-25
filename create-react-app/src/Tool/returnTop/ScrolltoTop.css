@@ -1,0 +1,14 @@
+.main{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position:absolute ;
+    top: 70vh;
+    right: 3vw;
+    z-index: 90000000;
+    transition: 1s;
+}
+
+.arrowUp{
+    vertical-align: middle;
+}

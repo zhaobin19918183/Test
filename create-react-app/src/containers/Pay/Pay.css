@@ -1,0 +1,500 @@
+.payDiv
+{
+   overflow-x: hidden
+
+}
+.payImagediv
+{
+    width: 100vw;
+    /* height: 40vw; */
+    padding-left: 2vw;
+    padding-top: 2vw;
+    background-color: white;
+    padding-bottom: 2vw
+
+  
+}
+.payImage
+{
+  
+    width: 96vw;
+    height: 50vw;
+    margin-top: 2vw;
+    margin-left: 2vw
+
+}
+.payButton
+{
+    width: 33vw;
+    height: 10vw;
+    color: white;
+    background-color: #FB437A;
+    border-radius: 10vw;
+    margin-left: 33vw;
+    text-align: center;
+    line-height: 10vw;
+    font-size: 5vw
+}
+.titleDiv
+{
+    display: flex;
+    background-color: white;
+    height: 28vw;
+    padding-left: 3vw;
+    padding-top: 3vw;
+    border-bottom: 1px solid #DFDFDF;
+
+}
+.titleImage
+{
+  width: 15vw;
+  height: 15vw;
+  border-radius: 10vw;
+  margin-right: 3vw
+
+}
+.title1
+{
+    font-size: 4vw;
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    margin-left: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.title2
+{
+    font-size: 4vw;
+    width: 60vw;
+    height: 8vw;
+    line-height: 8vw;
+    margin-left: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.code
+{
+   
+    width: 100vw;
+    background-color: white;
+    text-align: center;
+    border-top: 1vw solid #F4F4F4;
+ 
+}
+.codeTitle
+{
+    width: 100vw;
+    height: 10vw;
+    text-align: center;
+    line-height: 10vw;
+    font-size: 5vw;
+  
+}
+.codeTitleLeft
+{
+    width: 100vw;
+    height: 10vw;
+    text-align: center;
+    line-height: 10vw;
+    font-size: 5vw;
+    margin-left: -36vw
+  
+}
+
+.codeTitleseconde
+{
+    color: #999999;
+    text-align: left;
+    display: flex;
+    margin-left: 5vw;
+}
+
+.codeImage
+{
+    width: 30vw;
+    height: 30vw;
+  
+
+}
+.payDetail
+{
+    width: 100vw;
+    /* height: 100vw; */
+    background-color: white;
+    border-top: 1px solid #F4F4F4;
+    margin-top: 3vw;
+    padding-bottom: 2vw;
+}
+.list
+{
+    width: 100vw;
+    height: 10vw;
+    display: flex;
+    line-height: 10vw;
+    margin-left: 5vw;
+}
+
+.listdashed
+{
+    width: 90vw;
+    height: 10vw;
+    display: flex;
+    line-height: 10vw;
+    margin-left: 6vw;
+    border-top:1px dashed #DFDFDF;
+    margin-top: 2vw;
+}
+.payImagecode
+{
+    width: 90vw;
+    border-top:1px dashed #DFDFDF;
+    text-align: center;
+    margin-left: 5vw
+}
+.listName
+{
+    width: 22vw;
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 4vw;
+    color: #999999
+
+}
+.listContent
+{
+    width: 70vw;
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 4vw;
+    color: #383630
+}
+.useDiv
+{
+    height: 10vw;
+    display: flex;
+    line-height: 10vw;
+    width: 100vw;
+    padding-left: 6vw;
+
+    background-color: white;
+    border-top: 1vw solid #F4F4F4;
+
+}
+.useDiv1
+{
+    height: 10vw;
+    line-height: 10vw;
+    width: 40vw;
+    color: lightslategray;
+    text-decoration:line-through;
+
+}
+.useDiv2
+{
+    height: 10vw;
+    line-height: 10vw;
+    width: 20vw; 
+    text-align: right;
+    margin-left: 25vw
+}
+
+.buyDetailtitleImage
+{
+    width: 25vw;
+    height: 25vw;
+    margin-left: 2vw;
+    border-radius: 10px;
+}
+.success
+{
+    font-size: 12pt;
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    margin-left: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    margin-top: 4vw;
+    color: #999999
+}
+.successMoney
+{
+    font-size: 14pt;
+    width: 60vw;
+    height: 5vw;
+    line-height: 5vw;
+    margin-left: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    margin-top: 5vw;
+    font-weight: bold;
+    color: #383630;
+}
+.payTitleMessage
+{
+    padding-left: 5vw;
+    height: 11vw;
+    line-height: 11vw;
+    font-size: 5vw;
+    border-bottom: 1px solid #DFDFDF;
+    margin-bottom: 2vw;
+}
+.tagImage
+{
+    width: 5vw;
+    height: 5vw;
+    margin-top: 2.5vw;
+    margin-left:3vw;
+}
+.tagDiv
+{
+    display: flex;
+    width: 100vw;
+    background-color: white;
+    padding-left: 2vw
+    
+  
+}
+.tagDiv1
+{
+    display: flex;
+
+
+  
+}
+.successTag
+{
+    font-size: 3.5vw;
+
+    height: 10vw;
+    line-height: 10vw;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    color: #07C160;
+
+    background-color: white;
+    margin-left: 1vw;
+ 
+}
+.backDetailImage
+{
+    width: 2vw;
+    height: 25vw;
+    
+}
+
+.headerDiv
+{
+    height: 13vw;
+    width: 100vw;
+    background-color: #FB437A;
+    display: flex
+
+}
+.backImage
+{
+    width: 6.5vw;
+    /* height: 6vw; */
+    padding: 3.25vw;
+}
+.headerTitle
+{
+    width: 40vw;
+    height: 10vw;
+    color: white;
+    margin-top: 3.5vw;
+    font-size: 5vw;
+    margin-left: 30vw
+}
+.headerTitleClass
+{
+    width: 74vw;
+    height: 10vw;
+    color: white;
+    margin-top: 3.5vw;
+    font-size: 5vw;
+    text-align: center
+}
+.endit
+{
+    color: white;
+    font-size: 3vw;
+    height: 13vw;
+    line-height: 13vw
+}
+
+.payButtonDetail
+{
+    width: 90vw;
+    margin-left: 5vw;
+    height: 10vw;
+    line-height: 10vw;
+    color: white;
+    background-color: #FB437A;
+    border-radius: 5vw;
+    text-align: center;
+    margin-top: 10vw
+}
+
+.cancleButtonDetail
+{
+    width: 90vw;
+    margin-left: 5vw;
+    height: 10vw;
+    line-height: 10vw;
+    color: #383630;
+   
+    border-radius: 5vw;
+    text-align: center;
+    margin-top: 5vw
+}
+
+
+.cancleButtonDetailCancle
+{
+    width: 90vw;
+    margin-left: 5vw;
+    height: 10vw;
+    line-height: 10vw;
+    background-color: #DDDDDD;
+    color: white;
+    border-radius: 5vw;
+    text-align: center;
+    margin-top: 5vw
+}
+.payRefunddiv
+{
+    display: flex;
+
+    margin-right: 5vw;
+
+    /* border-bottom:1px dashed #DFDFDF; */
+    padding-bottom: 1vw
+
+}
+.payRefund
+{
+    border: 1px solid #DFDFDF;
+    color: #DFDFDF;
+    height: 8vw;
+    margin-top: 3vw;
+    width: 20vw;
+    font-size: 4vw;
+    line-height: 8vw;
+    border-radius: 5vw;
+    color: #999999;
+    margin-left: 10vw
+
+
+}
+.payRefundtitle
+{
+
+    font-size: 4vw;
+    color: #999999;
+    margin-top: 2vw;
+  
+}
+.payRefundtitle1
+{
+
+    font-size: 4vw;
+    margin-left: 4vw;
+    color: #999999;
+    margin-top: 2vw
+}
+.payRefundCode
+{
+   width: 94vw;
+   height: 10vw;
+   font-size: 4vw;
+   color: #999999;
+   display: flex;
+   justify-content: space-between;
+   margin-left: 4vw;
+   line-height: 10vw ;
+   border-bottom:1px dashed #DFDFDF;
+   border-top:1px dashed #DFDFDF;
+
+   
+
+}
+.payRefundCode1
+{
+   width: 94vw;
+   height: 10vw;
+   font-size: 4vw;
+   color: #999999;
+   display: flex;
+   justify-content: space-between;
+   margin-left: 4vw;
+   line-height: 10vw ;
+
+   text-decoration:line-through;
+   
+
+}
+.payRefundCode1
+{
+   width: 60vw;
+   height: 10vw;
+   line-height: 10vw;
+   color: #999999;
+   text-align: left;
+   display: flex;
+   margin-left: 3vw
+
+}
+.payRefundCode2
+{
+    width: 15vw;
+    height: 10vw;
+    line-height: 10vw;
+    color: #999999;
+    text-align: right
+}
+
+.payRefundDetail
+{
+   display: flex ;
+   height: 10vw;
+   line-height: 10vw;
+   width: 90vw;
+   margin-left:7vw ;
+   /* border-top:1px dashed #DFDFDF; */
+}
+
+.payRefundDetail1
+{
+   display: flex ;
+   height: 10vw;
+   line-height: 10vw;
+   width: 50vw;
+   color: #999999 
+}
+
+.payRefundDetail2
+{
+
+   height: 10vw;
+   line-height: 10vw;
+   margin-left:5vw ;
+   width: 40vw;
+   color: #07C160;
+   text-align: right;
+  
+}
+.toedit
+{
+    width: 3vw;
+    height: 5vw;
+    margin-left: 2vw;
+    margin-top: 2.5vw
+}

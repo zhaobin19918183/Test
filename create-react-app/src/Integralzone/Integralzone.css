@@ -1,0 +1,121 @@
+.search
+{
+    background-color: transparent;
+    height: 15vw;
+    width: 100vw;
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+
+}
+
+.searchBar
+{
+    width: 80vw;
+    height: 10vw;
+    background-color: rgba(255,255,255,0.7);
+    margin-top: 2.5vw;
+    margin-left: 5vw;
+    border-radius: 5vw;
+    display: flex
+
+   
+}
+
+.searchToolImag
+{
+    width: 5vw;
+    height: 5vw;
+    margin: 2.5vw;
+   
+}
+.searchtitleserch
+{
+    color: #999999;
+    width: 50vw;
+    height: 10vw;
+    line-height: 10vw;
+    margin-left: 3vw;
+    font-size: 4vw
+ 
+}
+.searchImag
+{
+    width: 3vw;
+    height: 5vw;
+    margin-top: 5vw;
+    margin-left: 5vw
+    
+}
+.menuDiv
+{
+    height: 30vw;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+.menuDivItem
+{
+    width: 25vw;
+    height: 25vw;
+    text-align: center;
+    padding-top: 5vw
+
+}
+.menuDivItemImage
+{
+    width: 10vw;
+    height: 10vw;
+
+}
+.menuDivItemTitle
+{
+    width: 25vw;
+    height: 10vw;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 10vw;
+
+}
+.menuDiv2
+{
+    height: 40vw;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between
+}
+.menuDivDetail
+{
+    width: 50vw;
+    height: 40vw;
+}
+.menuDiv2Left
+{
+    width: 45vw;
+    height: 40vw;
+    margin-left: 5vw
+}
+.menuDiv2Right
+{
+    width: 45vw;
+    height: 19vw;
+}
+.listul
+{
+	display: flex;
+    flex-wrap: wrap;
+    width:100%+42px;
+    margin-left: -37px;
+    border-top:3vw solid #dfdfdf;
+    padding-top: 3vw
+  
+
+
+}
+.listItem
+{
+    margin: 1vw;
+    border-bottom:1px solid #F4F4F4;
+}

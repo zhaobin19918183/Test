@@ -1,0 +1,79 @@
+
+.menuDiv
+{
+    display: flex
+}
+.menuDivLeft
+{
+    width: 30vw;
+}
+.menuDivRight
+{
+    width: 70vw;
+
+}
+.menuBackground
+{
+    width: 30vw;
+    height: 15vw;
+    /* border-bottom: 2px solid #999999;  */
+    margin-top: 1px;
+    line-height: 15vw;
+    padding-top: 2.5vw;
+    background-color: white;
+    
+
+
+
+}
+.menuBackgroundDis
+{
+    width: 30vw;
+    height: 15vw;
+    /* border-bottom: 2px solid #999999;  */
+    margin-top: 1px;
+    line-height: 15vw;
+    background-color: #F4F4F4;
+    padding-left: 3vw
+}
+.menuSelect
+{
+    border-left: 2px solid #FB437A; 
+    font-size: 5vw;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    height: 10vw;
+    width: 30vw;
+    line-height: 10vw;
+    text-align: center;
+
+}
+.menuDisSelect
+{
+
+    font-size: 5vw;
+    color: black;
+    background-color: #F4F4F4;
+    width: 25vw;
+    line-height: 15vw;
+    height: 15vw;
+    text-align: center
+}
+.itemImage
+{
+    width: 20vw;
+    height: 20vw;
+}
+.itemContentTitle
+{
+    color: black;
+    font-size: 5vw;
+    font-weight: bold;
+    height: 8vw;
+    width: 670vw;
+    background-color: white;
+    line-height: 8vw;
+    padding-left: 3vw;
+    padding-top: 3vw
+}

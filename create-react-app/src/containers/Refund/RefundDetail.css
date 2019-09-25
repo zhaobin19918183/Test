@@ -1,0 +1,70 @@
+.refunddetail{
+    
+}
+.card1{
+    margin-bottom: 2vw;
+}
+.card2{
+    /* margin-bottom: 8vw; */
+}
+.refundTitle{
+    font-size: 5vw;
+    font-weight: bold;
+}
+.refundNumber{
+    margin-top: 1vw;
+}
+.refundNumber label{
+    display: inline-block;
+    width: 12vw;
+    margin-top: 3vw;
+
+}
+
+.refundNumber1 label{
+    display: inline-block;
+    width: 15vw;
+    margin-top: 3vw;
+    margin-left: 8vw
+}
+.quan2{
+    margin-left: 15vw;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
+}
+.refundTime{
+    margin-top: 3vw;
+    display: flex
+}
+.stepsLine{
+    margin-left: 5vw;
+}
+.contactkf{
+    width: 94vw;
+    margin-left: 3vw;
+    border-radius: 50px;
+    /* position: fixed !important;
+    bottom: 3vw; */
+    position: relative !important;
+    top: 10vw;
+    margin-bottom: 15vw;
+}
+.backDetailImage {
+    width: 2vw;
+    height: 25vw;
+    position: relative;
+    left: 30vw;
+}
+
+
+:global(.am-steps-item-finish .am-steps-item-title){
+    color: #383630 !important;
+    font-weight: lighter !important;
+}
+:global(.am-steps-item-content .am-steps-item-description){
+    color: #888888 !important;
+    font-size: 13px !important;
+}
+:global(.am-steps-vertical .am-steps-item-tail){
+    left: 11px !important;
+}

@@ -1,0 +1,161 @@
+.xuanfu
+{
+	margin-top:15vw
+}
+.h22{
+    border-left: 4px solid #FB437A;
+    margin: 3vw;
+    font-size: 5vw;
+    font-weight: bold
+   
+}
+
+.HomeItemHotDiv
+{
+  width: 96vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw;
+  height: 40vw;
+
+}
+.HomeItemHot
+{
+    width: 31vw;
+    height: 40vw;
+
+}
+.HomeItemHotTitle
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vw
+}
+.HomeItemHotTitle1
+{
+    color: #FB437A;
+    font-size: 5vw
+}
+.HomeItemHotTitle2
+{
+    color: lightslategray;
+    text-decoration:line-through;
+    font-size: 3vw;
+    padding-top: 1.5vw
+}
+.HomeItemHotLine
+{
+    width: 1px;
+    height: 40vw;
+
+
+}
+.HomeItemHotImage
+{
+    width: 31vw;
+    height: 30vw;
+}
+.listul
+{
+	display: flex;
+    flex-wrap: wrap;
+    width:100%+45px;
+    margin-left: -37px;
+    background-color: white
+  
+
+
+}
+.goods
+{
+    width: 100vw;
+    background-color: white
+}
+.listItem
+{
+    margin: 1vw;
+    border-bottom:1px solid #F4F4F4;
+}
+.TabCss
+{
+
+    display: flex;
+    margin: 1vw;
+    width: 90vw;
+    height: 10vw;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background-color: white
+
+}
+.Tab1Select
+{
+    width: 15vw;
+    height: 10vw;
+    border-bottom:1px solid #FB437A;
+    font-size: 5vw;
+    text-align: center;
+    line-height: 10vw;
+    color: #FB437A
+}
+.Tab1DisSelect
+{
+    width: 15vw;
+    height: 10vw;
+    /* border-bottom:1px solid #FB437A; */
+    font-size: 5vw;
+    text-align: center;
+    line-height: 10vw;
+    /* color: #FB437A */
+
+}
+.tab3
+{
+    display: flex
+}
+.tab3Image
+{
+    width: 3vw;
+    height: 5vw;
+    margin-left: 2vw;
+    margin-top: 2.5vw
+
+  
+}
+/* .Tab2Select
+{
+    width: 20vw;
+    height: 10vw;
+    border-bottom:1px solid #FB437A;
+    font-size: 5vw;
+    text-align: center;
+    line-height: 10vw;
+}
+.Tab2DisSelect
+{
+    width: 20vw;
+    height: 15vw;
+    font-size: 5vw
+
+}
+.Tab3Select
+{
+    width: 20vw;
+    height: 10vw;
+    border-bottom:1px solid #FB437A;
+    font-size: 5vw;
+    text-align: center;
+    line-height: 10vw;
+}
+.Tab3DisSelect
+{
+    width: 20vw;
+    height: 15vw;
+    font-size: 5vw
+
+} */
+.search
+{
+    height: 15vw;
+}

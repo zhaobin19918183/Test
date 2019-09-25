@@ -1,0 +1,234 @@
+.buyDetail
+{
+    background-color: white;
+    height: 100vh;
+}
+.backgorundImage
+{
+    background-image: url('../../../image/backgroundDiscount2.png');
+    width: 96vw;
+    height: 37vw;
+    background-size: contain;
+    display: flex;
+    margin-left: 2vw;
+
+    
+}
+.backgorundImage1
+{
+    background-image: url('../../../image/backgroundDiscount1.png');
+    width: 96vw;
+    height: 37vw;
+    background-size: contain;
+    display: flex;
+    margin-left: 2vw;
+
+    
+}
+.am-list-content{
+   color:red 
+}
+.buyDetailnumber
+{
+    display: flex;
+    float: right;
+
+
+    
+   
+}
+.buyDetailnumber1
+{
+   color:  #FB437A;
+
+
+   
+}
+.buyDetailnumber1001
+{
+   color:  #FB437A;
+   /* margin-left: 4vw */
+}
+.buyDetailnumber2
+{
+   color:  #999999;
+   margin-left: 1vw;
+
+}
+.buyDetailListLine
+{
+    height: 2vw;
+    width: 100%;
+    background-color: #F4F4F4
+}
+.help
+{
+    margin-left: 10px
+}
+.integral1
+{
+    color: #363830;
+    font-size:5vw;
+}
+.integral2
+{
+    color: #999999;
+    font-size: 3vw;
+
+}
+.integral3
+{
+    color: #FFB926;
+    font-size:5vw;
+}
+.integral4
+{
+    color: #999999;  
+    justify-content: space-between;
+    display: flex
+}
+.buyButton
+{
+   display: flex;
+   justify-content: space-between;
+   height: 10vw;
+   margin-top: 41vw;
+   margin-bottom: 10vw;
+   border-radius: 20vw;
+   font-size: 17px;
+}
+.buyButton1
+{
+    background-color: #3B2F2F;
+    width: 50%;
+    height: 10vw;
+    text-align: center;
+    line-height: 10vw;
+    color: white;
+    border-radius: 20px 0px 0px 20px;
+   
+}
+.buyButton2
+{
+    background-color: #FB437A;
+    width: 50%;
+    height: 10vw;
+    text-align: center;
+    line-height: 10vw;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+}
+.buyButtonDiv
+{
+    height: 50vw;
+}
+.buyDetailtitleImage
+{
+    width: 30vw;
+    height: 30vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    border-radius: 10px;
+}
+.buyDetailtitle
+{
+    color: white;
+    margin-left: 5vw;
+    font-size: 16px;
+    margin-top: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 50vw;
+}
+.buyDetailtitle1
+{
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  
+    /* font-weight: bold; */
+    font-size: 5vw;
+   
+
+}
+.buyDetailtitle1001
+{
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  
+    /* font-weight: bold; */
+    font-size: 5vw;
+    margin-left: 5vw; 
+}
+.buyDetailtitle2
+{
+    color: #EEFF00;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-size: 4vw;
+    padding-top: 1.5vw;
+
+    
+
+}
+.buyDetailtitle22
+{
+   
+    width: 60vw;
+    display: flex;
+    margin-top: 10.5vw;
+}
+.condition
+{
+    color: #FFE1B5;
+    margin-left:5vw;
+    margin-top: 1vw;
+    font-size: 13px;
+}
+.conditionNumber
+{
+    color: #C5C5C5;
+    text-decoration:line-through;
+    margin-left:6vw;
+    font-size: 13px;
+    margin-top: 1vw;
+  
+}
+.footertitle
+{
+    width: 94vw;
+    height: 5vw;
+    line-height: 5vw;
+    font-size: 3vw;
+    color: #999999;
+    text-align: center
+
+}
+
+
+/*适配，6，7，8*/
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+    .condition{
+        font-size: 12px;
+    }
+}
+
+/*适配，6+，7+，8+*/
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    .condition{
+        font-size: 12px;
+    }
+}
+
+/*适配，5*/
+@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+    .condition{
+        font-size: 11px;
+    }
+}

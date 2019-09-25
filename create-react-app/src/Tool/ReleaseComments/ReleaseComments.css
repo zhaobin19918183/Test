@@ -1,0 +1,65 @@
+.TextareaItemCss
+{
+
+    background-color: white
+}
+
+.TextareaItemCssHeader
+{
+    height: 30vw;
+    width:100vw;
+    margin-bottom: 2vw;
+    background-color: white;
+    display: flex
+
+}
+.TextareaItemCssImage
+{
+    height: 25vw;
+    width: 25vw;
+    margin: 2vw
+
+}
+.TextareaItemCsstitle
+{
+    height: 29vw;
+    line-height: 29vw;
+    width: 25vw;
+    font-size: 5vw
+}
+.submit
+{
+    width: 90vw;
+    height: 15vw;
+    background-color: #FB437A;
+    color: white;
+    border-radius: 10vw;
+    font-size: 6vw;
+    margin-left: 5vw;
+    text-align: center;
+    line-height: 15vw;
+    margin-top: 5vw
+}
+.start
+{
+    width: 40vw;
+    height: 30vw;
+    line-height: 30vw;
+    margin-left: 3vw
+}
+.placeholderCss
+{
+    padding: 3vw;
+    color: #999999;
+    font-size: 3.5vw
+}
+.content
+{
+    border:1px solid #F4F4F4;
+    margin: 1vw
+}
+
+.selectImage
+{
+    padding: 1vw
+}

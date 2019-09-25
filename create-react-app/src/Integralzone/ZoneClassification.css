@@ -1,0 +1,21 @@
+.headerDIv
+{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.listul
+{
+	display: flex;
+    flex-wrap: wrap;
+    width:100%+42px;
+    margin-left: -37px;
+    background-color: white;
+    position:absolute;
+    margin-top: 27vw
+}
+.listItem
+{
+    margin: 1vw;
+    border-bottom:1px solid #F4F4F4;
+}

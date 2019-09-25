@@ -1,0 +1,244 @@
+.Order
+{
+    width: 96vw;
+    margin: 4vw 2vw;
+    border-radius: 5vw;
+    background-color: white;
+    overflow-y: scroll;
+}
+.OrderTitle
+{
+    border-bottom:1px solid #DFDFDF;
+    height: 10vw;
+    width: 92vw;
+    line-height: 10vw;
+    padding: 2vw;
+    display: flex;
+    /* justify-content: space-between */
+
+}
+.OrderTitleLfet
+{
+    height: 10vw;
+    width: 60vw;
+    line-height: 10vw;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 4vw;
+    margin-left: 2vw
+
+}
+.OrderTitleRight1
+{
+    height: 10vw;
+    width: 25vw;
+    line-height: 10vw;
+    text-align: right;
+    color: #38A70A;
+    font-size: 4vw
+}
+
+.OrderTitleRight2
+{
+    height: 10vw;
+    width: 30vw;
+    line-height: 10vw;
+    text-align: right;
+    color: #999999
+}
+
+.OrderTitle2
+{
+    border-bottom:1px solid #DFDFDF;
+    width: 92vw;
+    height: 35vw;
+    text-align: center
+}
+.OrderTitle2Image
+{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 20vw;
+    margin-top: 2vw
+}
+.OrderTitle2Title1
+{
+    width: 92vw;
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw
+
+}
+.OrderTitle2Title2
+{
+    width: 92vw;
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw
+
+}
+
+.OrderContent
+{
+    border-bottom:1px solid #DFDFDF;
+    width: 96vw;
+    height: 40vw;
+    text-align: center;
+    display: flex
+}
+
+.OrderContentImage
+{
+    width: 30vw;
+    height: 30vw;
+    padding: 2.5vw;
+    margin-top: 3vw
+
+}
+
+.OrderContentMessage
+{
+    width: 55vw;
+    height: 35vw;
+}
+.OrderContentMessage1
+{
+    display: flex;
+    height: 15vw;
+    line-height: 20vw;
+    justify-content: space-between;
+
+}
+
+.OrderContentMessage11
+{
+    width: 80vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 15vw;
+    font-size: 5vw;
+    text-align: left;
+}
+.OrderContentMessageConent
+{
+    width: 50vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 10vw;
+    line-height: 10vw;
+
+    text-align: left;
+    font-size: 4vw
+   
+}
+
+.OrderM
+{
+    height: 20vw;
+    width: 60vw;
+
+}
+.OrderContentMessage12
+{
+    width: 20vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #F67C1F;
+    font-size: 4vw;
+}
+
+.OrderContentMessage2
+{
+    width: 57vw;
+    height: 10vw;
+    text-align: right;
+    color: #999999;
+    margin-top: 10vw
+}
+
+.listItem
+{
+    margin: 2vw;
+    width: 92vw;
+    height: 5;
+    display: flex;
+    line-height: 5;
+
+}
+.listItemLfet
+{
+    width: 20vw;
+    height: 5vw;
+    font-size: 4vw;
+    line-height: 5vw;
+    text-align: center;
+}
+.listItemRight
+{
+    width: 60vw;
+    height: 5vw;
+    font-size: 4vw;
+    line-height: 5vw;
+  
+}
+.money
+{
+    /* border-bottom:1px solid #DFDFDF; */
+    border-top:1px solid #DFDFDF;
+    width: 96vw;
+    height: 10vw;
+    display: flex;
+    justify-content:space-between;
+
+ 
+    
+}
+.moneyLeft
+{
+    width: 30vw;
+    height:10vw;
+    font-size: 4vw;
+    line-height: 10vw;
+    margin-left: 4vw 
+}
+.moneyRight
+{
+    width: 30vw;
+    height:10vw;
+    font-size: 4vw;
+    line-height: 10vw;
+    color: #F67C1F;
+    text-align: right;
+    margin-right: 4vw 
+}
+.buttonDiv
+{
+    width: 96vw;
+    height: 12vw;
+    line-height: 12vw;
+}
+.button
+{
+    width: 30vw;
+    height: 10vw;
+    background-color: #6C98F7;
+    color: white;
+    font-size: 4vw;
+    line-height: 10vw;
+    text-align: center;
+    margin: 1vw;
+    border-radius: 10vw;
+    margin-left: 64vw
+}
+.dianpuCss
+{
+    width: 5vw;
+    height: 5vw;
+    margin-top: 2.5vw;
+    margin-left: 2vw
+}

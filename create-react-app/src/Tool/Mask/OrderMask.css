@@ -1,0 +1,102 @@
+.mask{
+    background: rgba(0,0,0,0.4) !important;
+    z-index: 10;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+  }
+  .selectMask_box{
+    background: rgba(0,0,0,0);
+    transition: all .2s linear
+  }
+  .whiteBackground
+  {
+      width: 80vw;
+      height: 40vw;
+      margin-left:10vw;
+      margin-right:10vw;
+      margin-top: 50vw;
+      background-color: white ;
+      border-radius: 5vw
+  }
+
+
+  .maskclose
+  {
+      text-align: center;
+      color: #FB437A;
+      width: 80vw;
+      padding-top: 6vw;
+      padding-bottom: 6vw;
+      border-top: 1px solid #E9ECF1;
+      font-size: 4vw;
+      font-weight: bold;
+      height: 2vw;
+
+  }
+  .title
+  {
+    width: 80vw;
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 5vw;
+    margin-left: 2vw
+  }
+  .title2
+  {
+    width: 80vw;
+    height: 15vw;
+    line-height: 10vw;
+    /* font-size: 4vw; */
+    font-size: 13px;
+    text-align: center;
+    margin-left: 2vw;
+    color: #999999;
+
+    
+  }
+  .buttonDiv
+  {
+    width: 80vw;
+    height: 20vw;
+    display: flex;
+    margin-left:10vw;  
+    margin-top: 15vw 
+  }
+  .buttonDiv1
+  {
+    width: 60vw;
+    height: 15vw;
+    display: flex;
+    margin-left:10vw;
+    overflow: hidden;
+    text-overflow: ellipsis;  
+
+
+  }
+  .sureButton
+  {
+    width: 20vw;
+    height: 8vw;  
+    border: 1px solid #999999;
+    border-radius: 8vw;
+    color: #999999;
+    text-align: center;
+    line-height: 8vw;
+    margin-left: 5vw
+  }
+  .cancleButton
+  {
+    width: 20vw;
+    height: 8vw; 
+    border-radius: 8vw ;
+    border: 1px solid #FB437A;
+    border-radius: 8vw;
+    color: #FB437A;
+    text-align: center;
+    line-height: 8vw;
+    margin-left: 10vw
+  }
+  

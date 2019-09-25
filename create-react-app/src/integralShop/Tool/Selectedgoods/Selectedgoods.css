@@ -1,0 +1,75 @@
+.Selectedgoods
+{
+    width: 47vw;
+    height: 80vw;
+    border-right:1px solid #F4F4F4;
+    background-color: white
+}
+.SelectedgoodImage
+{
+    width: 47vw;
+    height: 50vw;
+    /* position:absolute;
+    position:absolute; */
+    position:'relative'
+}
+.SelectedgoodsTitle
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 5vw;
+    width: 48vw;
+    height: 5vw;
+    line-height: 5vw;
+    text-align: center
+}
+.SelectedgoodsTitle1
+{
+    height: 5vw;
+    width: 46vw;
+    line-height: 5vw;
+    text-align: right;
+    color: #999999;
+    padding-top: 2vw
+}
+.SelectedgoodsNumber
+{
+    height: 5vw;
+    width: 48vw; 
+    display: flex
+}
+.SelectedgoodsNumber1
+{
+    height: 5vw;
+    width: 48vw; 
+    display: flex;
+    padding-top: 2vw;
+    
+}
+.SelectedgoodsNumber2
+{
+    height: 5vw;
+    width: 24vw; 
+    color: #FB437A;
+    font-size: 5vw
+  
+}
+.SelectedgoodsNumber3
+{
+    height: 5vw;
+    width: 24vw;
+    color: #F59C28;
+    font-size: 4vw;
+    padding-top: 1vw 
+  
+}
+.SelectedgoodsNumber4
+{
+    height: 5vw;
+    width: 48vw; 
+    color: lightslategray;
+    text-decoration:line-through;
+    font-size: 4vw;
+    padding-top: 4vw
+}

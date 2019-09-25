@@ -1,0 +1,74 @@
+
+.perferential
+{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.HeaderMenu
+{
+    height: 20vw;
+    width: 100vw;
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+
+}
+.HeaderMenuItem
+{
+    display: flex;
+    width: 50vw;
+    height: 20vw;
+    line-height: 20vw;
+   
+     align-items: center;
+     padding-left: 10vw;
+    
+}
+.HeaderMenuItem1
+{
+    display: flex;
+    width: 50vw;
+    height: 15vw;
+    line-height: 15vw;
+
+    align-items: center;
+    padding-left: 10vw;
+    margin-top: 2.5vw;
+    border-left: 1px solid #dfdfdf;
+}
+.HeaderMenuImage
+{
+    width: 5vw;
+    height: 5vw;
+}
+.HeaderMenuTitle
+{
+    font-size: 5vw;
+    width: 30vw;
+    height: 10vw;
+    line-height: 10vw;
+    margin-left: 2vw;
+    
+}
+.HeaderMenuRightImage
+{
+    width: 3vw;
+    height: 5vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
+   
+}
+.listul
+{
+	display: flex;
+    flex-wrap: wrap;
+    width:100%+42px;
+    margin-left: -37px
+}
+.listItem
+{
+    margin: 1vw;
+    border-bottom:1px solid #F4F4F4;
+}

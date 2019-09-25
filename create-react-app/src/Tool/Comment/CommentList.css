@@ -1,0 +1,77 @@
+.CommentList
+{
+    background-color: white;
+    border-bottom:1px solid #DFDFDF;
+    padding: 5vw 0;
+}
+.list_box_img{
+	width: 20vw;
+    height: 20vw;
+}
+.listul
+{
+	display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
+.maplicss
+{
+	width: 22vw;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.commentContent
+{
+    padding: 3vw 0;
+}
+.commentContentTitle
+{
+    display: flex
+}
+.CommentListItemTitle
+{
+    display: flex;
+    margin-right: 3vw;
+    /* width: 20vw; */
+}
+.CommentListImg
+{
+    width: 13vw;
+    height: 13vw;
+    border-radius: 10vw
+}
+.commentContentName
+{
+    height: 5vw;
+    width: 71vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+.commentContentName1
+{
+    margin-top: 3.5vw;
+}
+
+.commentContentName2
+{
+    font-size: 3.5vw;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.commentContentName3
+{
+    height: 5vw;
+    font-size: 3vw;
+    color: #999999
+}
+.startImage
+{
+    width: 20vw;
+    height: 3vw;
+}

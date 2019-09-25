@@ -1,0 +1,188 @@
+.Login
+{
+    background-color: white;
+    height: 100vh;
+}
+.LoginImage
+{
+    width: 25vw;
+    height: 25vw;
+    padding-left: 37.5vw;
+    padding-top: 13vw;
+    padding-bottom: 15vw;
+
+}
+.LoginContent
+{
+    width: 100vw;
+    height: 32vw;
+
+
+}
+
+.phoneDiv
+{
+    width: 90vw;
+    border:1px solid #FB437A;
+    height: 11vw;
+    border-radius: 50vw;
+    display: flex;
+    justify-items: center;
+    margin-left: 5vw;
+    margin-bottom: 5vw
+}
+.LoginImage1
+{
+    height: 4vw;
+    width: 3vw;
+    /* border-right: 1px solid #999999; */
+    /* padding: 4vw; */
+    padding-left: 4vw;
+    padding-top: 3.5vw;
+}
+.LoginPhone
+{
+    /* height: 10vw; */
+    width: 40vw;
+    line-height: 11vw;
+    font-size: 4vw;
+    background-color: transparent;
+    border:0px solid #999999; 
+    margin-left: 3vw;
+
+}
+.LoginYan
+{
+    height:11vw ;
+    width: 30vw;
+    line-height: 11vw;
+    color: #FB437A;
+    font-size: 3.5vw;
+    margin-left: 18vw;
+
+}
+
+.submit
+{
+    width: 90vw;
+    height: 11vw;
+    background-color: #FB437A;
+    color: white;
+    border-radius: 10vw;
+    font-size: 5vw;
+    margin-left: 5vw;
+    text-align: center;
+    line-height: 11vw;
+    /* margin-bottom: 25vw; */
+    
+}
+.footer
+{
+    width: 100vw;
+    height: 5vw;
+    text-align: center;
+    font-size: 3vw;
+    color: #999999;
+}
+
+.rule
+{
+    width: 90vw;
+    height: 5vw;
+    line-height: 5vw;
+    font-size: 3vw;
+    text-indent: 5vw;
+    margin: 5vw 0 3vw 5vw;
+}
+.blueRule
+{
+    color: #0389ff;
+
+}
+
+.footerMain{
+    /* position: fixed;
+    bottom: 2vh; */
+    position: relative;
+    top: 15vw;
+}
+
+
+
+/* 适配苹果（6、7、8）Plus input placeholder属性 */
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    .LoginPhone::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .LoginPhone{
+        line-height: 9.5vw;
+    }
+}
+
+/*适配，6，7，8*/
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+    .LoginPhone::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .LoginPhone{
+        line-height: 9.5vw;
+    }
+}
+
+/*适配苹果X*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .LoginPhone::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .LoginPhone{
+        line-height: 9.5vw;
+    }
+}
+
+
+/*适配苹果X smart Max*/
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+    .LoginPhone::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .LoginPhone{
+        line-height: 9.5vw;
+    }
+}
+
+/*适配苹果XR */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 2) {
+    .LoginPhone::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .LoginPhone{
+        line-height: 9.5vw;
+    }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+    .LoginPhone::-webkit-input-placeholder{
+        font-size: 3.5vw;
+        position: relative;
+        top: -8vw;
+    }
+
+    .LoginPhone{
+        line-height: 9.5vw;
+    }
+}

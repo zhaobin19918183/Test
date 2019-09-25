@@ -1,0 +1,123 @@
+.GoodsDetailTitleDiv
+{
+  width: 96vw;
+  padding: 2vw;
+  height: 30vw;
+  background-color: white
+}
+.GoodsDetailTitle
+{
+    height: 10vw;
+    width: 92vw;
+    display: flex;
+    justify-content: space-between
+}
+.GoodsDetailTitle1
+{
+    width: 35vw;
+    height: 10vw;
+    font-size: 7vw;
+    color: #FB437A;
+    line-height: 10vw
+}
+.GoodsDetailTitle2
+{
+    color: #F59C28;
+    font-size: 4vw;
+    width: 35vw;
+    height: 10vw;
+    line-height: 10vw;
+    padding-top: 1vw
+
+}
+.GoodsDetailTitle3
+{
+    width: 24vw;
+    height: 10vw;
+    font-size: 5vw;
+    color: #FB437A;
+    text-align: right;
+    line-height: 10vw 
+}
+.GoodsDetailTitle4
+{
+    color: lightslategray;
+    text-decoration:line-through;
+    height: 10vw;
+    width: 92vw;
+    line-height: 10vw;
+    text-align: left;
+    font-size: 4vw;
+    margin-left: 1.5vw
+}
+.GoodsDetailContent
+{
+   
+    height: 30vw;
+    width: 96vw;
+    font-size: 5vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    -webkit-line-clamp: 2;
+  
+
+}
+.location
+{
+    margin-top: 4vw;
+    height: 13vw;
+    line-height: 13vw;
+    display: flex;
+    width: 100vw;
+    background-color: white;
+    
+}
+.location1
+{
+    height: 13vw;
+    line-height: 13vw;
+    width: 10vw;
+    color: #999999;
+    margin-left: 2vw
+
+}
+.locationImage
+{
+    width: 4vw;
+    height: 5vw;
+    margin-left: 2vw;
+    padding-top: 4vw
+}
+.location2
+{
+    height: 10vw;
+    line-height: 10vw;
+    color: #363830;
+    width: 10vw;
+    margin-left: 3vw;
+    border-right:1px solid #F4F4F4;
+    margin-top: 1.5vw
+
+}
+.location4
+{
+    height: 13vw;
+    line-height: 13vw;
+    color: #999999;
+    margin-left: 3vw;
+
+}
+
+.commentDiv
+{
+    width: 100vw;
+    background-color: white;
+    margin-bottom: 30vw
+
+}
+.over
+{
+    overflow-x: hidden
+}

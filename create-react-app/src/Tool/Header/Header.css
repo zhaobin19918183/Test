@@ -1,0 +1,40 @@
+.headerDiv
+{
+    height: 13vw;
+    width: 100vw;
+    background-color: #FB437A;
+    display: flex;
+
+}
+.backImage
+{
+    width: 6.5vw;
+    height: 6vw;
+    padding-left: 3.25vw;
+    padding-top: 3.25vw;
+}
+.headerTitle
+{
+    width: 40vw;
+    height: 10vw;
+    color: white;
+    margin-top: 3.5vw;
+    font-size: 5vw;
+    margin-left: 30vw;
+}
+.headerTitleClass
+{
+    width: 80vw;
+    height: 10vw;
+    color: white;
+    margin-top: 3.5vw;
+    font-size: 5vw;
+    text-align: center;
+}
+.endit
+{
+    color: white;
+    font-size: 3vw;
+    height: 13vw;
+    line-height: 13vw;
+}
